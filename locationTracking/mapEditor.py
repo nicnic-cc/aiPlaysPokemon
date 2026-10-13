@@ -8,8 +8,11 @@ three modes, all operating on the currently loaded map:
     Tiles        Paint tile types (walkable, blocked, grass, water, ledges,
                  doors, warps, boulders, items, persistent objects, ...).  Items
                  and persistent objects are labeled; objects also get a category
-                 (pokemon_center / pc / mart / gym / npc / other) so the
-                 pathfinder can answer "go to the nearest Pokemon Center".
+                 (pokemon_center / pc / mart / gym / trainer / npc / other) so
+                 the pathfinder can answer "go to the nearest Pokemon Center".
+                 "Import Trainers from ROM" places every trainer NPC on the map
+                 with its trainer ids (see trainerExtractor.py); those ids are
+                 how the navigator stops listing a trainer once it's beaten.
 
     Connections  Define how this map links to others.  Click a source tile on
                  the main map, pick a target map, then click the exact target
@@ -55,6 +58,7 @@ import sys
 # Encounter terrain is derived from the painted grid, not stored. Share the
 # pathfinder's implementation so the editor shows exactly what it will compute.
 from pathfinder import ENCOUNTER_TERRAIN, encounterTilesFor
+from trainerExtractor import loadRomTrainers, placeTrainersOnMap
 
 
 TILE_SIZE = 16
@@ -82,8 +86,11 @@ OBJECT_TYPE = 14
 
 # Object categories. "landmark" is a named place you walk *onto* (routing treats
 # it as walkable, the rest are approached + interacted with). This replaces the
-# old separate "landmarks" concept.
-OBJECT_CATEGORIES = ["landmark", "pokemon_center", "pc", "mart", "gym", "npc", "other"]
+# old separate "landmarks" concept. "trainer" is an NPC that battles you; its
+# trainer ids (objectTrainers) are what let the navigator drop it once beaten.
+OBJECT_CATEGORIES = ["landmark", "pokemon_center", "pc", "mart", "gym", "trainer",
+                     "npc", "other"]
+TRAINER_OUTLINE = (255, 60, 60, 255)
 
 CONNECTION_TYPES = ["edge", "door", "warp", "stairs"]
 CONNECTION_COLORS = {
@@ -400,6 +407,8 @@ class MapEditor:
         # "bank-number-Name", so the lookup needs no per-map bookkeeping.
         self.romEncounters = {}
         self._loadRomEncounters()
+        # ROM trainer NPCs (trainerExtractor.py dump), keyed the same way.
+        self.romTrainers = loadRomTrainers()
 
         # All maps in the directory (name -> {file, widthTiles, heightTiles})
         self.mapMeta = {}
@@ -418,6 +427,7 @@ class MapEditor:
         self.items = {}             # "row,col" -> item name
         self.objects = {}           # "row,col" -> object name
         self.objectCategories = {}  # "row,col" -> category
+        self.objectTrainers = {}    # "row,col" -> [trainerId]
         # Manual encounter table, saved only when it differs from the ROM dump.
         self.encounterOverride = None   # None = use ROM, or [{species, ...}]
 
@@ -587,6 +597,9 @@ class MapEditor:
                   font=('monospace', 8)).pack(fill=tk.X, padx=5, pady=2)
         tk.Button(p, text="Undo (Ctrl+Z)", command=self._undo, bg='#404040', fg='white',
                   relief=tk.FLAT, font=('monospace', 8)).pack(fill=tk.X, padx=5, pady=2)
+        tk.Button(p, text="Import Trainers from ROM", command=self._importTrainers,
+                  bg='#603030', fg='white', relief=tk.FLAT,
+                  font=('monospace', 8)).pack(fill=tk.X, padx=5, pady=(10, 2))
 
         self.statsLabel = tk.Label(p, text="", bg='#333', fg='#aaa',
                                    font=('monospace', 8), justify=tk.LEFT)
@@ -821,6 +834,7 @@ class MapEditor:
             self.items = d.get('items', {})
             self.objects = d.get('objects', {})
             self.objectCategories = d.get('objectCategories', {})
+            self.objectTrainers = d.get('objectTrainers', {})
             self.encounterOverride = d.get('encounters')
             if (len(self.tileGrid) != self.heightTiles or
                     (self.tileGrid and len(self.tileGrid[0]) != self.widthTiles)):
@@ -828,6 +842,7 @@ class MapEditor:
         else:
             self.tileGrid = [[0] * self.widthTiles for _ in range(self.heightTiles)]
             self.items, self.objects, self.objectCategories = {}, {}, {}
+            self.objectTrainers = {}
             self.encounterOverride = None
 
         # ensure a connections.json entry exists for this map
@@ -865,6 +880,11 @@ class MapEditor:
                 if color:
                     x1, y1 = c * TILE_SIZE, r * TILE_SIZE
                     draw.rectangle([x1, y1, x1 + TILE_SIZE - 1, y1 + TILE_SIZE - 1], fill=color)
+
+        # Trainers stand out from other objects, so a map's fights read at a glance.
+        for key in self.objectTrainers:
+            r, c = (int(v) for v in key.split(','))
+            self._outline(draw, (c, r), TRAINER_OUTLINE)
 
         if self.mode == "connections":
             self._drawConnections(draw)
@@ -988,7 +1008,9 @@ class MapEditor:
                 extra = f"  [{self.items.get(key, '(unlabeled)')}]"
             elif t == OBJECT_TYPE:
                 cat = self.objectCategories.get(key, "?")
-                extra = f"  [{self.objects.get(key, '(unlabeled)')} / {cat}]"
+                ids = self.objectTrainers.get(key)
+                idText = f" / trainer {','.join(map(str, ids))}" if ids else ""
+                extra = f"  [{self.objects.get(key, '(unlabeled)')} / {cat}{idText}]"
             self.statusBar.config(text=f"({col},{row}) {TILE_TYPES[t]['name']}{extra}")
         else:
             self.statusBar.config(text=f"({col},{row})")
@@ -1030,6 +1052,7 @@ class MapEditor:
         if self.tileGrid[row][col] == OBJECT_TYPE and t != OBJECT_TYPE:
             self.objects.pop(key, None)
             self.objectCategories.pop(key, None)
+            self.objectTrainers.pop(key, None)
         self.tileGrid[row][col] = t
         self.hasUnsavedTiles = True
         return True
@@ -1107,15 +1130,76 @@ class MapEditor:
         if name is None:
             return
         cat = self._askCategory(self.objectCategories.get(first, "npc"))
+        ids = self.objectTrainers.get(first)
+        if name and cat == "trainer":
+            ids = self._askTrainerIds(ids)
         for r, c in tiles:
             k = f"{r},{c}"
             if name:
                 self.objects[k] = name
                 self.objectCategories[k] = cat
+                if ids:
+                    self.objectTrainers[k] = list(ids)
+                else:
+                    self.objectTrainers.pop(k, None)
             else:
                 self.objects.pop(k, None)
                 self.objectCategories.pop(k, None)
+                self.objectTrainers.pop(k, None)
         self.hasUnsavedTiles = True
+        self._renderCanvas()
+
+    def _askTrainerIds(self, current):
+        """Trainer ids for a hand-placed trainer; Import fills these in for you."""
+        text = simpledialog.askstring(
+            "Trainer ids", "Trainer id(s), comma-separated (blank = none).\n"
+            "Beating trainer N sets flag 0x500+N; see trainerData/romTrainers.json.",
+            initialvalue=",".join(map(str, current or [])), parent=self.root)
+        if text is None:
+            return current
+        try:
+            return [int(t, 0) for t in text.replace(' ', '').split(',') if t]
+        except ValueError:
+            messagebox.showwarning("Bad trainer id", f"Not a number list: {text!r}")
+            return current
+
+    def _importTrainers(self):
+        """Place this map's ROM trainers: tile, label, category and trainer ids.
+
+        Same merge as `trainerExtractor.py --apply`: hand-typed labels and any
+        category but plain "npc" are kept, so re-importing is always safe.
+        """
+        if not self.mapName:
+            return
+        if not self.romTrainers:
+            self.romTrainers = loadRomTrainers()
+        if not self.romTrainers:
+            messagebox.showinfo("No trainer dump",
+                                "Run `python trainerExtractor.py` first to dump "
+                                "trainerData/romTrainers.json from the ROM.")
+            return
+        before = [row[:] for row in self.tileGrid]
+        data = {"tiles": self.tileGrid, "objects": self.objects,
+                "objectCategories": self.objectCategories,
+                "objectTrainers": self.objectTrainers}
+        notes, reason = placeTrainersOnMap(self.mapName, data, self.romTrainers)
+        if reason:
+            messagebox.showinfo("Trainers not imported", f"{self.mapName}: {reason}")
+            return
+        # Tile changes go on the undo stack like any other paint stroke.
+        stroke = [(r, c, before[r][c]) for r in range(self.heightTiles)
+                  for c in range(self.widthTiles) if before[r][c] != self.tileGrid[r][c]]
+        if stroke:
+            self.undoStack.append(stroke)
+        changes = notes[1:]
+        if changes:
+            self.hasUnsavedTiles = True
+            print(f"{self.mapName}  {notes[0]}\n" + "\n".join(changes))
+        self.statusBar.config(
+            text=f"Trainers: {len(self.objectTrainers)} on this map "
+                 f"({len(changes)} change(s), {notes[0]}). Details in the console.")
+        self._renderCanvas()
+        self._updateStats()
 
     def _askCategory(self, initial="npc"):
         dlg = tk.Toplevel(self.root)
@@ -1141,7 +1225,8 @@ class MapEditor:
         lines = [f"Total: {total}"]
         for t in sorted(counts):
             lines.append(f"{TILE_TYPES[t]['name']}: {counts[t]}")
-        lines.append(f"items: {len(self.items)}  objects: {len(self.objects)}")
+        lines.append(f"items: {len(self.items)}  objects: {len(self.objects)}  "
+                     f"trainers: {len(self.objectTrainers)}")
         self.statsLabel.config(text='\n'.join(lines))
 
     # ── connections mode ─────────────────────────────────────────────────────
@@ -1422,6 +1507,7 @@ class MapEditor:
                 "items": self.items,
                 "objects": self.objects,
                 "objectCategories": self.objectCategories,
+                "objectTrainers": self.objectTrainers,
             }
             # Only written when it exists: absent means "use the ROM table",
             # which is what almost every map should say.

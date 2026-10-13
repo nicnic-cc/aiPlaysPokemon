@@ -1,0 +1,9136 @@
+{
+ "1,0": {
+  "width": 54,
+  "height": 69,
+  "trainers": [
+   {
+    "localId": 3,
+    "x": 47,
+    "y": 45,
+    "trainerIds": [
+     102
+    ],
+    "flags": [
+     "0x566"
+    ],
+    "name": "RICK",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER RICK",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 47,
+    "y": 29,
+    "trainerIds": [
+     103
+    ],
+    "flags": [
+     "0x567"
+    ],
+    "name": "DOUG",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER DOUG",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 7,
+    "y": 22,
+    "trainerIds": [
+     104
+    ],
+    "flags": [
+     "0x568"
+    ],
+    "name": "SAMMY",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER SAMMY",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 43,
+    "y": 6,
+    "trainerIds": [
+     531
+    ],
+    "flags": [
+     "0x713"
+    ],
+    "name": "ANTHONY",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER ANTHONY",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 10,
+    "x": 16,
+    "y": 5,
+    "trainerIds": [
+     532
+    ],
+    "flags": [
+     "0x714"
+    ],
+    "name": "CHARLIE",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER CHARLIE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,1": {
+  "width": 48,
+  "height": 40,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 20,
+    "y": 26,
+    "trainerIds": [
+     121
+    ],
+    "flags": [
+     "0x579"
+    ],
+    "name": "IRIS",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS IRIS",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 36,
+    "y": 30,
+    "trainerIds": [
+     109
+    ],
+    "flags": [
+     "0x56D"
+    ],
+    "name": "ROBBY",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER ROBBY",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 30,
+    "y": 35,
+    "trainerIds": [
+     169
+    ],
+    "flags": [
+     "0x5A9"
+    ],
+    "name": "JOVAN",
+    "trainerClass": 64,
+    "className": "SUPER NERD",
+    "label": "SUPER NERD JOVAN",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 33,
+    "y": 4,
+    "trainerIds": [
+     120
+    ],
+    "flags": [
+     "0x578"
+    ],
+    "name": "MIRIAM",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS MIRIAM",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 7,
+    "y": 26,
+    "trainerIds": [
+     108
+    ],
+    "flags": [
+     "0x56C"
+    ],
+    "name": "KENT",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER KENT",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 13,
+    "y": 17,
+    "trainerIds": [
+     91
+    ],
+    "flags": [
+     "0x55B"
+    ],
+    "name": "JOSH",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER JOSH",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 7,
+    "y": 10,
+    "trainerIds": [
+     181
+    ],
+    "flags": [
+     "0x5B5"
+    ],
+    "name": "MARCOS",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER MARCOS",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,3": {
+  "width": 48,
+  "height": 40,
+  "trainers": [
+   {
+    "localId": 3,
+    "x": 13,
+    "y": 11,
+    "trainerIds": [
+     170
+    ],
+    "flags": [
+     "0x5AA"
+    ],
+    "name": "MIGUEL",
+    "trainerClass": 64,
+    "className": "SUPER NERD",
+    "label": "SUPER NERD MIGUEL",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 3,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 37,
+    "y": 21,
+    "trainerIds": [
+     354
+    ],
+    "flags": [
+     "0x662"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0xAD"
+   },
+   {
+    "localId": 5,
+    "x": 12,
+    "y": 20,
+    "trainerIds": [
+     351
+    ],
+    "flags": [
+     "0x65F"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0xAD"
+   },
+   {
+    "localId": 6,
+    "x": 35,
+    "y": 12,
+    "trainerIds": [
+     353
+    ],
+    "flags": [
+     "0x661"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0xAD"
+   },
+   {
+    "localId": 7,
+    "x": 18,
+    "y": 27,
+    "trainerIds": [
+     352
+    ],
+    "flags": [
+     "0x660"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0xAD"
+   }
+  ]
+ },
+ "1,9": {
+  "width": 24,
+  "height": 19,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 12,
+    "y": 10,
+    "trainerIds": [
+     135
+    ],
+    "flags": [
+     "0x587"
+    ],
+    "name": "TREVOR",
+    "trainerClass": 60,
+    "className": "SAILOR",
+    "label": "SAILOR TREVOR",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 6,
+    "y": 9,
+    "trainerIds": [
+     134
+    ],
+    "flags": [
+     "0x586"
+    ],
+    "name": "EDMOND",
+    "trainerClass": 60,
+    "className": "SAILOR",
+    "label": "SAILOR EDMOND",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,13": {
+  "width": 6,
+  "height": 8,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 5,
+    "y": 3,
+    "trainerIds": [
+     126
+    ],
+    "flags": [
+     "0x57E"
+    ],
+    "name": "ANN",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS ANN",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 0,
+    "y": 4,
+    "trainerIds": [
+     96
+    ],
+    "flags": [
+     "0x560"
+    ],
+    "name": "TYLER",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER TYLER",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,16": {
+  "width": 6,
+  "height": 8,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 2,
+    "y": 6,
+    "trainerIds": [
+     422
+    ],
+    "flags": [
+     "0x6A6"
+    ],
+    "name": "ARTHUR",
+    "trainerClass": 88,
+    "className": "GENTLEMAN",
+    "label": "GENTLEMAN ARTHUR",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,17": {
+  "width": 6,
+  "height": 8,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 4,
+    "y": 3,
+    "trainerIds": [
+     421
+    ],
+    "flags": [
+     "0x6A5"
+    ],
+    "name": "THOMAS",
+    "trainerClass": 88,
+    "className": "GENTLEMAN",
+    "label": "GENTLEMAN THOMAS",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,19": {
+  "width": 6,
+  "height": 9,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 5,
+    "y": 5,
+    "trainerIds": [
+     223
+    ],
+    "flags": [
+     "0x5DF"
+    ],
+    "name": "DALE",
+    "trainerClass": 69,
+    "className": "FISHERMAN",
+    "label": "FISHERMAN DALE",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 1,
+    "y": 4,
+    "trainerIds": [
+     482
+    ],
+    "flags": [
+     "0x6E2"
+    ],
+    "name": "BROOKS",
+    "trainerClass": 88,
+    "className": "GENTLEMAN",
+    "label": "GENTLEMAN BROOKS",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,21": {
+  "width": 6,
+  "height": 9,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 0,
+    "y": 5,
+    "trainerIds": [
+     483
+    ],
+    "flags": [
+     "0x6E3"
+    ],
+    "name": "LAMAR",
+    "trainerClass": 88,
+    "className": "GENTLEMAN",
+    "label": "GENTLEMAN LAMAR",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 3,
+    "y": 3,
+    "trainerIds": [
+     127
+    ],
+    "flags": [
+     "0x57F"
+    ],
+    "name": "DAWN",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS DAWN",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,24": {
+  "width": 6,
+  "height": 9,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 5,
+    "y": 2,
+    "trainerIds": [
+     224
+    ],
+    "flags": [
+     "0x5E0"
+    ],
+    "name": "BARNY",
+    "trainerClass": 69,
+    "className": "FISHERMAN",
+    "label": "FISHERMAN BARNY",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 3,
+    "y": 2,
+    "trainerIds": [
+     140
+    ],
+    "flags": [
+     "0x58C"
+    ],
+    "name": "PHILLIP",
+    "trainerClass": 60,
+    "className": "SAILOR",
+    "label": "SAILOR PHILLIP",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,25": {
+  "width": 6,
+  "height": 9,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 3,
+    "y": 5,
+    "trainerIds": [
+     138
+    ],
+    "flags": [
+     "0x58A"
+    ],
+    "name": "HUEY",
+    "trainerClass": 60,
+    "className": "SAILOR",
+    "label": "SAILOR HUEY",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,26": {
+  "width": 6,
+  "height": 9,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 4,
+    "y": 4,
+    "trainerIds": [
+     139
+    ],
+    "flags": [
+     "0x58B"
+    ],
+    "name": "DYLAN",
+    "trainerClass": 60,
+    "className": "SAILOR",
+    "label": "SAILOR DYLAN",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,27": {
+  "width": 6,
+  "height": 9,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 3,
+    "y": 3,
+    "trainerIds": [
+     137
+    ],
+    "flags": [
+     "0x589"
+    ],
+    "name": "DUNCAN",
+    "trainerClass": 60,
+    "className": "SAILOR",
+    "label": "SAILOR DUNCAN",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 2,
+    "y": 6,
+    "trainerIds": [
+     136
+    ],
+    "flags": [
+     "0x588"
+    ],
+    "name": "LEONARD",
+    "trainerClass": 60,
+    "className": "SAILOR",
+    "label": "SAILOR LEONARD",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,39": {
+  "width": 48,
+  "height": 22,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 5,
+    "y": 2,
+    "trainerIds": [
+     396
+    ],
+    "flags": [
+     "0x68C"
+    ],
+    "name": "ROLANDO",
+    "trainerClass": 86,
+    "className": "COOLTRAINER",
+    "label": "COOLTRAINER ROLANDO",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 14,
+    "y": 6,
+    "trainerIds": [
+     406
+    ],
+    "flags": [
+     "0x696"
+    ],
+    "name": "NAOMI",
+    "trainerClass": 86,
+    "className": "COOLTRAINER",
+    "label": "COOLTRAINER NAOMI",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,40": {
+  "width": 51,
+  "height": 22,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 7,
+    "y": 4,
+    "trainerIds": [
+     167
+    ],
+    "flags": [
+     "0x5A7"
+    ],
+    "name": "DAWSON",
+    "trainerClass": 63,
+    "className": "POKEMANIAC",
+    "label": "POKEMANIAC DAWSON",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 20,
+    "y": 11,
+    "trainerIds": [
+     325
+    ],
+    "flags": [
+     "0x645"
+    ],
+    "name": "DAISUKE",
+    "trainerClass": 80,
+    "className": "BLACK BELT",
+    "label": "BLACK BELT DAISUKE",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 31,
+    "y": 16,
+    "trainerIds": [
+     287
+    ],
+    "flags": [
+     "0x61F"
+    ],
+    "name": "NELSON",
+    "trainerClass": 77,
+    "className": "JUGGLER",
+    "label": "JUGGLER NELSON",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 26,
+    "y": 6,
+    "trainerIds": [
+     298
+    ],
+    "flags": [
+     "0x62A"
+    ],
+    "name": "VINCENT",
+    "trainerClass": 78,
+    "className": "TAMER",
+    "label": "TAMER VINCENT",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 36,
+    "y": 5,
+    "trainerIds": [
+     290
+    ],
+    "flags": [
+     "0x622"
+    ],
+    "name": "GREGORY",
+    "trainerClass": 77,
+    "className": "JUGGLER",
+    "label": "JUGGLER GREGORY",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,41": {
+  "width": 45,
+  "height": 22,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 40,
+    "y": 7,
+    "trainerIds": [
+     393
+    ],
+    "flags": [
+     "0x689"
+    ],
+    "name": "GEORGE",
+    "trainerClass": 86,
+    "className": "COOLTRAINER",
+    "label": "COOLTRAINER GEORGE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 21,
+    "y": 5,
+    "trainerIds": [
+     404
+    ],
+    "flags": [
+     "0x694"
+    ],
+    "name": "ALEXA",
+    "trainerClass": 86,
+    "className": "COOLTRAINER",
+    "label": "COOLTRAINER ALEXA",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 10,
+    "y": 17,
+    "trainerIds": [
+     394
+    ],
+    "flags": [
+     "0x68A"
+    ],
+    "name": "COLBY",
+    "trainerClass": 86,
+    "className": "COOLTRAINER",
+    "label": "COOLTRAINER COLBY",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 11,
+    "y": 16,
+    "trainerIds": [
+     403
+    ],
+    "flags": [
+     "0x693"
+    ],
+    "name": "CAROLINE",
+    "trainerClass": 86,
+    "className": "COOLTRAINER",
+    "label": "COOLTRAINER CAROLINE",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 11,
+    "x": 38,
+    "y": 13,
+    "trainerIds": [
+     485
+    ],
+    "flags": [
+     "0x6E5"
+    ],
+    "name": "RAY & TYRA",
+    "trainerClass": 93,
+    "className": "COOL COUPLE",
+    "label": "COOL COUPLE RAY & TYRA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 12,
+    "x": 39,
+    "y": 13,
+    "trainerIds": [
+     485
+    ],
+    "flags": [
+     "0x6E5"
+    ],
+    "name": "RAY & TYRA",
+    "trainerClass": 93,
+    "className": "COOL COUPLE",
+    "label": "COOL COUPLE RAY & TYRA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,42": {
+  "width": 28,
+  "height": 34,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 4,
+    "y": 9,
+    "trainerIds": [
+     359
+    ],
+    "flags": [
+     "0x667"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0xAD"
+   },
+   {
+    "localId": 2,
+    "x": 24,
+    "y": 12,
+    "trainerIds": [
+     358
+    ],
+    "flags": [
+     "0x666"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0xAD"
+   },
+   {
+    "localId": 3,
+    "x": 6,
+    "y": 32,
+    "trainerIds": [
+     361
+    ],
+    "flags": [
+     "0x669"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0xAD"
+   },
+   {
+    "localId": 4,
+    "x": 10,
+    "y": 22,
+    "trainerIds": [
+     360
+    ],
+    "flags": [
+     "0x668"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0xAD"
+   },
+   {
+    "localId": 5,
+    "x": 21,
+    "y": 27,
+    "trainerIds": [
+     362
+    ],
+    "flags": [
+     "0x66A"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 2,
+    "hideFlag": "0xAD"
+   }
+  ]
+ },
+ "1,43": {
+  "width": 32,
+  "height": 22,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 20,
+    "y": 6,
+    "trainerIds": [
+     363
+    ],
+    "flags": [
+     "0x66B"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0xAD"
+   }
+  ]
+ },
+ "1,44": {
+  "width": 22,
+  "height": 27,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 19,
+    "y": 9,
+    "trainerIds": [
+     365
+    ],
+    "flags": [
+     "0x66D"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0xAD"
+   },
+   {
+    "localId": 2,
+    "x": 2,
+    "y": 20,
+    "trainerIds": [
+     364
+    ],
+    "flags": [
+     "0x66C"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0xAD"
+   }
+  ]
+ },
+ "1,45": {
+  "width": 24,
+  "height": 26,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 19,
+    "y": 4,
+    "trainerIds": [
+     348
+    ],
+    "flags": [
+     "0x65C"
+    ],
+    "name": "GIOVANNI",
+    "trainerClass": 83,
+    "className": "BOSS",
+    "label": "BOSS GIOVANNI",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 3,
+    "hideFlag": "0x38"
+   },
+   {
+    "localId": 3,
+    "x": 4,
+    "y": 2,
+    "trainerIds": [
+     368
+    ],
+    "flags": [
+     "0x670"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 2,
+    "hideFlag": "0xAD"
+   },
+   {
+    "localId": 5,
+    "x": 19,
+    "y": 14,
+    "trainerIds": [
+     367
+    ],
+    "flags": [
+     "0x66F"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 2,
+    "hideFlag": "0xAD"
+   },
+   {
+    "localId": 6,
+    "x": 16,
+    "y": 14,
+    "trainerIds": [
+     366
+    ],
+    "flags": [
+     "0x66E"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 2,
+    "hideFlag": "0xAD"
+   }
+  ]
+ },
+ "1,48": {
+  "width": 36,
+  "height": 22,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 29,
+    "y": 12,
+    "trainerIds": [
+     374
+    ],
+    "flags": [
+     "0x676"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 2,
+    "x": 28,
+    "y": 18,
+    "trainerIds": [
+     337
+    ],
+    "flags": [
+     "0x651"
+    ],
+    "name": "JERRY",
+    "trainerClass": 82,
+    "className": "SCIENTIST",
+    "label": "SCIENTIST JERRY",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 3,
+    "x": 20,
+    "y": 14,
+    "trainerIds": [
+     373
+    ],
+    "flags": [
+     "0x675"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 4,
+    "x": 5,
+    "y": 19,
+    "trainerIds": [
+     336
+    ],
+    "flags": [
+     "0x650"
+    ],
+    "name": "CONNOR",
+    "trainerClass": 82,
+    "className": "SCIENTIST",
+    "label": "SCIENTIST CONNOR",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   }
+  ]
+ },
+ "1,49": {
+  "width": 36,
+  "height": 22,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 25,
+    "y": 9,
+    "trainerIds": [
+     375
+    ],
+    "flags": [
+     "0x677"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 3,
+    "x": 4,
+    "y": 12,
+    "trainerIds": [
+     338
+    ],
+    "flags": [
+     "0x652"
+    ],
+    "name": "JOSE",
+    "trainerClass": 82,
+    "className": "SCIENTIST",
+    "label": "SCIENTIST JOSE",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   }
+  ]
+ },
+ "1,50": {
+  "width": 36,
+  "height": 22,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 33,
+    "y": 16,
+    "trainerIds": [
+     377
+    ],
+    "flags": [
+     "0x679"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 2,
+    "x": 10,
+    "y": 19,
+    "trainerIds": [
+     376
+    ],
+    "flags": [
+     "0x678"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 3,
+    "x": 14,
+    "y": 8,
+    "trainerIds": [
+     339
+    ],
+    "flags": [
+     "0x653"
+    ],
+    "name": "RODNEY",
+    "trainerClass": 82,
+    "className": "SCIENTIST",
+    "label": "SCIENTIST RODNEY",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   }
+  ]
+ },
+ "1,51": {
+  "width": 36,
+  "height": 22,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 35,
+    "y": 7,
+    "trainerIds": [
+     379
+    ],
+    "flags": [
+     "0x67B"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 2,
+    "x": 23,
+    "y": 13,
+    "trainerIds": [
+     286
+    ],
+    "flags": [
+     "0x61E"
+    ],
+    "name": "DALTON",
+    "trainerClass": 77,
+    "className": "JUGGLER",
+    "label": "JUGGLER DALTON",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 4,
+    "x": 11,
+    "y": 6,
+    "trainerIds": [
+     340
+    ],
+    "flags": [
+     "0x654"
+    ],
+    "name": "BEAU",
+    "trainerClass": 82,
+    "className": "SCIENTIST",
+    "label": "SCIENTIST BEAU",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 5,
+    "x": 9,
+    "y": 21,
+    "trainerIds": [
+     378
+    ],
+    "flags": [
+     "0x67A"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   }
+  ]
+ },
+ "1,52": {
+  "width": 31,
+  "height": 19,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 21,
+    "y": 5,
+    "trainerIds": [
+     380
+    ],
+    "flags": [
+     "0x67C"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 7,
+    "x": 9,
+    "y": 11,
+    "trainerIds": [
+     341
+    ],
+    "flags": [
+     "0x655"
+    ],
+    "name": "TAYLOR",
+    "trainerClass": 82,
+    "className": "SCIENTIST",
+    "label": "SCIENTIST TAYLOR",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 10,
+    "x": 18,
+    "y": 17,
+    "trainerIds": [
+     381
+    ],
+    "flags": [
+     "0x67D"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   }
+  ]
+ },
+ "1,53": {
+  "width": 31,
+  "height": 19,
+  "trainers": [
+   {
+    "localId": 3,
+    "x": 24,
+    "y": 5,
+    "trainerIds": [
+     383
+    ],
+    "flags": [
+     "0x67F"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 4,
+    "x": 24,
+    "y": 15,
+    "trainerIds": [
+     384
+    ],
+    "flags": [
+     "0x680"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 5,
+    "x": 13,
+    "y": 4,
+    "trainerIds": [
+     385
+    ],
+    "flags": [
+     "0x681"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 9,
+    "x": 3,
+    "y": 13,
+    "trainerIds": [
+     342
+    ],
+    "flags": [
+     "0x656"
+    ],
+    "name": "JOSHUA",
+    "trainerClass": 82,
+    "className": "SCIENTIST",
+    "label": "SCIENTIST JOSHUA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   }
+  ]
+ },
+ "1,54": {
+  "width": 31,
+  "height": 19,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 28,
+    "y": 5,
+    "trainerIds": [
+     382
+    ],
+    "flags": [
+     "0x67E"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 2,
+    "x": 10,
+    "y": 17,
+    "trainerIds": [
+     386
+    ],
+    "flags": [
+     "0x682"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 3,
+    "x": 9,
+    "y": 4,
+    "trainerIds": [
+     343
+    ],
+    "flags": [
+     "0x657"
+    ],
+    "name": "PARKER",
+    "trainerClass": 82,
+    "className": "SCIENTIST",
+    "label": "SCIENTIST PARKER",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   }
+  ]
+ },
+ "1,55": {
+  "width": 31,
+  "height": 19,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 26,
+    "y": 16,
+    "trainerIds": [
+     344
+    ],
+    "flags": [
+     "0x658"
+    ],
+    "name": "ED",
+    "trainerClass": 82,
+    "className": "SCIENTIST",
+    "label": "SCIENTIST ED",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 2,
+    "x": 15,
+    "y": 18,
+    "trainerIds": [
+     388
+    ],
+    "flags": [
+     "0x684"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 4,
+    "x": 1,
+    "y": 6,
+    "trainerIds": [
+     387
+    ],
+    "flags": [
+     "0x683"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   }
+  ]
+ },
+ "1,56": {
+  "width": 17,
+  "height": 19,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 2,
+    "y": 7,
+    "trainerIds": [
+     345
+    ],
+    "flags": [
+     "0x659"
+    ],
+    "name": "TRAVIS",
+    "trainerClass": 82,
+    "className": "SCIENTIST",
+    "label": "SCIENTIST TRAVIS",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 3,
+    "x": 0,
+    "y": 13,
+    "trainerIds": [
+     389
+    ],
+    "flags": [
+     "0x685"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   }
+  ]
+ },
+ "1,57": {
+  "width": 17,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 4,
+    "x": 16,
+    "y": 12,
+    "trainerIds": [
+     390
+    ],
+    "flags": [
+     "0x686"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   },
+   {
+    "localId": 6,
+    "x": 2,
+    "y": 19,
+    "trainerIds": [
+     391
+    ],
+    "flags": [
+     "0x687"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x53"
+   }
+  ]
+ },
+ "1,59": {
+  "width": 38,
+  "height": 35,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 22,
+    "y": 24,
+    "trainerIds": [
+     335
+    ],
+    "flags": [
+     "0x64F"
+    ],
+    "name": "TED",
+    "trainerClass": 82,
+    "className": "SCIENTIST",
+    "label": "SCIENTIST TED",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 8,
+    "y": 8,
+    "trainerIds": [
+     534
+    ],
+    "flags": [
+     "0x716"
+    ],
+    "name": "JOHNSON",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER JOHNSON",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,60": {
+  "width": 38,
+  "height": 38,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 5,
+    "y": 23,
+    "trainerIds": [
+     216
+    ],
+    "flags": [
+     "0x5D8"
+    ],
+    "name": "ARNIE",
+    "trainerClass": 67,
+    "className": "BURGLAR",
+    "label": "BURGLAR ARNIE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,61": {
+  "width": 38,
+  "height": 35,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 7,
+    "y": 13,
+    "trainerIds": [
+     218
+    ],
+    "flags": [
+     "0x5DA"
+    ],
+    "name": "SIMON",
+    "trainerClass": 67,
+    "className": "BURGLAR",
+    "label": "BURGLAR SIMON",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 22,
+    "y": 13,
+    "trainerIds": [
+     346
+    ],
+    "flags": [
+     "0x65A"
+    ],
+    "name": "BRAYDON",
+    "trainerClass": 82,
+    "className": "SCIENTIST",
+    "label": "SCIENTIST BRAYDON",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,62": {
+  "width": 38,
+  "height": 35,
+  "trainers": [
+   {
+    "localId": 2,
+    "x": 20,
+    "y": 25,
+    "trainerIds": [
+     219
+    ],
+    "flags": [
+     "0x5DB"
+    ],
+    "name": "LEWIS",
+    "trainerClass": 67,
+    "className": "BURGLAR",
+    "label": "BURGLAR LEWIS",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 34,
+    "y": 13,
+    "trainerIds": [
+     347
+    ],
+    "flags": [
+     "0x65B"
+    ],
+    "name": "IVAN",
+    "trainerClass": 82,
+    "className": "SCIENTIST",
+    "label": "SCIENTIST IVAN",
+    "trainerType": 1,
+    "sightRange": 6,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,75": {
+  "width": 13,
+  "height": 13,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 6,
+    "y": 5,
+    "trainerIds": [
+     410,
+     735
+    ],
+    "flags": [
+     "0x69A",
+     "0x7DF"
+    ],
+    "name": "LORELEI",
+    "trainerClass": 87,
+    "className": "ELITE FOUR",
+    "label": "ELITE FOUR LORELEI",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 3,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,76": {
+  "width": 13,
+  "height": 13,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 6,
+    "y": 5,
+    "trainerIds": [
+     411,
+     736
+    ],
+    "flags": [
+     "0x69B",
+     "0x7E0"
+    ],
+    "name": "BRUNO",
+    "trainerClass": 87,
+    "className": "ELITE FOUR",
+    "label": "ELITE FOUR BRUNO",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 3,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,77": {
+  "width": 13,
+  "height": 13,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 6,
+    "y": 5,
+    "trainerIds": [
+     412,
+     737
+    ],
+    "flags": [
+     "0x69C",
+     "0x7E1"
+    ],
+    "name": "AGATHA",
+    "trainerClass": 87,
+    "className": "ELITE FOUR",
+    "label": "ELITE FOUR AGATHA",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 3,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,78": {
+  "width": 28,
+  "height": 24,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 6,
+    "y": 8,
+    "trainerIds": [
+     413,
+     738
+    ],
+    "flags": [
+     "0x69D",
+     "0x7E2"
+    ],
+    "name": "LANCE",
+    "trainerClass": 87,
+    "className": "ELITE FOUR",
+    "label": "ELITE FOUR LANCE",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 3,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,81": {
+  "width": 48,
+  "height": 40,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 26,
+    "y": 28,
+    "trainerIds": [
+     474
+    ],
+    "flags": [
+     "0x6DA"
+    ],
+    "name": "DANA",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER DANA",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 39,
+    "y": 27,
+    "trainerIds": [
+     475
+    ],
+    "flags": [
+     "0x6DB"
+    ],
+    "name": "ARIANA",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER ARIANA",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 45,
+    "y": 24,
+    "trainerIds": [
+     476
+    ],
+    "flags": [
+     "0x6DC"
+    ],
+    "name": "LEAH",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER LEAH",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 20,
+    "y": 17,
+    "trainerIds": [
+     194
+    ],
+    "flags": [
+     "0x5C2"
+    ],
+    "name": "LUCAS",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER LUCAS",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 5,
+    "y": 20,
+    "trainerIds": [
+     193
+    ],
+    "flags": [
+     "0x5C1"
+    ],
+    "name": "OLIVER",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER OLIVER",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 7,
+    "y": 5,
+    "trainerIds": [
+     192
+    ],
+    "flags": [
+     "0x5C0"
+    ],
+    "name": "LENNY",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER LENNY",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 27,
+    "y": 10,
+    "trainerIds": [
+     168
+    ],
+    "flags": [
+     "0x5A8"
+    ],
+    "name": "ASHTON",
+    "trainerClass": 63,
+    "className": "POKEMANIAC",
+    "label": "POKEMANIAC ASHTON",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,82": {
+  "width": 48,
+  "height": 40,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 2,
+    "y": 6,
+    "trainerIds": [
+     164
+    ],
+    "flags": [
+     "0x5A4"
+    ],
+    "name": "COOPER",
+    "trainerClass": 63,
+    "className": "POKEMANIAC",
+    "label": "POKEMANIAC COOPER",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 5,
+    "y": 11,
+    "trainerIds": [
+     189
+    ],
+    "flags": [
+     "0x5BD"
+    ],
+    "name": "DUDLEY",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER DUDLEY",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 11,
+    "y": 15,
+    "trainerIds": [
+     158
+    ],
+    "flags": [
+     "0x59E"
+    ],
+    "name": "SOFIA",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER SOFIA",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 36,
+    "y": 11,
+    "trainerIds": [
+     190
+    ],
+    "flags": [
+     "0x5BE"
+    ],
+    "name": "ALLEN",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER ALLEN",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 41,
+    "y": 5,
+    "trainerIds": [
+     191
+    ],
+    "flags": [
+     "0x5BF"
+    ],
+    "name": "ERIC",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER ERIC",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 23,
+    "y": 23,
+    "trainerIds": [
+     165
+    ],
+    "flags": [
+     "0x5A5"
+    ],
+    "name": "STEVE",
+    "trainerClass": 63,
+    "className": "POKEMANIAC",
+    "label": "POKEMANIAC STEVE",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 15,
+    "y": 33,
+    "trainerIds": [
+     159
+    ],
+    "flags": [
+     "0x59F"
+    ],
+    "name": "MARTHA",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER MARTHA",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 29,
+    "y": 35,
+    "trainerIds": [
+     166
+    ],
+    "flags": [
+     "0x5A6"
+    ],
+    "name": "WINSTON",
+    "trainerClass": 63,
+    "className": "POKEMANIAC",
+    "label": "POKEMANIAC WINSTON",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,90": {
+  "width": 24,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 10,
+    "y": 14,
+    "trainerIds": [
+     441
+    ],
+    "flags": [
+     "0x6B9"
+    ],
+    "name": "PATRICIA",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER PATRICIA",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 9,
+    "y": 9,
+    "trainerIds": [
+     442
+    ],
+    "flags": [
+     "0x6BA"
+    ],
+    "name": "CARLY",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER CARLY",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 12,
+    "y": 4,
+    "trainerIds": [
+     443
+    ],
+    "flags": [
+     "0x6BB"
+    ],
+    "name": "HOPE",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER HOPE",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,91": {
+  "width": 24,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 17,
+    "y": 7,
+    "trainerIds": [
+     445
+    ],
+    "flags": [
+     "0x6BD"
+    ],
+    "name": "LAUREL",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER LAUREL",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 15,
+    "y": 13,
+    "trainerIds": [
+     446
+    ],
+    "flags": [
+     "0x6BE"
+    ],
+    "name": "JODY",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER JODY",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 4,
+    "y": 12,
+    "trainerIds": [
+     444
+    ],
+    "flags": [
+     "0x6BC"
+    ],
+    "name": "PAULA",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER PAULA",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,92": {
+  "width": 24,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 11,
+    "y": 4,
+    "trainerIds": [
+     448
+    ],
+    "flags": [
+     "0x6C0"
+    ],
+    "name": "RUTH",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER RUTH",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 19,
+    "y": 7,
+    "trainerIds": [
+     447
+    ],
+    "flags": [
+     "0x6BF"
+    ],
+    "name": "TAMMY",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER TAMMY",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 7,
+    "y": 12,
+    "trainerIds": [
+     449
+    ],
+    "flags": [
+     "0x6C1"
+    ],
+    "name": "KARINA",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER KARINA",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 11,
+    "y": 16,
+    "trainerIds": [
+     450
+    ],
+    "flags": [
+     "0x6C2"
+    ],
+    "name": "JANAE",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER JANAE",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,93": {
+  "width": 24,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 13,
+    "y": 10,
+    "trainerIds": [
+     451
+    ],
+    "flags": [
+     "0x6C3"
+    ],
+    "name": "ANGELICA",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER ANGELICA",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 18,
+    "y": 6,
+    "trainerIds": [
+     453
+    ],
+    "flags": [
+     "0x6C5"
+    ],
+    "name": "JENNIFER",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER JENNIFER",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 9,
+    "y": 6,
+    "trainerIds": [
+     452
+    ],
+    "flags": [
+     "0x6C4"
+    ],
+    "name": "EMILIA",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER EMILIA",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,94": {
+  "width": 24,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 2,
+    "x": 9,
+    "y": 10,
+    "trainerIds": [
+     369
+    ],
+    "flags": [
+     "0x671"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 2,
+    "hideFlag": "0x5E"
+   },
+   {
+    "localId": 3,
+    "x": 13,
+    "y": 8,
+    "trainerIds": [
+     370
+    ],
+    "flags": [
+     "0x672"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 2,
+    "hideFlag": "0x83"
+   },
+   {
+    "localId": 4,
+    "x": 9,
+    "y": 6,
+    "trainerIds": [
+     371
+    ],
+    "flags": [
+     "0x673"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 2,
+    "hideFlag": "0x84"
+   }
+  ]
+ },
+ "1,97": {
+  "width": 57,
+  "height": 54,
+  "trainers": [
+   {
+    "localId": 2,
+    "x": 41,
+    "y": 40,
+    "trainerIds": [
+     537
+    ],
+    "flags": [
+     "0x719"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 3,
+    "hideFlag": "0x89"
+   },
+   {
+    "localId": 3,
+    "x": 42,
+    "y": 40,
+    "trainerIds": [
+     538
+    ],
+    "flags": [
+     "0x71A"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 3,
+    "hideFlag": "0x89"
+   },
+   {
+    "localId": 4,
+    "x": 22,
+    "y": 35,
+    "trainerIds": [
+     592
+    ],
+    "flags": [
+     "0x750"
+    ],
+    "name": "JOCELYN",
+    "trainerClass": 99,
+    "className": "CRUSH GIRL",
+    "label": "CRUSH GIRL JOCELYN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 15,
+    "y": 28,
+    "trainerIds": [
+     595
+    ],
+    "flags": [
+     "0x753"
+    ],
+    "name": "LOGAN",
+    "trainerClass": 102,
+    "className": "PKMN RANGER",
+    "label": "PKMN RANGER LOGAN",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 14,
+    "y": 42,
+    "trainerIds": [
+     597
+    ],
+    "flags": [
+     "0x755"
+    ],
+    "name": "BETH",
+    "trainerClass": 102,
+    "className": "PKMN RANGER",
+    "label": "PKMN RANGER BETH",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,114": {
+  "width": 29,
+  "height": 27,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 15,
+    "y": 11,
+    "trainerIds": [
+     541
+    ],
+    "flags": [
+     "0x71D"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x88"
+   },
+   {
+    "localId": 2,
+    "x": 17,
+    "y": 15,
+    "trainerIds": [
+     542
+    ],
+    "flags": [
+     "0x71E"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x88"
+   },
+   {
+    "localId": 3,
+    "x": 27,
+    "y": 16,
+    "trainerIds": [
+     543
+    ],
+    "flags": [
+     "0x71F"
+    ],
+    "name": "ADMIN",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET ADMIN",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 2,
+    "hideFlag": "0x88"
+   },
+   {
+    "localId": 4,
+    "x": 25,
+    "y": 11,
+    "trainerIds": [
+     544
+    ],
+    "flags": [
+     "0x720"
+    ],
+    "name": "ADMIN",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET ADMIN",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 2,
+    "hideFlag": "0x88"
+   },
+   {
+    "localId": 5,
+    "x": 6,
+    "y": 6,
+    "trainerIds": [
+     516
+    ],
+    "flags": [
+     "0x704"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x88"
+   },
+   {
+    "localId": 6,
+    "x": 27,
+    "y": 4,
+    "trainerIds": [
+     545
+    ],
+    "flags": [
+     "0x721"
+    ],
+    "name": "GIDEON",
+    "trainerClass": 82,
+    "className": "SCIENTIST",
+    "label": "SCIENTIST GIDEON",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 2,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "1,121": {
+  "width": 60,
+  "height": 32,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 48,
+    "y": 15,
+    "trainerIds": [
+     609
+    ],
+    "flags": [
+     "0x761"
+    ],
+    "name": "BETHANY",
+    "trainerClass": 101,
+    "className": "PKMN BREEDER",
+    "label": "PKMN BREEDER BETHANY",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 10,
+    "y": 5,
+    "trainerIds": [
+     610
+    ],
+    "flags": [
+     "0x762"
+    ],
+    "name": "ALLISON",
+    "trainerClass": 101,
+    "className": "PKMN BREEDER",
+    "label": "PKMN BREEDER ALLISON",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 51,
+    "y": 6,
+    "trainerIds": [
+     611
+    ],
+    "flags": [
+     "0x763"
+    ],
+    "name": "GARRET",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER GARRET",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 12,
+    "y": 13,
+    "trainerIds": [
+     612
+    ],
+    "flags": [
+     "0x764"
+    ],
+    "name": "JONAH",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER JONAH",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 37,
+    "y": 23,
+    "trainerIds": [
+     613
+    ],
+    "flags": [
+     "0x765"
+    ],
+    "name": "VANCE",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER VANCE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 32,
+    "y": 5,
+    "trainerIds": [
+     614
+    ],
+    "flags": [
+     "0x766"
+    ],
+    "name": "NASH",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER NASH",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 52,
+    "y": 20,
+    "trainerIds": [
+     615
+    ],
+    "flags": [
+     "0x767"
+    ],
+    "name": "CORDELL",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER CORDELL",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 8,
+    "y": 21,
+    "trainerIds": [
+     616
+    ],
+    "flags": [
+     "0x768"
+    ],
+    "name": "DALIA",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS DALIA",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 39,
+    "y": 6,
+    "trainerIds": [
+     617
+    ],
+    "flags": [
+     "0x769"
+    ],
+    "name": "JOANA",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS JOANA",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 10,
+    "x": 3,
+    "y": 9,
+    "trainerIds": [
+     618
+    ],
+    "flags": [
+     "0x76A"
+    ],
+    "name": "RILEY",
+    "trainerClass": 61,
+    "className": "CAMPER",
+    "label": "CAMPER RILEY",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 11,
+    "x": 19,
+    "y": 24,
+    "trainerIds": [
+     619
+    ],
+    "flags": [
+     "0x76B"
+    ],
+    "name": "MARCY",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER MARCY",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 12,
+    "x": 30,
+    "y": 19,
+    "trainerIds": [
+     620
+    ],
+    "flags": [
+     "0x76C"
+    ],
+    "name": "LAYTON",
+    "trainerClass": 104,
+    "className": "RUIN MANIAC",
+    "label": "RUIN MANIAC LAYTON",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "2,13": {
+  "width": 11,
+  "height": 11,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 5,
+    "y": 4,
+    "trainerIds": [
+     607
+    ],
+    "flags": [
+     "0x75F"
+    ],
+    "name": "LAWSON",
+    "trainerClass": 104,
+    "className": "RUIN MANIAC",
+    "label": "RUIN MANIAC LAWSON",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "2,16": {
+  "width": 11,
+  "height": 11,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 6,
+    "y": 4,
+    "trainerIds": [
+     608
+    ],
+    "flags": [
+     "0x760"
+    ],
+    "name": "LAURA",
+    "trainerClass": 75,
+    "className": "PSYCHIC",
+    "label": "PSYCHIC LAURA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,3": {
+  "width": 48,
+  "height": 40,
+  "trainers": [
+   {
+    "localId": 2,
+    "x": 33,
+    "y": 6,
+    "trainerIds": [
+     355
+    ],
+    "flags": [
+     "0x663"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 3,
+    "hideFlag": "0x3B"
+   }
+  ]
+ },
+ "3,21": {
+  "width": 84,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 2,
+    "x": 40,
+    "y": 11,
+    "trainerIds": [
+     118
+    ],
+    "flags": [
+     "0x576"
+    ],
+    "name": "ROBIN",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS ROBIN",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 32,
+    "y": 6,
+    "trainerIds": [
+     107
+    ],
+    "flags": [
+     "0x56B"
+    ],
+    "name": "JAMES",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER JAMES",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 30,
+    "y": 3,
+    "trainerIds": [
+     117
+    ],
+    "flags": [
+     "0x575"
+    ],
+    "name": "SALLY",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS SALLY",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 25,
+    "y": 4,
+    "trainerIds": [
+     106
+    ],
+    "flags": [
+     "0x56A"
+    ],
+    "name": "GREG",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER GREG",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 29,
+    "y": 10,
+    "trainerIds": [
+     90
+    ],
+    "flags": [
+     "0x55A"
+    ],
+    "name": "CALVIN",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER CALVIN",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 19,
+    "y": 9,
+    "trainerIds": [
+     116
+    ],
+    "flags": [
+     "0x574"
+    ],
+    "name": "JANICE",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS JANICE",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 12,
+    "y": 6,
+    "trainerIds": [
+     105
+    ],
+    "flags": [
+     "0x569"
+    ],
+    "name": "COLTON",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER COLTON",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 17,
+    "y": 4,
+    "trainerIds": [
+     89
+    ],
+    "flags": [
+     "0x559"
+    ],
+    "name": "BEN",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER BEN",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,22": {
+  "width": 108,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 2,
+    "x": 75,
+    "y": 3,
+    "trainerIds": [
+     119
+    ],
+    "flags": [
+     "0x577"
+    ],
+    "name": "CRISSY",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS CRISSY",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,24": {
+  "width": 24,
+  "height": 40,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 3,
+    "y": 16,
+    "trainerIds": [
+     111
+    ],
+    "flags": [
+     "0x56F"
+    ],
+    "name": "KEIGO",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER KEIGO",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 12,
+    "y": 21,
+    "trainerIds": [
+     145
+    ],
+    "flags": [
+     "0x591"
+    ],
+    "name": "RICKY",
+    "trainerClass": 61,
+    "className": "CAMPER",
+    "label": "CAMPER RICKY",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 13,
+    "y": 21,
+    "trainerIds": [
+     151
+    ],
+    "flags": [
+     "0x597"
+    ],
+    "name": "NANCY",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER NANCY",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 20,
+    "y": 25,
+    "trainerIds": [
+     112
+    ],
+    "flags": [
+     "0x570"
+    ],
+    "name": "ELIJAH",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER ELIJAH",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 13,
+    "y": 32,
+    "trainerIds": [
+     152
+    ],
+    "flags": [
+     "0x598"
+    ],
+    "name": "ISABELLE",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER ISABELLE",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 13,
+    "y": 33,
+    "trainerIds": [
+     146
+    ],
+    "flags": [
+     "0x592"
+    ],
+    "name": "JEFF",
+    "trainerClass": 61,
+    "className": "CAMPER",
+    "label": "CAMPER JEFF",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,26": {
+  "width": 72,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 62,
+    "y": 14,
+    "trainerIds": [
+     131
+    ],
+    "flags": [
+     "0x583"
+    ],
+    "name": "JULIA",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS JULIA",
+    "trainerType": 1,
+    "sightRange": 6,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 55,
+    "y": 15,
+    "trainerIds": [
+     264
+    ],
+    "flags": [
+     "0x608"
+    ],
+    "name": "RICH",
+    "trainerClass": 72,
+    "className": "GAMER",
+    "label": "GAMER RICH",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 51,
+    "y": 6,
+    "trainerIds": [
+     172
+    ],
+    "flags": [
+     "0x5AC"
+    ],
+    "name": "GLENN",
+    "trainerClass": 64,
+    "className": "SUPER NERD",
+    "label": "SUPER NERD GLENN",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 29,
+    "y": 3,
+    "trainerIds": [
+     128
+    ],
+    "flags": [
+     "0x580"
+    ],
+    "name": "PAIGE",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS PAIGE",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 29,
+    "y": 4,
+    "trainerIds": [
+     173
+    ],
+    "flags": [
+     "0x5AD"
+    ],
+    "name": "LESLIE",
+    "trainerClass": 64,
+    "className": "SUPER NERD",
+    "label": "SUPER NERD LESLIE",
+    "trainerType": 1,
+    "sightRange": 6,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 29,
+    "y": 5,
+    "trainerIds": [
+     129
+    ],
+    "flags": [
+     "0x581"
+    ],
+    "name": "ANDREA",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS ANDREA",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 29,
+    "y": 6,
+    "trainerIds": [
+     130
+    ],
+    "flags": [
+     "0x582"
+    ],
+    "name": "MEGAN",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS MEGAN",
+    "trainerType": 1,
+    "sightRange": 6,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 21,
+    "y": 3,
+    "trainerIds": [
+     262
+    ],
+    "flags": [
+     "0x606"
+    ],
+    "name": "STAN",
+    "trainerClass": 72,
+    "className": "GAMER",
+    "label": "GAMER STAN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 9,
+    "y": 6,
+    "trainerIds": [
+     171
+    ],
+    "flags": [
+     "0x5AB"
+    ],
+    "name": "AIDAN",
+    "trainerClass": 64,
+    "className": "SUPER NERD",
+    "label": "SUPER NERD AIDAN",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 12,
+    "x": 40,
+    "y": 3,
+    "trainerIds": [
+     484
+    ],
+    "flags": [
+     "0x6E4"
+    ],
+    "name": "ELI & ANNE",
+    "trainerClass": 92,
+    "className": "TWINS",
+    "label": "TWINS ELI & ANNE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 13,
+    "x": 41,
+    "y": 3,
+    "trainerIds": [
+     484
+    ],
+    "flags": [
+     "0x6E4"
+    ],
+    "name": "ELI & ANNE",
+    "trainerClass": 92,
+    "className": "TWINS",
+    "label": "TWINS ELI & ANNE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 14,
+    "x": 14,
+    "y": 16,
+    "trainerIds": [
+     535
+    ],
+    "flags": [
+     "0x717"
+    ],
+    "name": "RICARDO",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER RICARDO",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 15,
+    "x": 24,
+    "y": 17,
+    "trainerIds": [
+     536
+    ],
+    "flags": [
+     "0x718"
+    ],
+    "name": "JAREN",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER JAREN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,27": {
+  "width": 72,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 14,
+    "y": 10,
+    "trainerIds": [
+     154
+    ],
+    "flags": [
+     "0x59A"
+    ],
+    "name": "ALICIA",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER ALICIA",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 20,
+    "y": 17,
+    "trainerIds": [
+     465
+    ],
+    "flags": [
+     "0x6D1"
+    ],
+    "name": "JEREMY",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER JEREMY",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 61,
+    "y": 16,
+    "trainerIds": [
+     185
+    ],
+    "flags": [
+     "0x5B9"
+    ],
+    "name": "ALAN",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER ALAN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 26,
+    "y": 7,
+    "trainerIds": [
+     148
+    ],
+    "flags": [
+     "0x594"
+    ],
+    "name": "CHRIS",
+    "trainerClass": 61,
+    "className": "CAMPER",
+    "label": "CAMPER CHRIS",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 26,
+    "y": 1,
+    "trainerIds": [
+     114
+    ],
+    "flags": [
+     "0x572"
+    ],
+    "name": "BRENT",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER BRENT",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 49,
+    "y": 7,
+    "trainerIds": [
+     115
+    ],
+    "flags": [
+     "0x573"
+    ],
+    "name": "CONNER",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER CONNER",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 53,
+    "y": 2,
+    "trainerIds": [
+     186
+    ],
+    "flags": [
+     "0x5BA"
+    ],
+    "name": "BRICE",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER BRICE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 60,
+    "y": 9,
+    "trainerIds": [
+     155
+    ],
+    "flags": [
+     "0x59B"
+    ],
+    "name": "CAITLIN",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER CAITLIN",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 36,
+    "y": 6,
+    "trainerIds": [
+     149
+    ],
+    "flags": [
+     "0x595"
+    ],
+    "name": "DREW",
+    "trainerClass": 61,
+    "className": "CAMPER",
+    "label": "CAMPER DREW",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,28": {
+  "width": 24,
+  "height": 80,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 7,
+    "y": 60,
+    "trainerIds": [
+     157
+    ],
+    "flags": [
+     "0x59D"
+    ],
+    "name": "CAROL",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER CAROL",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 4,
+    "y": 62,
+    "trainerIds": [
+     187
+    ],
+    "flags": [
+     "0x5BB"
+    ],
+    "name": "CLARK",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER CLARK",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 15,
+    "y": 70,
+    "trainerIds": [
+     163
+    ],
+    "flags": [
+     "0x5A3"
+    ],
+    "name": "HERMAN",
+    "trainerClass": 63,
+    "className": "POKEMANIAC",
+    "label": "POKEMANIAC HERMAN",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 4,
+    "y": 68,
+    "trainerIds": [
+     188
+    ],
+    "flags": [
+     "0x5BC"
+    ],
+    "name": "TRENT",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER TRENT",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 13,
+    "y": 44,
+    "trainerIds": [
+     162
+    ],
+    "flags": [
+     "0x5A2"
+    ],
+    "name": "MARK",
+    "trainerClass": 63,
+    "className": "POKEMANIAC",
+    "label": "POKEMANIAC MARK",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 9,
+    "y": 27,
+    "trainerIds": [
+     156
+    ],
+    "flags": [
+     "0x59C"
+    ],
+    "name": "HEIDI",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER HEIDI",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,29": {
+  "width": 72,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 19,
+    "y": 8,
+    "trainerIds": [
+     97
+    ],
+    "flags": [
+     "0x561"
+    ],
+    "name": "EDDIE",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER EDDIE",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 16,
+    "y": 17,
+    "trainerIds": [
+     258
+    ],
+    "flags": [
+     "0x602"
+    ],
+    "name": "HUGO",
+    "trainerClass": 72,
+    "className": "GAMER",
+    "label": "GAMER HUGO",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 31,
+    "y": 8,
+    "trainerIds": [
+     98
+    ],
+    "flags": [
+     "0x562"
+    ],
+    "name": "DILLON",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER DILLON",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 28,
+    "y": 10,
+    "trainerIds": [
+     100
+    ],
+    "flags": [
+     "0x564"
+    ],
+    "name": "DAVE",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER DAVE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 38,
+    "y": 15,
+    "trainerIds": [
+     259
+    ],
+    "flags": [
+     "0x603"
+    ],
+    "name": "JASPER",
+    "trainerClass": 72,
+    "className": "GAMER",
+    "label": "GAMER JASPER",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 50,
+    "y": 4,
+    "trainerIds": [
+     261
+    ],
+    "flags": [
+     "0x605"
+    ],
+    "name": "DARIAN",
+    "trainerClass": 72,
+    "className": "GAMER",
+    "label": "GAMER DARIAN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 42,
+    "y": 8,
+    "trainerIds": [
+     221
+    ],
+    "flags": [
+     "0x5DD"
+    ],
+    "name": "BRAXTON",
+    "trainerClass": 68,
+    "className": "ENGINEER",
+    "label": "ENGINEER BRAXTON",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 50,
+    "y": 14,
+    "trainerIds": [
+     99
+    ],
+    "flags": [
+     "0x563"
+    ],
+    "name": "YASU",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER YASU",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 57,
+    "y": 16,
+    "trainerIds": [
+     260
+    ],
+    "flags": [
+     "0x604"
+    ],
+    "name": "DIRK",
+    "trainerClass": 72,
+    "className": "GAMER",
+    "label": "GAMER DIRK",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 10,
+    "x": 32,
+    "y": 18,
+    "trainerIds": [
+     222
+    ],
+    "flags": [
+     "0x5DE"
+    ],
+    "name": "BERNIE",
+    "trainerClass": 68,
+    "className": "ENGINEER",
+    "label": "ENGINEER BERNIE",
+    "trainerType": 1,
+    "sightRange": 6,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,30": {
+  "width": 24,
+  "height": 120,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 17,
+    "y": 32,
+    "trainerIds": [
+     225
+    ],
+    "flags": [
+     "0x5E1"
+    ],
+    "name": "NED",
+    "trainerClass": 69,
+    "className": "FISHERMAN",
+    "label": "FISHERMAN NED",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 9,
+    "y": 40,
+    "trainerIds": [
+     226
+    ],
+    "flags": [
+     "0x5E2"
+    ],
+    "name": "CHIP",
+    "trainerClass": 69,
+    "className": "FISHERMAN",
+    "label": "FISHERMAN CHIP",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 16,
+    "y": 47,
+    "trainerIds": [
+     227
+    ],
+    "flags": [
+     "0x5E3"
+    ],
+    "name": "HANK",
+    "trainerClass": 69,
+    "className": "FISHERMAN",
+    "label": "FISHERMAN HANK",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 13,
+    "y": 59,
+    "trainerIds": [
+     228
+    ],
+    "flags": [
+     "0x5E4"
+    ],
+    "name": "ELLIOT",
+    "trainerClass": 69,
+    "className": "FISHERMAN",
+    "label": "FISHERMAN ELLIOT",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 13,
+    "y": 92,
+    "trainerIds": [
+     285
+    ],
+    "flags": [
+     "0x61D"
+    ],
+    "name": "LUCA",
+    "trainerClass": 76,
+    "className": "ROCKER",
+    "label": "ROCKER LUCA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 10,
+    "y": 99,
+    "trainerIds": [
+     477
+    ],
+    "flags": [
+     "0x6DD"
+    ],
+    "name": "JUSTIN",
+    "trainerClass": 61,
+    "className": "CAMPER",
+    "label": "CAMPER JUSTIN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 18,
+    "y": 108,
+    "trainerIds": [
+     233
+    ],
+    "flags": [
+     "0x5E9"
+    ],
+    "name": "ANDREW",
+    "trainerClass": 69,
+    "className": "FISHERMAN",
+    "label": "FISHERMAN ANDREW",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 12,
+    "x": 19,
+    "y": 64,
+    "trainerIds": [
+     486
+    ],
+    "flags": [
+     "0x6E6"
+    ],
+    "name": "GIA & JES",
+    "trainerClass": 94,
+    "className": "YOUNG COUPLE",
+    "label": "YOUNG COUPLE GIA & JES",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 13,
+    "x": 19,
+    "y": 63,
+    "trainerIds": [
+     486
+    ],
+    "flags": [
+     "0x6E6"
+    ],
+    "name": "GIA & JES",
+    "trainerClass": 94,
+    "className": "YOUNG COUPLE",
+    "label": "YOUNG COUPLE GIA & JES",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,31": {
+  "width": 72,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 62,
+    "y": 6,
+    "trainerIds": [
+     466
+    ],
+    "flags": [
+     "0x6D2"
+    ],
+    "name": "ALMA",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER ALMA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 63,
+    "y": 12,
+    "trainerIds": [
+     300
+    ],
+    "flags": [
+     "0x62C"
+    ],
+    "name": "SEBASTIAN",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER SEBASTIAN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 54,
+    "y": 11,
+    "trainerIds": [
+     467
+    ],
+    "flags": [
+     "0x6D3"
+    ],
+    "name": "SUSIE",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER SUSIE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 42,
+    "y": 7,
+    "trainerIds": [
+     269
+    ],
+    "flags": [
+     "0x60D"
+    ],
+    "name": "SHEILA",
+    "trainerClass": 73,
+    "className": "BEAUTY",
+    "label": "BEAUTY SHEILA",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 43,
+    "y": 7,
+    "trainerIds": [
+     268
+    ],
+    "flags": [
+     "0x60C"
+    ],
+    "name": "LOLA",
+    "trainerClass": 73,
+    "className": "BEAUTY",
+    "label": "BEAUTY LOLA",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 35,
+    "y": 10,
+    "trainerIds": [
+     468
+    ],
+    "flags": [
+     "0x6D4"
+    ],
+    "name": "VALERIE",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER VALERIE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 29,
+    "y": 11,
+    "trainerIds": [
+     469
+    ],
+    "flags": [
+     "0x6D5"
+    ],
+    "name": "GWEN",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER GWEN",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 9,
+    "y": 14,
+    "trainerIds": [
+     302
+    ],
+    "flags": [
+     "0x62E"
+    ],
+    "name": "ROBERT",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER ROBERT",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 16,
+    "y": 5,
+    "trainerIds": [
+     301
+    ],
+    "flags": [
+     "0x62D"
+    ],
+    "name": "PERRY",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER PERRY",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 10,
+    "x": 14,
+    "y": 8,
+    "trainerIds": [
+     195
+    ],
+    "flags": [
+     "0x5C3"
+    ],
+    "name": "JARED",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER JARED",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,32": {
+  "width": 24,
+  "height": 60,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 7,
+    "y": 37,
+    "trainerIds": [
+     209
+    ],
+    "flags": [
+     "0x5D1"
+    ],
+    "name": "GERALD",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER GERALD",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 18,
+    "y": 35,
+    "trainerIds": [
+     303
+    ],
+    "flags": [
+     "0x62F"
+    ],
+    "name": "DONALD",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER DONALD",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 10,
+    "y": 14,
+    "trainerIds": [
+     315
+    ],
+    "flags": [
+     "0x63B"
+    ],
+    "name": "BECK",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER BECK",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 16,
+    "y": 16,
+    "trainerIds": [
+     316
+    ],
+    "flags": [
+     "0x63C"
+    ],
+    "name": "MARLON",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER MARLON",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 7,
+    "y": 31,
+    "trainerIds": [
+     208
+    ],
+    "flags": [
+     "0x5D0"
+    ],
+    "name": "ISAAC",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER ISAAC",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 7,
+    "y": 34,
+    "trainerIds": [
+     196
+    ],
+    "flags": [
+     "0x5C4"
+    ],
+    "name": "MALIK",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER MALIK",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 8,
+    "y": 9,
+    "trainerIds": [
+     314
+    ],
+    "flags": [
+     "0x63A"
+    ],
+    "name": "MITCH",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER MITCH",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 7,
+    "y": 6,
+    "trainerIds": [
+     313
+    ],
+    "flags": [
+     "0x639"
+    ],
+    "name": "CARTER",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER CARTER",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 10,
+    "y": 37,
+    "trainerIds": [
+     207
+    ],
+    "flags": [
+     "0x5CF"
+    ],
+    "name": "LUKAS",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER LUKAS",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 10,
+    "x": 18,
+    "y": 47,
+    "trainerIds": [
+     304
+    ],
+    "flags": [
+     "0x630"
+    ],
+    "name": "BENNY",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER BENNY",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 14,
+    "x": 13,
+    "y": 51,
+    "trainerIds": [
+     487
+    ],
+    "flags": [
+     "0x6E7"
+    ],
+    "name": "KIRI & JAN",
+    "trainerClass": 92,
+    "className": "TWINS",
+    "label": "TWINS KIRI & JAN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 15,
+    "x": 12,
+    "y": 51,
+    "trainerIds": [
+     487
+    ],
+    "flags": [
+     "0x6E7"
+    ],
+    "name": "KIRI & JAN",
+    "trainerClass": 92,
+    "className": "TWINS",
+    "label": "TWINS KIRI & JAN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,33": {
+  "width": 72,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 22,
+    "y": 13,
+    "trainerIds": [
+     478
+    ],
+    "flags": [
+     "0x6DE"
+    ],
+    "name": "YAZMIN",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER YAZMIN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 31,
+    "y": 12,
+    "trainerIds": [
+     305
+    ],
+    "flags": [
+     "0x631"
+    ],
+    "name": "EDWIN",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER EDWIN",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 37,
+    "y": 14,
+    "trainerIds": [
+     306
+    ],
+    "flags": [
+     "0x632"
+    ],
+    "name": "CHESTER",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER CHESTER",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 44,
+    "y": 13,
+    "trainerIds": [
+     479
+    ],
+    "flags": [
+     "0x6DF"
+    ],
+    "name": "KINDRA",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER KINDRA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 50,
+    "y": 12,
+    "trainerIds": [
+     274
+    ],
+    "flags": [
+     "0x612"
+    ],
+    "name": "OLIVIA",
+    "trainerClass": 73,
+    "className": "BEAUTY",
+    "label": "BEAUTY OLIVIA",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 59,
+    "y": 12,
+    "trainerIds": [
+     198
+    ],
+    "flags": [
+     "0x5C6"
+    ],
+    "name": "ALEX",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER ALEX",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 63,
+    "y": 13,
+    "trainerIds": [
+     197
+    ],
+    "flags": [
+     "0x5C5"
+    ],
+    "name": "ERNEST",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER ERNEST",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 52,
+    "y": 8,
+    "trainerIds": [
+     480
+    ],
+    "flags": [
+     "0x6E0"
+    ],
+    "name": "BECKY",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER BECKY",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 54,
+    "y": 12,
+    "trainerIds": [
+     273
+    ],
+    "flags": [
+     "0x611"
+    ],
+    "name": "GRACE",
+    "trainerClass": 73,
+    "className": "BEAUTY",
+    "label": "BEAUTY GRACE",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 10,
+    "x": 28,
+    "y": 6,
+    "trainerIds": [
+     481
+    ],
+    "flags": [
+     "0x6E1"
+    ],
+    "name": "CELIA",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER CELIA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 12,
+    "x": 39,
+    "y": 7,
+    "trainerIds": [
+     488
+    ],
+    "flags": [
+     "0x6E8"
+    ],
+    "name": "RON & MYA",
+    "trainerClass": 95,
+    "className": "CRUSH KIN",
+    "label": "CRUSH KIN RON & MYA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 13,
+    "x": 40,
+    "y": 7,
+    "trainerIds": [
+     488
+    ],
+    "flags": [
+     "0x6E8"
+    ],
+    "name": "RON & MYA",
+    "trainerClass": 95,
+    "className": "CRUSH KIN",
+    "label": "CRUSH KIN RON & MYA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,34": {
+  "width": 48,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 16,
+    "y": 12,
+    "trainerIds": [
+     199
+    ],
+    "flags": [
+     "0x5C7"
+    ],
+    "name": "LAO",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER LAO",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 14,
+    "y": 14,
+    "trainerIds": [
+     249
+    ],
+    "flags": [
+     "0x5F9"
+    ],
+    "name": "KOJI",
+    "trainerClass": 71,
+    "className": "CUE BALL",
+    "label": "CUE BALL KOJI",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 12,
+    "y": 12,
+    "trainerIds": [
+     250
+    ],
+    "flags": [
+     "0x5FA"
+    ],
+    "name": "LUKE",
+    "trainerClass": 71,
+    "className": "CUE BALL",
+    "label": "CUE BALL LUKE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 8,
+    "y": 12,
+    "trainerIds": [
+     202
+    ],
+    "flags": [
+     "0x5CA"
+    ],
+    "name": "RUBEN",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER RUBEN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 10,
+    "y": 14,
+    "trainerIds": [
+     201
+    ],
+    "flags": [
+     "0x5C9"
+    ],
+    "name": "HIDEO",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER HIDEO",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 6,
+    "y": 14,
+    "trainerIds": [
+     251
+    ],
+    "flags": [
+     "0x5FB"
+    ],
+    "name": "CAMRON",
+    "trainerClass": 71,
+    "className": "CUE BALL",
+    "label": "CUE BALL CAMRON",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 30,
+    "y": 5,
+    "trainerIds": [
+     489
+    ],
+    "flags": [
+     "0x6E9"
+    ],
+    "name": "LEA & JED",
+    "trainerClass": 94,
+    "className": "YOUNG COUPLE",
+    "label": "YOUNG COUPLE LEA & JED",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 31,
+    "y": 5,
+    "trainerIds": [
+     489
+    ],
+    "flags": [
+     "0x6E9"
+    ],
+    "name": "LEA & JED",
+    "trainerClass": 94,
+    "className": "YOUNG COUPLE",
+    "label": "YOUNG COUPLE LEA & JED",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,35": {
+  "width": 24,
+  "height": 160,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 4,
+    "y": 18,
+    "trainerIds": [
+     470
+    ],
+    "flags": [
+     "0x6D6"
+    ],
+    "name": "VIRGIL",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER VIRGIL",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 11,
+    "y": 15,
+    "trainerIds": [
+     253
+    ],
+    "flags": [
+     "0x5FD"
+    ],
+    "name": "ISAIAH",
+    "trainerClass": 71,
+    "className": "CUE BALL",
+    "label": "CUE BALL ISAIAH",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 15,
+    "y": 24,
+    "trainerIds": [
+     252
+    ],
+    "flags": [
+     "0x5FC"
+    ],
+    "name": "RAUL",
+    "trainerClass": 71,
+    "className": "CUE BALL",
+    "label": "CUE BALL RAUL",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 18,
+    "y": 41,
+    "trainerIds": [
+     204
+    ],
+    "flags": [
+     "0x5CC"
+    ],
+    "name": "NIKOLAS",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER NIKOLAS",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 7,
+    "y": 38,
+    "trainerIds": [
+     203
+    ],
+    "flags": [
+     "0x5CB"
+    ],
+    "name": "BILLY",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER BILLY",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 2,
+    "y": 61,
+    "trainerIds": [
+     255
+    ],
+    "flags": [
+     "0x5FF"
+    ],
+    "name": "JAMAL",
+    "trainerClass": 71,
+    "className": "CUE BALL",
+    "label": "CUE BALL JAMAL",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 21,
+    "y": 61,
+    "trainerIds": [
+     254
+    ],
+    "flags": [
+     "0x5FE"
+    ],
+    "name": "ZEEK",
+    "trainerClass": 71,
+    "className": "CUE BALL",
+    "label": "CUE BALL ZEEK",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 18,
+    "y": 94,
+    "trainerIds": [
+     256
+    ],
+    "flags": [
+     "0x600"
+    ],
+    "name": "COREY",
+    "trainerClass": 71,
+    "className": "CUE BALL",
+    "label": "CUE BALL COREY",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 16,
+    "y": 134,
+    "trainerIds": [
+     206
+    ],
+    "flags": [
+     "0x5CE"
+    ],
+    "name": "WILLIAM",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER WILLIAM",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 10,
+    "x": 4,
+    "y": 116,
+    "trainerIds": [
+     205
+    ],
+    "flags": [
+     "0x5CD"
+    ],
+    "name": "JAXON",
+    "trainerClass": 66,
+    "className": "BIKER",
+    "label": "BIKER JAXON",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,36": {
+  "width": 60,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 46,
+    "y": 14,
+    "trainerIds": [
+     309
+    ],
+    "flags": [
+     "0x635"
+    ],
+    "name": "JACOB",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER JACOB",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 41,
+    "y": 15,
+    "trainerIds": [
+     308
+    ],
+    "flags": [
+     "0x634"
+    ],
+    "name": "RAMIRO",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER RAMIRO",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 39,
+    "y": 12,
+    "trainerIds": [
+     307
+    ],
+    "flags": [
+     "0x633"
+    ],
+    "name": "WILTON",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER WILTON",
+    "trainerType": 1,
+    "sightRange": 6,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,37": {
+  "width": 24,
+  "height": 60,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 15,
+    "y": 10,
+    "trainerIds": [
+     236
+    ],
+    "flags": [
+     "0x5EC"
+    ],
+    "name": "REECE",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER REECE",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 10,
+    "y": 9,
+    "trainerIds": [
+     235
+    ],
+    "flags": [
+     "0x5EB"
+    ],
+    "name": "RICHARD",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER RICHARD",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 12,
+    "y": 17,
+    "trainerIds": [
+     240
+    ],
+    "flags": [
+     "0x5F0"
+    ],
+    "name": "TONY",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER TONY",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 18,
+    "y": 33,
+    "trainerIds": [
+     237
+    ],
+    "flags": [
+     "0x5ED"
+    ],
+    "name": "MATTHEW",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER MATTHEW",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 8,
+    "y": 27,
+    "trainerIds": [
+     238
+    ],
+    "flags": [
+     "0x5EE"
+    ],
+    "name": "DOUGLAS",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER DOUGLAS",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 16,
+    "y": 22,
+    "trainerIds": [
+     239
+    ],
+    "flags": [
+     "0x5EF"
+    ],
+    "name": "DAVID",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER DAVID",
+    "trainerType": 1,
+    "sightRange": 6,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 11,
+    "y": 47,
+    "trainerIds": [
+     241
+    ],
+    "flags": [
+     "0x5F1"
+    ],
+    "name": "AXLE",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER AXLE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 14,
+    "y": 48,
+    "trainerIds": [
+     277
+    ],
+    "flags": [
+     "0x615"
+    ],
+    "name": "ALICE",
+    "trainerClass": 74,
+    "className": "SWIMMER",
+    "label": "SWIMMER ALICE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 12,
+    "y": 49,
+    "trainerIds": [
+     278
+    ],
+    "flags": [
+     "0x616"
+    ],
+    "name": "CONNIE",
+    "trainerClass": 74,
+    "className": "SWIMMER",
+    "label": "SWIMMER CONNIE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 10,
+    "x": 9,
+    "y": 48,
+    "trainerIds": [
+     276
+    ],
+    "flags": [
+     "0x614"
+    ],
+    "name": "ANYA",
+    "trainerClass": 74,
+    "className": "SWIMMER",
+    "label": "SWIMMER ANYA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 11,
+    "x": 8,
+    "y": 41,
+    "trainerIds": [
+     490
+    ],
+    "flags": [
+     "0x6EA"
+    ],
+    "name": "LIA & LUC",
+    "trainerClass": 96,
+    "className": "SIS AND BRO",
+    "label": "SIS AND BRO LIA & LUC",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 12,
+    "x": 9,
+    "y": 41,
+    "trainerIds": [
+     490
+    ],
+    "flags": [
+     "0x6EA"
+    ],
+    "name": "LIA & LUC",
+    "trainerClass": 96,
+    "className": "SIS AND BRO",
+    "label": "SIS AND BRO LIA & LUC",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,38": {
+  "width": 120,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 8,
+    "y": 11,
+    "trainerIds": [
+     272
+    ],
+    "flags": [
+     "0x610"
+    ],
+    "name": "MELISSA",
+    "trainerClass": 74,
+    "className": "SWIMMER",
+    "label": "SWIMMER MELISSA",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 16,
+    "y": 14,
+    "trainerIds": [
+     472
+    ],
+    "flags": [
+     "0x6D8"
+    ],
+    "name": "MISSY",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER MISSY",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 34,
+    "y": 7,
+    "trainerIds": [
+     271
+    ],
+    "flags": [
+     "0x60F"
+    ],
+    "name": "NORA",
+    "trainerClass": 74,
+    "className": "SWIMMER",
+    "label": "SWIMMER NORA",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 43,
+    "y": 9,
+    "trainerIds": [
+     310
+    ],
+    "flags": [
+     "0x636"
+    ],
+    "name": "ROGER",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER ROGER",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 23,
+    "y": 10,
+    "trainerIds": [
+     243
+    ],
+    "flags": [
+     "0x5F3"
+    ],
+    "name": "DEAN",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER DEAN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 73,
+    "y": 16,
+    "trainerIds": [
+     473
+    ],
+    "flags": [
+     "0x6D9"
+    ],
+    "name": "IRENE",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER IRENE",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 111,
+    "y": 9,
+    "trainerIds": [
+     242
+    ],
+    "flags": [
+     "0x5F2"
+    ],
+    "name": "BARRY",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER BARRY",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 106,
+    "y": 11,
+    "trainerIds": [
+     244
+    ],
+    "flags": [
+     "0x5F4"
+    ],
+    "name": "DARRIN",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER DARRIN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 93,
+    "y": 10,
+    "trainerIds": [
+     279
+    ],
+    "flags": [
+     "0x617"
+    ],
+    "name": "SHIRLEY",
+    "trainerClass": 74,
+    "className": "SWIMMER",
+    "label": "SWIMMER SHIRLEY",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 10,
+    "x": 54,
+    "y": 11,
+    "trainerIds": [
+     270
+    ],
+    "flags": [
+     "0x60E"
+    ],
+    "name": "TIFFANY",
+    "trainerClass": 74,
+    "className": "SWIMMER",
+    "label": "SWIMMER TIFFANY",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,39": {
+  "width": 24,
+  "height": 50,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 7,
+    "y": 27,
+    "trainerIds": [
+     229
+    ],
+    "flags": [
+     "0x5E5"
+    ],
+    "name": "RONALD",
+    "trainerClass": 69,
+    "className": "FISHERMAN",
+    "label": "FISHERMAN RONALD",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 16,
+    "y": 26,
+    "trainerIds": [
+     231
+    ],
+    "flags": [
+     "0x5E7"
+    ],
+    "name": "WADE",
+    "trainerClass": 69,
+    "className": "FISHERMAN",
+    "label": "FISHERMAN WADE",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 12,
+    "y": 44,
+    "trainerIds": [
+     245
+    ],
+    "flags": [
+     "0x5F5"
+    ],
+    "name": "SPENCER",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER SPENCER",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 14,
+    "y": 35,
+    "trainerIds": [
+     491
+    ],
+    "flags": [
+     "0x6EB"
+    ],
+    "name": "LIL & IAN",
+    "trainerClass": 96,
+    "className": "SIS AND BRO",
+    "label": "SIS AND BRO LIL & IAN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 15,
+    "y": 35,
+    "trainerIds": [
+     491
+    ],
+    "flags": [
+     "0x6EB"
+    ],
+    "name": "LIL & IAN",
+    "trainerClass": 96,
+    "className": "SIS AND BRO",
+    "label": "SIS AND BRO LIL & IAN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,40": {
+  "width": 24,
+  "height": 50,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 11,
+    "y": 8,
+    "trainerIds": [
+     230
+    ],
+    "flags": [
+     "0x5E6"
+    ],
+    "name": "CLAUDE",
+    "trainerClass": 69,
+    "className": "FISHERMAN",
+    "label": "FISHERMAN CLAUDE",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 14,
+    "y": 15,
+    "trainerIds": [
+     232
+    ],
+    "flags": [
+     "0x5E8"
+    ],
+    "name": "NOLAN",
+    "trainerClass": 69,
+    "className": "FISHERMAN",
+    "label": "FISHERMAN NOLAN",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 15,
+    "y": 24,
+    "trainerIds": [
+     246
+    ],
+    "flags": [
+     "0x5F6"
+    ],
+    "name": "JACK",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER JACK",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 15,
+    "y": 38,
+    "trainerIds": [
+     247
+    ],
+    "flags": [
+     "0x5F7"
+    ],
+    "name": "JEROME",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER JEROME",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 10,
+    "y": 29,
+    "trainerIds": [
+     248
+    ],
+    "flags": [
+     "0x5F8"
+    ],
+    "name": "ROLAND",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER ROLAND",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,43": {
+  "width": 24,
+  "height": 40,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 12,
+    "y": 15,
+    "trainerIds": [
+     356
+    ],
+    "flags": [
+     "0x664"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 3,
+    "hideFlag": "0x31"
+   },
+   {
+    "localId": 2,
+    "x": 12,
+    "y": 19,
+    "trainerIds": [
+     144
+    ],
+    "flags": [
+     "0x590"
+    ],
+    "name": "ETHAN",
+    "trainerClass": 61,
+    "className": "CAMPER",
+    "label": "CAMPER ETHAN",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 10,
+    "y": 22,
+    "trainerIds": [
+     122
+    ],
+    "flags": [
+     "0x57A"
+    ],
+    "name": "RELI",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS RELI",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 12,
+    "y": 25,
+    "trainerIds": [
+     92
+    ],
+    "flags": [
+     "0x55C"
+    ],
+    "name": "TIMMY",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER TIMMY",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 10,
+    "y": 28,
+    "trainerIds": [
+     123
+    ],
+    "flags": [
+     "0x57B"
+    ],
+    "name": "ALI",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS ALI",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 12,
+    "y": 31,
+    "trainerIds": [
+     110
+    ],
+    "flags": [
+     "0x56E"
+    ],
+    "name": "CALE",
+    "trainerClass": 58,
+    "className": "BUG CATCHER",
+    "label": "BUG CATCHER CALE",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 5,
+    "y": 21,
+    "trainerIds": [
+     143
+    ],
+    "flags": [
+     "0x58F"
+    ],
+    "name": "SHANE",
+    "trainerClass": 61,
+    "className": "CAMPER",
+    "label": "CAMPER SHANE",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,44": {
+  "width": 72,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 11,
+    "y": 4,
+    "trainerIds": [
+     182
+    ],
+    "flags": [
+     "0x5B6"
+    ],
+    "name": "FRANKLIN",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER FRANKLIN",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 18,
+    "y": 2,
+    "trainerIds": [
+     93
+    ],
+    "flags": [
+     "0x55D"
+    ],
+    "name": "JOEY",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER JOEY",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 17,
+    "y": 7,
+    "trainerIds": [
+     184
+    ],
+    "flags": [
+     "0x5B8"
+    ],
+    "name": "WAYNE",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER WAYNE",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 22,
+    "y": 4,
+    "trainerIds": [
+     94
+    ],
+    "flags": [
+     "0x55E"
+    ],
+    "name": "DAN",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER DAN",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 22,
+    "y": 8,
+    "trainerIds": [
+     153
+    ],
+    "flags": [
+     "0x599"
+    ],
+    "name": "KELSEY",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER KELSEY",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 27,
+    "y": 9,
+    "trainerIds": [
+     183
+    ],
+    "flags": [
+     "0x5B7"
+    ],
+    "name": "NOB",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER NOB",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 28,
+    "y": 4,
+    "trainerIds": [
+     471
+    ],
+    "flags": [
+     "0x6D7"
+    ],
+    "name": "FLINT",
+    "trainerClass": 61,
+    "className": "CAMPER",
+    "label": "CAMPER FLINT",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 36,
+    "y": 4,
+    "trainerIds": [
+     95
+    ],
+    "flags": [
+     "0x55F"
+    ],
+    "name": "CHAD",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER CHAD",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 42,
+    "y": 5,
+    "trainerIds": [
+     125
+    ],
+    "flags": [
+     "0x57D"
+    ],
+    "name": "HALEY",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS HALEY",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,45": {
+  "width": 24,
+  "height": 140,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 11,
+    "y": 32,
+    "trainerIds": [
+     547
+    ],
+    "flags": [
+     "0x723"
+    ],
+    "name": "MARIA",
+    "trainerClass": 74,
+    "className": "SWIMMER",
+    "label": "SWIMMER MARIA",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 17,
+    "y": 132,
+    "trainerIds": [
+     548
+    ],
+    "flags": [
+     "0x724"
+    ],
+    "name": "ABIGAIL",
+    "trainerClass": 74,
+    "className": "SWIMMER",
+    "label": "SWIMMER ABIGAIL",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 7,
+    "y": 39,
+    "trainerIds": [
+     549
+    ],
+    "flags": [
+     "0x725"
+    ],
+    "name": "FINN",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER FINN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 19,
+    "y": 79,
+    "trainerIds": [
+     550
+    ],
+    "flags": [
+     "0x726"
+    ],
+    "name": "GARRETT",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER GARRETT",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 15,
+    "y": 25,
+    "trainerIds": [
+     551
+    ],
+    "flags": [
+     "0x727"
+    ],
+    "name": "TOMMY",
+    "trainerClass": 69,
+    "className": "FISHERMAN",
+    "label": "FISHERMAN TOMMY",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 9,
+    "y": 53,
+    "trainerIds": [
+     518
+    ],
+    "flags": [
+     "0x706"
+    ],
+    "name": "SHARON",
+    "trainerClass": 99,
+    "className": "CRUSH GIRL",
+    "label": "CRUSH GIRL SHARON",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 18,
+    "y": 105,
+    "trainerIds": [
+     552
+    ],
+    "flags": [
+     "0x728"
+    ],
+    "name": "TANYA",
+    "trainerClass": 99,
+    "className": "CRUSH GIRL",
+    "label": "CRUSH GIRL TANYA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 16,
+    "y": 64,
+    "trainerIds": [
+     553
+    ],
+    "flags": [
+     "0x729"
+    ],
+    "name": "SHEA",
+    "trainerClass": 80,
+    "className": "BLACK BELT",
+    "label": "BLACK BELT SHEA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 9,
+    "x": 11,
+    "y": 64,
+    "trainerIds": [
+     554
+    ],
+    "flags": [
+     "0x72A"
+    ],
+    "name": "HUGH",
+    "trainerClass": 80,
+    "className": "BLACK BELT",
+    "label": "BLACK BELT HUGH",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 10,
+    "x": 11,
+    "y": 89,
+    "trainerIds": [
+     555
+    ],
+    "flags": [
+     "0x72B"
+    ],
+    "name": "BRYCE",
+    "trainerClass": 61,
+    "className": "CAMPER",
+    "label": "CAMPER BRYCE",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 11,
+    "x": 9,
+    "y": 108,
+    "trainerIds": [
+     556
+    ],
+    "flags": [
+     "0x72C"
+    ],
+    "name": "CLAIRE",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER CLAIRE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 12,
+    "x": 8,
+    "y": 68,
+    "trainerIds": [
+     557
+    ],
+    "flags": [
+     "0x72D"
+    ],
+    "name": "MIK & KIA",
+    "trainerClass": 95,
+    "className": "CRUSH KIN",
+    "label": "CRUSH KIN MIK & KIA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 13,
+    "x": 9,
+    "y": 68,
+    "trainerIds": [
+     557
+    ],
+    "flags": [
+     "0x72D"
+    ],
+    "name": "MIK & KIA",
+    "trainerClass": 95,
+    "className": "CRUSH KIN",
+    "label": "CRUSH KIN MIK & KIA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,46": {
+  "width": 24,
+  "height": 40,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 8,
+    "y": 11,
+    "trainerIds": [
+     546
+    ],
+    "flags": [
+     "0x722"
+    ],
+    "name": "AMARA",
+    "trainerClass": 74,
+    "className": "SWIMMER",
+    "label": "SWIMMER AMARA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,48": {
+  "width": 96,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 27,
+    "y": 10,
+    "trainerIds": [
+     523
+    ],
+    "flags": [
+     "0x70B"
+    ],
+    "name": "NIKKI",
+    "trainerClass": 103,
+    "className": "AROMA LADY",
+    "label": "AROMA LADY NIKKI",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 68,
+    "y": 10,
+    "trainerIds": [
+     558
+    ],
+    "flags": [
+     "0x72E"
+    ],
+    "name": "VIOLET",
+    "trainerClass": 103,
+    "className": "AROMA LADY",
+    "label": "AROMA LADY VIOLET",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 33,
+    "y": 13,
+    "trainerIds": [
+     519
+    ],
+    "flags": [
+     "0x707"
+    ],
+    "name": "AMIRA",
+    "trainerClass": 100,
+    "className": "TUBER",
+    "label": "TUBER AMIRA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 50,
+    "y": 11,
+    "trainerIds": [
+     559
+    ],
+    "flags": [
+     "0x72F"
+    ],
+    "name": "ALEXIS",
+    "trainerClass": 100,
+    "className": "TUBER",
+    "label": "TUBER ALEXIS",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 36,
+    "y": 4,
+    "trainerIds": [
+     561
+    ],
+    "flags": [
+     "0x731"
+    ],
+    "name": "TISHA",
+    "trainerClass": 74,
+    "className": "SWIMMER",
+    "label": "SWIMMER TISHA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 77,
+    "y": 5,
+    "trainerIds": [
+     560
+    ],
+    "flags": [
+     "0x730"
+    ],
+    "name": "JOY & MEG",
+    "trainerClass": 92,
+    "className": "TWINS",
+    "label": "TWINS JOY & MEG",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 78,
+    "y": 5,
+    "trainerIds": [
+     560
+    ],
+    "flags": [
+     "0x730"
+    ],
+    "name": "JOY & MEG",
+    "trainerClass": 92,
+    "className": "TWINS",
+    "label": "TWINS JOY & MEG",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,54": {
+  "width": 72,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 44,
+    "y": 10,
+    "trainerIds": [
+     526
+    ],
+    "flags": [
+     "0x70E"
+    ],
+    "name": "DAISY",
+    "trainerClass": 106,
+    "className": "PAINTER",
+    "label": "PAINTER DAISY",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 33,
+    "y": 12,
+    "trainerIds": [
+     562
+    ],
+    "flags": [
+     "0x732"
+    ],
+    "name": "CELINA",
+    "trainerClass": 106,
+    "className": "PAINTER",
+    "label": "PAINTER CELINA",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 12,
+    "y": 10,
+    "trainerIds": [
+     563
+    ],
+    "flags": [
+     "0x733"
+    ],
+    "name": "RAYNA",
+    "trainerClass": 106,
+    "className": "PAINTER",
+    "label": "PAINTER RAYNA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 23,
+    "y": 9,
+    "trainerIds": [
+     525
+    ],
+    "flags": [
+     "0x70D"
+    ],
+    "name": "JACKI",
+    "trainerClass": 105,
+    "className": "LADY",
+    "label": "LADY JACKI",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 33,
+    "y": 8,
+    "trainerIds": [
+     564
+    ],
+    "flags": [
+     "0x734"
+    ],
+    "name": "GILLIAN",
+    "trainerClass": 105,
+    "className": "LADY",
+    "label": "LADY GILLIAN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 33,
+    "y": 3,
+    "trainerIds": [
+     565
+    ],
+    "flags": [
+     "0x735"
+    ],
+    "name": "DESTIN",
+    "trainerClass": 57,
+    "className": "YOUNGSTER",
+    "label": "YOUNGSTER DESTIN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 56,
+    "y": 7,
+    "trainerIds": [
+     566
+    ],
+    "flags": [
+     "0x736"
+    ],
+    "name": "TOBY",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER TOBY",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,55": {
+  "width": 72,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 2,
+    "x": 9,
+    "y": 7,
+    "trainerIds": [
+     520
+    ],
+    "flags": [
+     "0x708"
+    ],
+    "name": "ALIZE",
+    "trainerClass": 101,
+    "className": "PKMN BREEDER",
+    "label": "PKMN BREEDER ALIZE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,56": {
+  "width": 24,
+  "height": 40,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 18,
+    "y": 18,
+    "trainerIds": [
+     569
+    ],
+    "flags": [
+     "0x739"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x88"
+   },
+   {
+    "localId": 2,
+    "x": 17,
+    "y": 5,
+    "trainerIds": [
+     567
+    ],
+    "flags": [
+     "0x737"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x88"
+   },
+   {
+    "localId": 3,
+    "x": 11,
+    "y": 27,
+    "trainerIds": [
+     568
+    ],
+    "flags": [
+     "0x738"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x88"
+   }
+  ]
+ },
+ "3,57": {
+  "width": 24,
+  "height": 60,
+  "trainers": [
+   {
+    "localId": 2,
+    "x": 12,
+    "y": 6,
+    "trainerIds": [
+     570
+    ],
+    "flags": [
+     "0x73A"
+    ],
+    "name": "MILO",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER MILO",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 14,
+    "y": 17,
+    "trainerIds": [
+     571
+    ],
+    "flags": [
+     "0x73B"
+    ],
+    "name": "CHAZ",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER CHAZ",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 17,
+    "y": 31,
+    "trainerIds": [
+     572
+    ],
+    "flags": [
+     "0x73C"
+    ],
+    "name": "HAROLD",
+    "trainerClass": 79,
+    "className": "BIRD KEEPER",
+    "label": "BIRD KEEPER HAROLD",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,58": {
+  "width": 24,
+  "height": 80,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 9,
+    "y": 24,
+    "trainerIds": [
+     540
+    ],
+    "flags": [
+     "0x71C"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x88"
+   },
+   {
+    "localId": 2,
+    "x": 12,
+    "y": 15,
+    "trainerIds": [
+     573
+    ],
+    "flags": [
+     "0x73D"
+    ],
+    "name": "TYLOR",
+    "trainerClass": 69,
+    "className": "FISHERMAN",
+    "label": "FISHERMAN TYLOR",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 13,
+    "y": 34,
+    "trainerIds": [
+     574
+    ],
+    "flags": [
+     "0x73E"
+    ],
+    "name": "MYMO",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER MYMO",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 14,
+    "y": 61,
+    "trainerIds": [
+     575
+    ],
+    "flags": [
+     "0x73F"
+    ],
+    "name": "NICOLE",
+    "trainerClass": 74,
+    "className": "SWIMMER",
+    "label": "SWIMMER NICOLE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 10,
+    "y": 44,
+    "trainerIds": [
+     576
+    ],
+    "flags": [
+     "0x740"
+    ],
+    "name": "AVA & GEB",
+    "trainerClass": 96,
+    "className": "SIS AND BRO",
+    "label": "SIS AND BRO AVA & GEB",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 11,
+    "y": 44,
+    "trainerIds": [
+     576
+    ],
+    "flags": [
+     "0x740"
+    ],
+    "name": "AVA & GEB",
+    "trainerClass": 96,
+    "className": "SIS AND BRO",
+    "label": "SIS AND BRO AVA & GEB",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,59": {
+  "width": 72,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 11,
+    "y": 8,
+    "trainerIds": [
+     517
+    ],
+    "flags": [
+     "0x705"
+    ],
+    "name": "JACLYN",
+    "trainerClass": 75,
+    "className": "PSYCHIC",
+    "label": "PSYCHIC JACLYN",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,60": {
+  "width": 24,
+  "height": 100,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 12,
+    "y": 13,
+    "trainerIds": [
+     577
+    ],
+    "flags": [
+     "0x741"
+    ],
+    "name": "ROSE",
+    "trainerClass": 103,
+    "className": "AROMA LADY",
+    "label": "AROMA LADY ROSE",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 11,
+    "y": 52,
+    "trainerIds": [
+     291
+    ],
+    "flags": [
+     "0x623"
+    ],
+    "name": "EDWARD",
+    "trainerClass": 77,
+    "className": "JUGGLER",
+    "label": "JUGGLER EDWARD",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 13,
+    "y": 35,
+    "trainerIds": [
+     578
+    ],
+    "flags": [
+     "0x742"
+    ],
+    "name": "SAMIR",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER SAMIR",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 15,
+    "y": 45,
+    "trainerIds": [
+     579
+    ],
+    "flags": [
+     "0x743"
+    ],
+    "name": "DENISE",
+    "trainerClass": 74,
+    "className": "SWIMMER",
+    "label": "SWIMMER DENISE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 6,
+    "y": 21,
+    "trainerIds": [
+     580
+    ],
+    "flags": [
+     "0x744"
+    ],
+    "name": "MIU & MIA",
+    "trainerClass": 92,
+    "className": "TWINS",
+    "label": "TWINS MIU & MIA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 7,
+    "y": 21,
+    "trainerIds": [
+     580
+    ],
+    "flags": [
+     "0x744"
+    ],
+    "name": "MIU & MIA",
+    "trainerClass": 92,
+    "className": "TWINS",
+    "label": "TWINS MIU & MIA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 11,
+    "y": 76,
+    "trainerIds": [
+     581
+    ],
+    "flags": [
+     "0x745"
+    ],
+    "name": "EARL",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER EARL",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,61": {
+  "width": 48,
+  "height": 40,
+  "trainers": [
+   {
+    "localId": 2,
+    "x": 32,
+    "y": 11,
+    "trainerIds": [
+     524
+    ],
+    "flags": [
+     "0x70C"
+    ],
+    "name": "STANLY",
+    "trainerClass": 104,
+    "className": "RUIN MANIAC",
+    "label": "RUIN MANIAC STANLY",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 33,
+    "y": 16,
+    "trainerIds": [
+     582
+    ],
+    "flags": [
+     "0x746"
+    ],
+    "name": "FOSTER",
+    "trainerClass": 104,
+    "className": "RUIN MANIAC",
+    "label": "RUIN MANIAC FOSTER",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 31,
+    "y": 24,
+    "trainerIds": [
+     583
+    ],
+    "flags": [
+     "0x747"
+    ],
+    "name": "LARRY",
+    "trainerClass": 104,
+    "className": "RUIN MANIAC",
+    "label": "RUIN MANIAC LARRY",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 14,
+    "y": 10,
+    "trainerIds": [
+     584
+    ],
+    "flags": [
+     "0x748"
+    ],
+    "name": "DARYL",
+    "trainerClass": 65,
+    "className": "HIKER",
+    "label": "HIKER DARYL",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 21,
+    "y": 29,
+    "trainerIds": [
+     585
+    ],
+    "flags": [
+     "0x749"
+    ],
+    "name": "HECTOR",
+    "trainerClass": 63,
+    "className": "POKEMANIAC",
+    "label": "POKEMANIAC HECTOR",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,62": {
+  "width": 120,
+  "height": 40,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 56,
+    "y": 26,
+    "trainerIds": [
+     586
+    ],
+    "flags": [
+     "0x74A"
+    ],
+    "name": "DARIO",
+    "trainerClass": 75,
+    "className": "PSYCHIC",
+    "label": "PSYCHIC DARIO",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 56,
+    "y": 29,
+    "trainerIds": [
+     587
+    ],
+    "flags": [
+     "0x74B"
+    ],
+    "name": "RODETTE",
+    "trainerClass": 75,
+    "className": "PSYCHIC",
+    "label": "PSYCHIC RODETTE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,63": {
+  "width": 24,
+  "height": 40,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 12,
+    "y": 6,
+    "trainerIds": [
+     588
+    ],
+    "flags": [
+     "0x74C"
+    ],
+    "name": "MIAH",
+    "trainerClass": 103,
+    "className": "AROMA LADY",
+    "label": "AROMA LADY MIAH",
+    "trainerType": 1,
+    "sightRange": 5,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 3,
+    "y": 34,
+    "trainerIds": [
+     589
+    ],
+    "flags": [
+     "0x74D"
+    ],
+    "name": "EVE & JON",
+    "trainerClass": 94,
+    "className": "YOUNG COUPLE",
+    "label": "YOUNG COUPLE EVE & JON",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 4,
+    "y": 34,
+    "trainerIds": [
+     589
+    ],
+    "flags": [
+     "0x74D"
+    ],
+    "name": "EVE & JON",
+    "trainerClass": 94,
+    "className": "YOUNG COUPLE",
+    "label": "YOUNG COUPLE EVE & JON",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 11,
+    "y": 26,
+    "trainerIds": [
+     521
+    ],
+    "flags": [
+     "0x709"
+    ],
+    "name": "NICOLAS",
+    "trainerClass": 102,
+    "className": "PKMN RANGER",
+    "label": "PKMN RANGER NICOLAS",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 10,
+    "y": 26,
+    "trainerIds": [
+     522
+    ],
+    "flags": [
+     "0x70A"
+    ],
+    "name": "MADELINE",
+    "trainerClass": 102,
+    "className": "PKMN RANGER",
+    "label": "PKMN RANGER MADELINE",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 11,
+    "y": 17,
+    "trainerIds": [
+     590
+    ],
+    "flags": [
+     "0x74E"
+    ],
+    "name": "MASON",
+    "trainerClass": 77,
+    "className": "JUGGLER",
+    "label": "JUGGLER MASON",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,64": {
+  "width": 24,
+  "height": 80,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 13,
+    "y": 43,
+    "trainerIds": [
+     591
+    ],
+    "flags": [
+     "0x74F"
+    ],
+    "name": "CYNDY",
+    "trainerClass": 99,
+    "className": "CRUSH GIRL",
+    "label": "CRUSH GIRL CYNDY",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 13,
+    "y": 36,
+    "trainerIds": [
+     593
+    ],
+    "flags": [
+     "0x751"
+    ],
+    "name": "EVAN",
+    "trainerClass": 78,
+    "className": "TAMER",
+    "label": "TAMER EVAN",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 3,
+    "y": 35,
+    "trainerIds": [
+     596
+    ],
+    "flags": [
+     "0x754"
+    ],
+    "name": "JACKSON",
+    "trainerClass": 102,
+    "className": "PKMN RANGER",
+    "label": "PKMN RANGER JACKSON",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 3,
+    "y": 36,
+    "trainerIds": [
+     598
+    ],
+    "flags": [
+     "0x756"
+    ],
+    "name": "KATELYN",
+    "trainerClass": 102,
+    "className": "PKMN RANGER",
+    "label": "PKMN RANGER KATELYN",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 7,
+    "y": 56,
+    "trainerIds": [
+     599
+    ],
+    "flags": [
+     "0x757"
+    ],
+    "name": "LEROY",
+    "trainerClass": 86,
+    "className": "COOLTRAINER",
+    "label": "COOLTRAINER LEROY",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 11,
+    "y": 63,
+    "trainerIds": [
+     600
+    ],
+    "flags": [
+     "0x758"
+    ],
+    "name": "MICHELLE",
+    "trainerClass": 86,
+    "className": "COOLTRAINER",
+    "label": "COOLTRAINER MICHELLE",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 14,
+    "y": 13,
+    "trainerIds": [
+     601
+    ],
+    "flags": [
+     "0x759"
+    ],
+    "name": "LEX & NYA",
+    "trainerClass": 93,
+    "className": "COOL COUPLE",
+    "label": "COOL COUPLE LEX & NYA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 14,
+    "y": 14,
+    "trainerIds": [
+     601
+    ],
+    "flags": [
+     "0x759"
+    ],
+    "name": "LEX & NYA",
+    "trainerClass": 93,
+    "className": "COOL COUPLE",
+    "label": "COOL COUPLE LEX & NYA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 4,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "3,65": {
+  "width": 144,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 35,
+    "y": 7,
+    "trainerIds": [
+     602
+    ],
+    "flags": [
+     "0x75A"
+    ],
+    "name": "BRANDON",
+    "trainerClass": 104,
+    "className": "RUIN MANIAC",
+    "label": "RUIN MANIAC BRANDON",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 121,
+    "y": 11,
+    "trainerIds": [
+     603
+    ],
+    "flags": [
+     "0x75B"
+    ],
+    "name": "BENJAMIN",
+    "trainerClass": 104,
+    "className": "RUIN MANIAC",
+    "label": "RUIN MANIAC BENJAMIN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 85,
+    "y": 8,
+    "trainerIds": [
+     604
+    ],
+    "flags": [
+     "0x75C"
+    ],
+    "name": "EDNA",
+    "trainerClass": 106,
+    "className": "PAINTER",
+    "label": "PAINTER EDNA",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 85,
+    "y": 5,
+    "trainerIds": [
+     605
+    ],
+    "flags": [
+     "0x75D"
+    ],
+    "name": "CLIFFORD",
+    "trainerClass": 88,
+    "className": "GENTLEMAN",
+    "label": "GENTLEMAN CLIFFORD",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "5,1": {
+  "width": 20,
+  "height": 24,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 10,
+    "y": 2,
+    "trainerIds": [
+     324
+    ],
+    "flags": [
+     "0x644"
+    ],
+    "name": "TAKASHI",
+    "trainerClass": 80,
+    "className": "BLACK BELT",
+    "label": "BLACK BELT TAKASHI",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 12,
+    "y": 10,
+    "trainerIds": [
+     400
+    ],
+    "flags": [
+     "0x690"
+    ],
+    "name": "YUJI",
+    "trainerClass": 86,
+    "className": "COOLTRAINER",
+    "label": "COOLTRAINER YUJI",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 11,
+    "y": 14,
+    "trainerIds": [
+     322
+    ],
+    "flags": [
+     "0x642"
+    ],
+    "name": "ATSUSHI",
+    "trainerClass": 80,
+    "className": "BLACK BELT",
+    "label": "BLACK BELT ATSUSHI",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 10,
+    "y": 10,
+    "trainerIds": [
+     296
+    ],
+    "flags": [
+     "0x628"
+    ],
+    "name": "JASON",
+    "trainerClass": 78,
+    "className": "TAMER",
+    "label": "TAMER JASON",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 2,
+    "y": 21,
+    "trainerIds": [
+     297
+    ],
+    "flags": [
+     "0x629"
+    ],
+    "name": "COLE",
+    "trainerClass": 78,
+    "className": "TAMER",
+    "label": "TAMER COLE",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 3,
+    "y": 11,
+    "trainerIds": [
+     323
+    ],
+    "flags": [
+     "0x643"
+    ],
+    "name": "KIYO",
+    "trainerClass": 80,
+    "className": "BLACK BELT",
+    "label": "BLACK BELT KIYO",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 6,
+    "y": 8,
+    "trainerIds": [
+     392
+    ],
+    "flags": [
+     "0x688"
+    ],
+    "name": "SAMUEL",
+    "trainerClass": 86,
+    "className": "COOLTRAINER",
+    "label": "COOLTRAINER SAMUEL",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 2,
+    "y": 2,
+    "trainerIds": [
+     350
+    ],
+    "flags": [
+     "0x65E"
+    ],
+    "name": "GIOVANNI",
+    "trainerClass": 84,
+    "className": "LEADER",
+    "label": "LEADER GIOVANNI",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 1,
+    "hideFlag": "0x55"
+   },
+   {
+    "localId": 9,
+    "x": 13,
+    "y": 7,
+    "trainerIds": [
+     401
+    ],
+    "flags": [
+     "0x691"
+    ],
+    "name": "WARREN",
+    "trainerClass": 86,
+    "className": "COOLTRAINER",
+    "label": "COOLTRAINER WARREN",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "6,2": {
+  "width": 13,
+  "height": 16,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 6,
+    "y": 5,
+    "trainerIds": [
+     414
+    ],
+    "flags": [
+     "0x69E"
+    ],
+    "name": "BROCK",
+    "trainerClass": 84,
+    "className": "LEADER",
+    "label": "LEADER BROCK",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 1,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 3,
+    "y": 8,
+    "trainerIds": [
+     142
+    ],
+    "flags": [
+     "0x58E"
+    ],
+    "name": "LIAM",
+    "trainerClass": 61,
+    "className": "CAMPER",
+    "label": "CAMPER LIAM",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "7,5": {
+  "width": 17,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 10,
+    "y": 12,
+    "trainerIds": [
+     234
+    ],
+    "flags": [
+     "0x5EA"
+    ],
+    "name": "LUIS",
+    "trainerClass": 70,
+    "className": "SWIMMER",
+    "label": "SWIMMER LUIS",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 4,
+    "y": 7,
+    "trainerIds": [
+     150
+    ],
+    "flags": [
+     "0x596"
+    ],
+    "name": "DIANA",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER DIANA",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 8,
+    "y": 6,
+    "trainerIds": [
+     415
+    ],
+    "flags": [
+     "0x69F"
+    ],
+    "name": "MISTY",
+    "trainerClass": 84,
+    "className": "LEADER",
+    "label": "LEADER MISTY",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 1,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "9,6": {
+  "width": 11,
+  "height": 21,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 5,
+    "y": 2,
+    "trainerIds": [
+     416
+    ],
+    "flags": [
+     "0x6A0"
+    ],
+    "name": "LT. SURGE",
+    "trainerClass": 84,
+    "className": "LEADER",
+    "label": "LEADER LT. SURGE",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 1,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 2,
+    "y": 11,
+    "trainerIds": [
+     220
+    ],
+    "flags": [
+     "0x5DC"
+    ],
+    "name": "BAILY",
+    "trainerClass": 68,
+    "className": "ENGINEER",
+    "label": "ENGINEER BAILY",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 8,
+    "y": 13,
+    "trainerIds": [
+     141
+    ],
+    "flags": [
+     "0x58D"
+    ],
+    "name": "DWAYNE",
+    "trainerClass": 60,
+    "className": "SAILOR",
+    "label": "SAILOR DWAYNE",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 7,
+    "y": 8,
+    "trainerIds": [
+     423
+    ],
+    "flags": [
+     "0x6A7"
+    ],
+    "name": "TUCKER",
+    "trainerClass": 88,
+    "className": "GENTLEMAN",
+    "label": "GENTLEMAN TUCKER",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 2,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "10,14": {
+  "width": 18,
+  "height": 15,
+  "trainers": [
+   {
+    "localId": 11,
+    "x": 11,
+    "y": 2,
+    "trainerIds": [
+     357
+    ],
+    "flags": [
+     "0x665"
+    ],
+    "name": "GRUNT",
+    "trainerClass": 85,
+    "className": "TEAM ROCKET",
+    "label": "TEAM ROCKET GRUNT",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 2,
+    "hideFlag": "0x5B"
+   }
+  ]
+ },
+ "10,16": {
+  "width": 13,
+  "height": 20,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 3,
+    "y": 11,
+    "trainerIds": [
+     132
+    ],
+    "flags": [
+     "0x584"
+    ],
+    "name": "KAY",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS KAY",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 9,
+    "y": 10,
+    "trainerIds": [
+     265
+    ],
+    "flags": [
+     "0x609"
+    ],
+    "name": "BRIDGET",
+    "trainerClass": 73,
+    "className": "BEAUTY",
+    "label": "BEAUTY BRIDGET",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 10,
+    "y": 7,
+    "trainerIds": [
+     160
+    ],
+    "flags": [
+     "0x5A0"
+    ],
+    "name": "TINA",
+    "trainerClass": 62,
+    "className": "PICNICKER",
+    "label": "PICNICKER TINA",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 2,
+    "y": 6,
+    "trainerIds": [
+     266
+    ],
+    "flags": [
+     "0x60A"
+    ],
+    "name": "TAMIA",
+    "trainerClass": 73,
+    "className": "BEAUTY",
+    "label": "BEAUTY TAMIA",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 5,
+    "y": 4,
+    "trainerIds": [
+     267
+    ],
+    "flags": [
+     "0x60B"
+    ],
+    "name": "LORI",
+    "trainerClass": 73,
+    "className": "BEAUTY",
+    "label": "BEAUTY LORI",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 7,
+    "y": 4,
+    "trainerIds": [
+     133
+    ],
+    "flags": [
+     "0x585"
+    ],
+    "name": "LISA",
+    "trainerClass": 59,
+    "className": "LASS",
+    "label": "LASS LISA",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 6,
+    "y": 4,
+    "trainerIds": [
+     417
+    ],
+    "flags": [
+     "0x6A1"
+    ],
+    "name": "ERIKA",
+    "trainerClass": 84,
+    "className": "LEADER",
+    "label": "LEADER ERIKA",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 1,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 8,
+    "y": 7,
+    "trainerIds": [
+     402
+    ],
+    "flags": [
+     "0x692"
+    ],
+    "name": "MARY",
+    "trainerClass": 86,
+    "className": "COOLTRAINER",
+    "label": "COOLTRAINER MARY",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "11,3": {
+  "width": 15,
+  "height": 23,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 12,
+    "y": 16,
+    "trainerIds": [
+     292
+    ],
+    "flags": [
+     "0x624"
+    ],
+    "name": "KAYDEN",
+    "trainerClass": 77,
+    "className": "JUGGLER",
+    "label": "JUGGLER KAYDEN",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 2,
+    "y": 9,
+    "trainerIds": [
+     289
+    ],
+    "flags": [
+     "0x621"
+    ],
+    "name": "SHAWN",
+    "trainerClass": 77,
+    "className": "JUGGLER",
+    "label": "JUGGLER SHAWN",
+    "trainerType": 1,
+    "sightRange": 1,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 11,
+    "y": 11,
+    "trainerIds": [
+     288
+    ],
+    "flags": [
+     "0x620"
+    ],
+    "name": "KIRK",
+    "trainerClass": 77,
+    "className": "JUGGLER",
+    "label": "JUGGLER KIRK",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 13,
+    "y": 4,
+    "trainerIds": [
+     295
+    ],
+    "flags": [
+     "0x627"
+    ],
+    "name": "EDGAR",
+    "trainerClass": 78,
+    "className": "TAMER",
+    "label": "TAMER EDGAR",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 4,
+    "y": 6,
+    "trainerIds": [
+     294
+    ],
+    "flags": [
+     "0x626"
+    ],
+    "name": "PHIL",
+    "trainerClass": 78,
+    "className": "TAMER",
+    "label": "TAMER PHIL",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 2,
+    "y": 16,
+    "trainerIds": [
+     293
+    ],
+    "flags": [
+     "0x625"
+    ],
+    "name": "NATE",
+    "trainerClass": 77,
+    "className": "JUGGLER",
+    "label": "JUGGLER NATE",
+    "trainerType": 1,
+    "sightRange": 4,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 7,
+    "y": 13,
+    "trainerIds": [
+     418
+    ],
+    "flags": [
+     "0x6A2"
+    ],
+    "name": "KOGA",
+    "trainerClass": 84,
+    "className": "LEADER",
+    "label": "LEADER KOGA",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 1,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "12,0": {
+  "width": 30,
+  "height": 25,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 25,
+    "y": 11,
+    "trainerIds": [
+     213
+    ],
+    "flags": [
+     "0x5D5"
+    ],
+    "name": "QUINN",
+    "trainerClass": 67,
+    "className": "BURGLAR",
+    "label": "BURGLAR QUINN",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 2,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 25,
+    "y": 4,
+    "trainerIds": [
+     177
+    ],
+    "flags": [
+     "0x5B1"
+    ],
+    "name": "ERIK",
+    "trainerClass": 64,
+    "className": "SUPER NERD",
+    "label": "SUPER NERD ERIK",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 17,
+    "y": 5,
+    "trainerIds": [
+     178
+    ],
+    "flags": [
+     "0x5B2"
+    ],
+    "name": "AVERY",
+    "trainerClass": 64,
+    "className": "SUPER NERD",
+    "label": "SUPER NERD AVERY",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 2,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 16,
+    "y": 11,
+    "trainerIds": [
+     214
+    ],
+    "flags": [
+     "0x5D6"
+    ],
+    "name": "RAMON",
+    "trainerClass": 67,
+    "className": "BURGLAR",
+    "label": "BURGLAR RAMON",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 2,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 16,
+    "y": 18,
+    "trainerIds": [
+     179
+    ],
+    "flags": [
+     "0x5B3"
+    ],
+    "name": "DEREK",
+    "trainerClass": 64,
+    "className": "SUPER NERD",
+    "label": "SUPER NERD DEREK",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 2,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 4,
+    "y": 19,
+    "trainerIds": [
+     215
+    ],
+    "flags": [
+     "0x5D7"
+    ],
+    "name": "DUSTY",
+    "trainerClass": 67,
+    "className": "BURGLAR",
+    "label": "BURGLAR DUSTY",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 2,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 4,
+    "y": 11,
+    "trainerIds": [
+     180
+    ],
+    "flags": [
+     "0x5B4"
+    ],
+    "name": "ZAC",
+    "trainerClass": 64,
+    "className": "SUPER NERD",
+    "label": "SUPER NERD ZAC",
+    "trainerType": 1,
+    "sightRange": 0,
+    "battleType": 2,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 5,
+    "y": 4,
+    "trainerIds": [
+     419
+    ],
+    "flags": [
+     "0x6A3"
+    ],
+    "name": "BLAINE",
+    "trainerClass": 84,
+    "className": "LEADER",
+    "label": "LEADER BLAINE",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 1,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "14,2": {
+  "width": 13,
+  "height": 16,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 11,
+    "y": 10,
+    "trainerIds": [
+     321
+    ],
+    "flags": [
+     "0x641"
+    ],
+    "name": "HITOSHI",
+    "trainerClass": 80,
+    "className": "BLACK BELT",
+    "label": "BLACK BELT HITOSHI",
+    "trainerType": 1,
+    "sightRange": 7,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 1,
+    "y": 10,
+    "trainerIds": [
+     319
+    ],
+    "flags": [
+     "0x63F"
+    ],
+    "name": "HIDEKI",
+    "trainerClass": 80,
+    "className": "BLACK BELT",
+    "label": "BLACK BELT HIDEKI",
+    "trainerType": 1,
+    "sightRange": 7,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 11,
+    "y": 8,
+    "trainerIds": [
+     320
+    ],
+    "flags": [
+     "0x640"
+    ],
+    "name": "AARON",
+    "trainerClass": 80,
+    "className": "BLACK BELT",
+    "label": "BLACK BELT AARON",
+    "trainerType": 1,
+    "sightRange": 7,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 1,
+    "y": 8,
+    "trainerIds": [
+     318
+    ],
+    "flags": [
+     "0x63E"
+    ],
+    "name": "MIKE",
+    "trainerClass": 80,
+    "className": "BLACK BELT",
+    "label": "BLACK BELT MIKE",
+    "trainerType": 1,
+    "sightRange": 7,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 6,
+    "y": 5,
+    "trainerIds": [
+     317
+    ],
+    "flags": [
+     "0x63D"
+    ],
+    "name": "KOICHI",
+    "trainerClass": 80,
+    "className": "BLACK BELT",
+    "label": "BLACK BELT KOICHI",
+    "trainerType": 1,
+    "sightRange": 2,
+    "battleType": 2,
+    "hideFlag": "0x0"
+   }
+  ]
+ },
+ "14,3": {
+  "width": 29,
+  "height": 25,
+  "trainers": [
+   {
+    "localId": 1,
+    "x": 24,
+    "y": 18,
+    "trainerIds": [
+     282
+    ],
+    "flags": [
+     "0x61A"
+    ],
+    "name": "CAMERON",
+    "trainerClass": 75,
+    "className": "PSYCHIC",
+    "label": "PSYCHIC CAMERON",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 2,
+    "x": 24,
+    "y": 2,
+    "trainerIds": [
+     280
+    ],
+    "flags": [
+     "0x618"
+    ],
+    "name": "JOHAN",
+    "trainerClass": 75,
+    "className": "PSYCHIC",
+    "label": "PSYCHIC JOHAN",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 3,
+    "x": 4,
+    "y": 2,
+    "trainerIds": [
+     283
+    ],
+    "flags": [
+     "0x61B"
+    ],
+    "name": "PRESTON",
+    "trainerClass": 75,
+    "className": "PSYCHIC",
+    "label": "PSYCHIC PRESTON",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 4,
+    "x": 14,
+    "y": 2,
+    "trainerIds": [
+     462
+    ],
+    "flags": [
+     "0x6CE"
+    ],
+    "name": "AMANDA",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER AMANDA",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 5,
+    "x": 4,
+    "y": 10,
+    "trainerIds": [
+     463
+    ],
+    "flags": [
+     "0x6CF"
+    ],
+    "name": "STACY",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER STACY",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 6,
+    "x": 4,
+    "y": 18,
+    "trainerIds": [
+     464
+    ],
+    "flags": [
+     "0x6D0"
+    ],
+    "name": "TASHA",
+    "trainerClass": 91,
+    "className": "CHANNELER",
+    "label": "CHANNELER TASHA",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 7,
+    "x": 14,
+    "y": 11,
+    "trainerIds": [
+     420
+    ],
+    "flags": [
+     "0x6A4"
+    ],
+    "name": "SABRINA",
+    "trainerClass": 84,
+    "className": "LEADER",
+    "label": "LEADER SABRINA",
+    "trainerType": 0,
+    "sightRange": 0,
+    "battleType": 1,
+    "hideFlag": "0x0"
+   },
+   {
+    "localId": 8,
+    "x": 24,
+    "y": 10,
+    "trainerIds": [
+     281
+    ],
+    "flags": [
+     "0x619"
+    ],
+    "name": "TYRON",
+    "trainerClass": 75,
+    "className": "PSYCHIC",
+    "label": "PSYCHIC TYRON",
+    "trainerType": 1,
+    "sightRange": 3,
+    "battleType": 0,
+    "hideFlag": "0x0"
+   }
+  ]
+ }
+}

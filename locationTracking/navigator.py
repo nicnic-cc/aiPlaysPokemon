@@ -47,6 +47,11 @@ from screen_state import dialogBoxOpen  # noqa: E402
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'mGBA'))
 from mgba_client import MGBAClient, MGBAError, print_game_state  # noqa: E402
 
+# Story flags 0x500-0x7FF are one bit per trainer id (mgba_server.lua's
+# TRAINER_FLAGS_START); a set bit means that trainer has been beaten.
+TRAINER_FLAGS_START = 0x500
+TRAINER_FLAGS_END = 0x7FF
+
 # Inverse of pathfinder.DIRECTIONS, in screen terms.
 STEP_DELTA = {'Up': (0, -1), 'Down': (0, 1), 'Left': (-1, 0), 'Right': (1, 0)}
 OPPOSITE = {'Up': 'Down', 'Down': 'Up', 'Left': 'Right', 'Right': 'Left'}
@@ -195,6 +200,22 @@ class Navigator:
             return self.client.game_state()
         except (MGBAError, ConnectionError, ValueError):
             return None
+
+    def beatenTrainers(self):
+        """Set of trainer ids already beaten, or None if it can't be read.
+
+        Beating trainer N sets story flag TRAINER_FLAGS_START + N, so one FLAGS
+        read over the trainer range answers it for every trainer at once. None
+        (old server, no connection) means "don't know", and callers must then
+        prune nothing rather than everything.
+        """
+        if self.client is None or not hasattr(self.client, 'flags'):
+            return None
+        try:
+            reply = self.client.flags(TRAINER_FLAGS_START, TRAINER_FLAGS_END)
+        except (MGBAError, ConnectionError, ValueError):
+            return None
+        return {int(f, 16) - TRAINER_FLAGS_START for f in reply.get('set', [])}
 
     def _screenshot(self):
         self.client.screenshot(self.screenshotPath)
@@ -1010,6 +1031,9 @@ class Navigator:
         Unreachable candidates are expected here (a survey asks about places we
         can't get to yet), so `quiet` swallows the planner's per-failure logging
         - the reason survives on each entry either way.
+
+        Trainers already beaten are left out entirely: there is nothing more to
+        do with them, and on a route they would otherwise be most of the list.
         """
         if fix is None:
             fix, _state = self.observe()
@@ -1020,10 +1044,16 @@ class Navigator:
         caps = self.inferCapabilities(
             gameState if gameState is not None else self._gameState())
 
+        beaten = self.beatenTrainers() if self.pf.objectTrainers else None
         candidates = []
         for category, entries in self.pf.objectIndex.items():
             interact = category not in WALK_THROUGH_OBJECT_CATEGORIES
             for (m, c, r, name) in entries:
+                # Any id counts: one NPC can carry several (the Elite Four's
+                # rematch teams, a rival whose team depends on your starter).
+                ids = self.pf.objectTrainers.get((m, c, r))
+                if beaten and ids and any(t in beaten for t in ids):
+                    continue
                 candidates.append(('object', category, name, m, (c, r), interact))
         for itemName, entries in self.pf.itemIndex.items():
             for (m, c, r) in entries:

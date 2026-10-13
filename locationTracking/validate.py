@@ -119,6 +119,16 @@ def validate(baseDir=None):
             if key not in cats:
                 warnings.append(f"{mapName}: object at {key} has no category")
 
+        # Trainer ids are what prune a beaten trainer from the destination list;
+        # a trainer without them never drops off it.
+        trainerIds = d.get('objectTrainers', {})
+        for key, cat in cats.items():
+            if cat == 'trainer' and not trainerIds.get(key):
+                warnings.append(f"{mapName}: trainer at {key} has no trainer ids")
+        for key in trainerIds:
+            if key not in d.get('objects', {}):
+                errors.append(f"{mapName}: trainer ids at {key} but no object there")
+
         # Wild encounters. The table belongs to the map (the game keys it by
         # map_bank/map_number); the grid only decides where it can be triggered.
         table, source = _encounterTable(mapName, d, rom)

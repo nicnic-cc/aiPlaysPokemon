@@ -237,6 +237,9 @@ class Pathfinder:
         self.objectIndex = defaultdict(list)    # category -> [(map, col, row, name)]
         self.speciesIndex = defaultdict(set)    # species(lower) -> {(map, method)}
         self.walkableObjectTiles = {}           # mapName -> set((col, row)) walk-through objects
+        # (map, col, row) -> [trainerId]. Beating trainer N sets flag 0x500 + N,
+        # which is how a beaten trainer drops off the destination list.
+        self.objectTrainers = {}
 
         # Encounters, keyed by map rather than by patch (the game keys its
         # tables by map_bank/map_number, so a patch-level list was always a
@@ -259,7 +262,8 @@ class Pathfinder:
         print(f"Pathfinder: {len(self.tileData)} maps, "
               f"{sum(len(c) for c in self.connections.values())} connections, "
               f"{len(self.landmarks)} landmarks, "
-              f"{sum(len(v) for v in self.objectIndex.values())} objects, "
+              f"{sum(len(v) for v in self.objectIndex.values())} objects "
+              f"({len(self.objectTrainers)} trainers), "
               f"{len(self.speciesIndex)} catchable species")
         self._reportUnpaintedEncounterMaps()
 
@@ -404,6 +408,9 @@ class Pathfinder:
                     walkThrough.add((col, row))
             if walkThrough:
                 self.walkableObjectTiles[mapName] = walkThrough
+            for key, ids in data.get('objectTrainers', {}).items():
+                row, col = (int(x) for x in key.split(','))
+                self.objectTrainers[(mapName, col, row)] = list(ids)
 
         # Species are indexed per (map, method): the encounter table says *what*
         # lives here and *how* it is met, and the tile grid says where on the map
