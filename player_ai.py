@@ -117,6 +117,7 @@ from objectives import (  # noqa: E402
 from screen_state import measure as measureScreen, yesNoMenu  # noqa: E402
 from naming_screen import Keyboard, NamingError, currentName  # noqa: E402
 from naming_screen import isOpen as namingScreenOpen  # noqa: E402
+from offmap import markOffMap, namingBlock as offMapNamingBlock, pressEffect as offMapPressEffect  # pokeplay: harness/offmap.py
 
 # Raw taps into a menu need a beat to land: the tap returns when its frames
 # elapse, but the menu redraws a few frames later, and a second tap fired into
@@ -667,6 +668,8 @@ class Actions:
         after = self._worldMark()
         if before is None or after is None:
             return ""
+        if offMap := offMapPressEffect(before["ram"], after["ram"]):  # pokeplay: harness/offmap.py
+            return offMap
         if after["battle"] and not before["battle"]:
             return " - a battle started"
         if after["battle"] and before["battle"]:
@@ -1706,6 +1709,8 @@ class Observation:
         return "overworld"
 
     def _namingBlock(self) -> str:
+        if intro := offMapNamingBlock(self.state, self.namingSoFar):  # pokeplay: a person, not a Pokemon
+            return intro
         lines = ["THE GAME IS ASKING YOU TO NAME SOMETHING.",
                  "  An on-screen keyboard is up. Do NOT try to walk or to press "
                  "letters one at a time - that is how a Pokemon ends up called "
@@ -2660,6 +2665,7 @@ class PlayerAI:
                                         self._checkPendingForget(state),
                                         self._repeatAlert(),
                                         self._stuckNote) if n)
+        markOffMap(obs, state)  # pokeplay: title and intro are not the map (harness/offmap.py)
         return obs
 
     # ---- what is on screen ------------------------------------------------

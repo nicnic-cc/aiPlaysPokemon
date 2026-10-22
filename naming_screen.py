@@ -84,7 +84,8 @@ NAMING_CALLBACK = "0809FB59"
 # (see currentName). Add a new one with `python naming_screen.py --where` while
 # that screen is up; it prints the address it found.
 NAME_BUFFERS = (0x02004560,     # naming the player / the rival
-                0x0200FF34)     # nicknaming a caught Pokemon
+                0x0200FF34,     # nicknaming a caught Pokemon
+                0x02007370)     # pokeplay: the intro's player keyboard, FireRed v1.0 and LeafGreen v1.1 (--where)
 MAX_NAME_LENGTH = 10
 
 # Gen 3 text ends with 0xFF, and - the part that matters here - 0x00 is not a
