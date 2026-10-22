@@ -118,6 +118,7 @@ from screen_state import measure as measureScreen, yesNoMenu  # noqa: E402
 from naming_screen import Keyboard, NamingError, currentName  # noqa: E402
 from naming_screen import isOpen as namingScreenOpen  # noqa: E402
 from offmap import markOffMap, namingBlock as offMapNamingBlock, pressEffect as offMapPressEffect  # pokeplay: harness/offmap.py
+from dialog import Conversation, READ_IT, lineCap, withBoxExample  # pokeplay: harness/dialog.py
 
 # Raw taps into a menu need a beat to land: the tap returns when its frames
 # elapse, but the menu redraws a few frames later, and a second tap fired into
@@ -533,6 +534,7 @@ class Actions:
         self.memory = memory        # objectives.Memory, for `note`
         self.roster = roster        # matchup.Roster, for `check`
         self.data = data            # damage_calc.GameData, for `check`
+        self.talk = Conversation()  # pokeplay: what boxes said (harness/dialog.py)
         # Set by PlayerAI each turn so battle commands can name real moves.
         self.observation: "Observation | None" = None
         self.turn = 0               # for stamping notes
@@ -614,6 +616,9 @@ class Actions:
                 times = max(1, min(MAX_PRESSES, int(match.group())))
 
         before = self._worldMark()
+        if (boxed := self.talk.press(self, button, times, before)) is not None:  # pokeplay: read every page (harness/dialog.py)
+            self.nav.facing = None
+            return boxed
         self._menuTap(button, times)
 
         # navigator caches which way we're facing to save a tap per step. A raw
@@ -677,6 +682,8 @@ class Actions:
                 return f' - the battle moved on: "{after["text"]}"'
             return " - the battle is saying the same thing it was"
         if after["dialog"]:
+            if said := self.talk.heard(self.client):  # pokeplay: the box's words, not only that it is there
+                return said
             return " - there is a text box on screen now; keep pressing A"
         if before["dialog"]:
             return " - the text box is gone; you can walk again"
@@ -1565,6 +1572,8 @@ class Observation:
     dialogText: str = ""                # what it says, if gStringVar4 is known
     dialogTextLive: bool = False        # ...and that text is current, not stale
     dialogDoubted: bool = False         # asserted too long without anything moving
+    dialogFresh: bool = False           # pokeplay: the text changed since last turn, so it is not stale
+    toldBlock: str = ""                 # pokeplay: what the box just closed said (harness/dialog.py)
     choiceOpen: bool = False            # a YES/NO menu is waiting on an answer
     choiceCursor: str = ""              # which of the two it is currently on
     noDialogNotice: bool = False        # pressing A at nothing; say so outright
@@ -1598,6 +1607,8 @@ class Observation:
                 blocks.append(self._choiceBlock())
         elif self.noDialogNotice:
             blocks.append(self._noDialogBlock())
+        if self.toldBlock:  # pokeplay
+            blocks.append(self.toldBlock)
         blocks.append(self._situation())
         if self.learn is not None:
             # Deliberately instead of the battle report, not alongside it. The
@@ -1756,7 +1767,7 @@ class Observation:
             # honest there - but a battle message is read live out of its own
             # buffer, and warning the model that accurate text might be stale
             # teaches it to ignore the one line on screen that is certain.
-            if not self.dialogTextLive:
+            if not self.dialogTextLive and not self.dialogFresh:  # pokeplay: changed text is current
                 lines.append("  (That text is the last message the game wrote, "
                              "which it keeps after a box closes - so it may be "
                              "older than what is on screen.)")
@@ -1772,6 +1783,7 @@ class Observation:
         else:
             lines.append("  Press A to advance the text. Long conversations take "
                          "several presses; keep going until the box is gone.")
+        lines.append(READ_IT)  # pokeplay: harness/dialog.py
         return "\n".join(lines)
 
     def _choiceBlock(self) -> str:
@@ -1975,8 +1987,9 @@ class Observation:
         # `check` answers with a whole report; the history only needs the
         # gist of it, and the full text was already shown the turn it ran.
         result = " ".join(str(entry["result"]).split())
-        if len(result) > 180:
-            result = result[:177] + "..."
+        cap = lineCap(result)  # pokeplay: a box's words need room
+        if len(result) > cap:
+            result = result[:cap - 3] + "..."
         return f"  turn {entry['turn']}: {entry['action']} -> {result}"
 
     def _history(self, history: list, limit: int) -> str:
@@ -2219,6 +2232,8 @@ ACTION: name toasty
 THINK: Growl is the weakest of the four and dropping it keeps both my attacks.
 ACTION: forget growl
 """
+
+SYSTEM_PROMPT = withBoxExample(SYSTEM_PROMPT)  # pokeplay: harness/dialog.py
 
 # Anchored on the ACTION: line, but tolerant of the wrappers small models add
 # around it (**ACTION:**, "action -", a bullet, a trailing period).
@@ -2666,6 +2681,7 @@ class PlayerAI:
                                         self._repeatAlert(),
                                         self._stuckNote) if n)
         markOffMap(obs, state)  # pokeplay: title and intro are not the map (harness/offmap.py)
+        self.actions.talk.update(obs)  # pokeplay: keep what the boxes said (harness/dialog.py)
         return obs
 
     # ---- what is on screen ------------------------------------------------
