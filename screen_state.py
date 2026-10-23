@@ -220,6 +220,16 @@ def yesNoMenu(image) -> dict:
     return result
 
 
+def _anyYesNo(codes: np.ndarray) -> dict:
+    """The first of YESNO_BOXES that holds a menu, with its columns; else the
+    overworld window's miss, as measure used to read."""
+    for _where, left, right in YESNO_BOXES:
+        found = _yesNo(codes, left, right)
+        if found["open"]:
+            return {**found, "left": left, "right": right}
+    return {**_yesNo(codes), "left": YESNO_LEFT, "right": YESNO_RIGHT}
+
+
 def _yesNo(codes: np.ndarray, left: int = YESNO_LEFT,
            right: int = YESNO_RIGHT) -> dict:
     box = codes[YESNO_TOP:YESNO_BOTTOM, left:right]
@@ -306,7 +316,7 @@ def measure(image) -> dict:
     # message at once, so it looks identical while the player pages through it;
     # the drawn text does not. Callers watching for "is this conversation
     # actually going anywhere" should watch this, not the text.
-    menu = _yesNo(codes)
+    menu = _anyYesNo(codes)
     result = {"open": False, "flatRows": len(flat), "worldShare": 0.0,
               "marginShare": 0.0, "topEdge": 0.0, "colour": None, "reason": "",
               "fingerprint": _fingerprint(box), "yesNo": menu["open"],
@@ -331,8 +341,8 @@ def measure(image) -> dict:
     if menu["open"]:
         rows = slice(max(0, YESNO_TOP - WORLD_TOP),
                      max(0, YESNO_BOTTOM - WORLD_TOP))
-        cols = slice(max(0, YESNO_LEFT - BOX_LEFT),
-                     max(0, YESNO_RIGHT - BOX_LEFT))
+        cols = slice(max(0, menu["left"] - BOX_LEFT),
+                     max(0, menu["right"] - BOX_LEFT))
         keep[rows, cols] = False
     scene = world[keep]
     result["worldShare"] = float(np.count_nonzero(scene == colour)
