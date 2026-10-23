@@ -117,8 +117,7 @@ from objectives import (  # noqa: E402
 from screen_state import measure as measureScreen, yesNoMenu  # noqa: E402
 from naming_screen import Keyboard, NamingError, currentName  # noqa: E402
 from naming_screen import isOpen as namingScreenOpen  # noqa: E402
-from offmap import IntroNames, markOffMap, namingBlock as offMapNamingBlock, pressEffect as offMapPressEffect  # pokeplay: harness/offmap.py
-from dialog import BOX_CAP, Conversation, READ_IT, lineCap, withBoxExample  # pokeplay: harness/dialog.py
+from dialog import BOX_CAP, READ_IT, lineCap, withBoxExample  # pokeplay: harness/dialog.py
 
 # Raw taps into a menu need a beat to land: the tap returns when its frames
 # elapse, but the menu redraws a few frames later, and a second tap fired into
@@ -534,8 +533,6 @@ class Actions:
         self.memory = memory        # objectives.Memory, for `note`
         self.roster = roster        # matchup.Roster, for `check`
         self.data = data            # damage_calc.GameData, for `check`
-        self.talk = Conversation()  # pokeplay: what boxes said (harness/dialog.py)
-        self.introNames = IntroNames()  # pokeplay: the rival gets its own name (harness/offmap.py)
         # Set by PlayerAI each turn so battle commands can name real moves.
         self.observation: "Observation | None" = None
         self.turn = 0               # for stamping notes
@@ -617,9 +614,6 @@ class Actions:
                 times = max(1, min(MAX_PRESSES, int(match.group())))
 
         before = self._worldMark()
-        if (boxed := self.talk.press(self, button, times, before)) is not None:  # pokeplay: read every page (harness/dialog.py)
-            self.nav.facing = None
-            return boxed
         self._menuTap(button, times)
 
         # navigator caches which way we're facing to save a tap per step. A raw
@@ -674,8 +668,6 @@ class Actions:
         after = self._worldMark()
         if before is None or after is None:
             return ""
-        if offMap := offMapPressEffect(before["ram"], after["ram"]):  # pokeplay: harness/offmap.py
-            return offMap
         if after["battle"] and not before["battle"]:
             return " - a battle started"
         if after["battle"] and before["battle"]:
@@ -683,8 +675,6 @@ class Actions:
                 return f' - the battle moved on: "{after["text"]}"'
             return " - the battle is saying the same thing it was"
         if after["dialog"]:
-            if said := self.talk.heard(self.client):  # pokeplay: the box's words, not only that it is there
-                return said
             return " - there is a text box on screen now; keep pressing A"
         if before["dialog"]:
             return " - the text box is gone; you can walk again"
@@ -1060,8 +1050,6 @@ class Actions:
         wanted = " ".join(args).strip()
         if not wanted:
             raise ActionError("name needs the name to type, e.g. `name sprout`")
-        if clash := self.introNames.clash(obs.state, wanted):  # pokeplay
-            raise ActionError(clash)
         try:
             result = Keyboard(self.client).enter(wanted)
         except NamingError as exc:
@@ -1070,7 +1058,6 @@ class Actions:
         if not result["confirmed"]:
             return (f"typed {result['name']!r}{note}, but the keyboard is still "
                     f"open - check the screen and press A to accept it")
-        self.introNames.add(obs.state, result["name"])  # pokeplay
         return f"named it {result['name']!r}{note} and confirmed"
 
     # ---- learning a move --------------------------------------------------
@@ -1724,8 +1711,6 @@ class Observation:
         return "overworld"
 
     def _namingBlock(self) -> str:
-        if intro := offMapNamingBlock(self.state, self.namingSoFar):  # pokeplay: a person, not a Pokemon
-            return intro
         lines = ["THE GAME IS ASKING YOU TO NAME SOMETHING.",
                  "  An on-screen keyboard is up. Do NOT try to walk or to press "
                  "letters one at a time - that is how a Pokemon ends up called "
@@ -2684,8 +2669,6 @@ class PlayerAI:
                                         self._checkPendingForget(state),
                                         self._repeatAlert(),
                                         self._stuckNote) if n)
-        markOffMap(obs, state)  # pokeplay: title and intro are not the map (harness/offmap.py)
-        self.actions.talk.update(obs)  # pokeplay: keep what the boxes said (harness/dialog.py)
         return obs
 
     # ---- what is on screen ------------------------------------------------
