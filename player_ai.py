@@ -125,6 +125,9 @@ from naming_screen import isOpen as namingScreenOpen  # noqa: E402
 MENU_TAP_FRAMES = 12
 MENU_TAP_DELAY = 0.15
 
+# How many characters of an open text box the report quotes.
+DIALOG_TEXT_CAP = 400
+
 # Battle menus are 2x2 grids whose cursor persists between turns, so "press A
 # twice to attack" is not reliable - you might attack with whatever you picked
 # last turn. The cursor movement is clamped rather than wrapping (DPAD_LEFT is
@@ -1745,7 +1748,7 @@ class Observation:
         lines = ["A TEXT BOX IS OPEN ON SCREEN."]
         if self.dialogText:
             flat = " ".join(self.dialogText.split())
-            lines.append(f'  It says: "{flat[:400]}"')
+            lines.append(f'  It says: "{flat[:DIALOG_TEXT_CAP]}"')
             # Only hedge when the text is actually hedgeable. gStringVar4 keeps
             # the last message long after its box has gone, so the caveat is
             # honest there - but a battle message is read live out of its own
@@ -1966,12 +1969,18 @@ class Observation:
         return body
 
     @staticmethod
+    def _lineCap(result: str) -> int:
+        """How many characters of a result the history keeps."""
+        return 180
+
+    @staticmethod
     def _line(entry: dict) -> str:
         # `check` answers with a whole report; the history only needs the
         # gist of it, and the full text was already shown the turn it ran.
         result = " ".join(str(entry["result"]).split())
-        if len(result) > 180:
-            result = result[:177] + "..."
+        cap = Observation._lineCap(result)
+        if len(result) > cap:
+            result = result[:cap - 3] + "..."
         return f"  turn {entry['turn']}: {entry['action']} -> {result}"
 
     def _history(self, history: list, limit: int) -> str:
