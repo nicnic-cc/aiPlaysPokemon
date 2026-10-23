@@ -36,6 +36,7 @@ import os
 import sys
 import time
 
+import npcs
 from locationTracker import LocationTracker
 from pathfinder import (BLOCKED, Pathfinder, RETURN_TARGET,
                         WALK_THROUGH_OBJECT_CATEGORIES)
@@ -62,6 +63,9 @@ HM_CAPABILITIES = {
 
 # Consecutive blocked steps before we stop rather than burn the step budget.
 BLOCKED_LIMIT = 4
+
+# Seconds to wait when people block the only way, before looking again.
+PEOPLE_WAIT = 2
 
 # Presses allowed to talk a conversation out, and the pause between them. Mom
 # and the nurses run three or four pages around the healing animation, so a
@@ -726,8 +730,10 @@ class Navigator:
         # the next attempt re-probes instead of re-deciding "blocked" forever.
         self.facing = None
         # Keep it: a refused step is a fact about the world that the grid can be
-        # checked against, and _blockedStepEvidence does exactly that.
-        self._lastBlocked = (before, direction)
+        # checked against, and _blockedStepEvidence does exactly that. Unless
+        # a person stands there: they say nothing about where the walls are.
+        if not npcs.ahead(npcs.read(self.client, before), before, direction):
+            self._lastBlocked = (before, direction)
         return 'blocked'
 
     def _awaitChange(self, before, polls):
@@ -1089,11 +1095,19 @@ class Navigator:
     def _run(self, planFn, description, maxSteps, onArrive=None):
         """Walk the plan one verified step at a time, replanning after each.
 
+        People are routed round while the walk lasts; no survey sees them.
+
         ``onArrive`` lets a goal keep working after it reaches its target -
         goCatch uses it to pace for an encounter. It is called with
         (plan, mapName, tile, steps) and may return a result dict to finish
         with, or None to fall through to the plain "arrived" result.
         """
+        try:
+            return self._walk(planFn, description, maxSteps, onArrive)
+        finally:
+            self.pf.avoid = {}
+
+    def _walk(self, planFn, description, maxSteps, onArrive):
         steps = 0
         blocked = 0
         # Field-move capabilities come from the bag, which POSITION doesn't
@@ -1109,7 +1123,23 @@ class Navigator:
                                     "screen) - operator should resolve")
             curMap, curTile = fix['mapName'], tuple(fix['tile'])
 
+            ram = self._ramPos(state)
+            people = npcs.read(self.client, ram)
+            crowd = npcs.blocked(people, npcs.delta(ram, curTile)) if people and ram else set()
+            self.pf.avoid = {curMap: crowd}
             plan = planFn(curMap, curTile, caps)
+            if not plan['found'] and crowd:
+                # No way round them: if the bare map has one, they are the wall.
+                self.pf.avoid = {}
+                bare = planFn(curMap, curTile, caps)
+                if bare['found']:
+                    blocked += 1
+                    if blocked >= BLOCKED_LIMIT:
+                        return self._result(
+                            "stuck", description, steps,
+                            npcs.stuckAt(self._peopleOnPath(bare, curMap, crowd)))
+                    time.sleep(PEOPLE_WAIT)
+                    continue
             if not plan['found']:
                 return self._result("no_route", description, steps, plan['reason'])
 
@@ -1165,15 +1195,31 @@ class Navigator:
             steps += 1
             if outcome == 'blocked':
                 blocked += 1
+                if self._boxUp():
+                    return self._result("interrupted", description, steps,
+                                        npcs.BOX_STOP)
+                there = npcs.ahead(npcs.read(self.client, ram), ram,
+                                   plan['directions'][0]) if ram else None
                 if blocked >= BLOCKED_LIMIT:
+                    if there:
+                        return self._result(
+                            "stuck", description, steps,
+                            npcs.standing(self._expectedTile(
+                                curTile, plan['directions'][0])))
                     return self._result(
                         "stuck", description, steps,
                         f"blocked {blocked}x heading {plan['directions'][0]} from "
                         f"{curMap} {curTile}")
-                # Replanning routes around whatever is in the way.
+                # The next plan starts from fresh people and, after a bump, a
+                # fresh idea of where the walls are.
                 continue
             blocked = 0
         return self._result("gave_up", description, steps, "exceeded step budget")
+
+    def _peopleOnPath(self, plan, curMap, crowd):
+        """The occupied tiles a plan walks through, or all of them if none."""
+        hit = {(c, r) for m, c, r in plan.get('path') or [] if m == curMap and (c, r) in crowd}
+        return hit or crowd
 
     def _expectedTile(self, tile, move):
         dc, dr = STEP_DELTA[move]

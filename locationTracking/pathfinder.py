@@ -253,6 +253,10 @@ class Pathfinder:
         # tiles per map, not every tile.
         self._reachCache = {}
 
+        # mapName -> tiles someone is standing on right now. A caller sets it for
+        # one walk; only _searchTiles reads it, so the reach cache stays static.
+        self.avoid = {}
+
         self._loadTileData(tileDataDir)
         self._loadConnections(connectionDataDir)
         self._loadEncounters(connectionDataDir, encounterDataDir)
@@ -657,7 +661,8 @@ class Pathfinder:
         return (info['tiles'], info['widthTiles'], info['heightTiles'],
                 self.walkableObjectTiles.get(mapName, set()))
 
-    def _walkableNeighbors(self, grid, tile, capabilities, extraGoals=()):
+    def _walkableNeighbors(self, grid, tile, capabilities, extraGoals=(),
+                           avoid=()):
         """Tiles enterable from ``tile`` in one step, with their tile types.
 
         The single definition of a legal move, shared by A* and by
@@ -670,6 +675,9 @@ class Pathfinder:
         aiming at (an item, an NPC). Reachability passes none: you can face an
         NPC but you cannot stand on one, so counting those tiles as reached
         would let routes plan straight through them.
+
+        ``avoid`` holds tiles that are open on the map but occupied right now; one
+        is entered only as an interactable goal, like any other thing you talk to.
         """
         tiles, tw, th, passable = grid
         col, row = tile
@@ -692,6 +700,9 @@ class Pathfinder:
                              or (nc, nr) in passable
                              or ((nc, nr) in extraGoals
                                  and tileType in INTERACTABLE_TYPES))
+            if enterable and (nc, nr) in avoid and not (
+                    (nc, nr) in extraGoals and tileType in INTERACTABLE_TYPES):
+                enterable = False
             if not enterable:
                 continue
             # Ledge restrictions are a property of the tile being left, too.
@@ -813,6 +824,7 @@ class Pathfinder:
 
         # Aim at the goal only when there is exactly one; otherwise h == 0.
         target = next(iter(goals)) if len(goals) == 1 else None
+        avoid = self.avoid.get(mapName, ())
 
         def heuristic(tile):
             return self._heuristic(tile, target) if target else 0
@@ -832,7 +844,7 @@ class Pathfinder:
             # _walkableNeighbors; `goals` is passed so an interactable target
             # (an item, an NPC) can be stepped onto as the final move.
             for neighbor, tileType in self._walkableNeighbors(
-                    grid, current, capabilities, extraGoals=goals):
+                    grid, current, capabilities, extraGoals=goals, avoid=avoid):
                 moveCost = TILE_COSTS.get(tileType, 1.0)
                 tentativeG = gScore[current] + moveCost
 

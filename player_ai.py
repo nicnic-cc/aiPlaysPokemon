@@ -77,6 +77,7 @@ for _p in (HERE / "mGBA", HERE / "battle", HERE / "locationTracking"):
     if str(_p) not in sys.path:
         sys.path.insert(0, str(_p))
 
+import npcs  # noqa: E402
 import ollama  # noqa: E402
 
 from mgba_client import BUTTONS, MGBAClient, MGBAError  # noqa: E402
@@ -716,9 +717,20 @@ class Actions:
 
         where = self._whereNow()
         if outcome == "blocked":
-            return (f"walked {walked} of {steps} tile(s) {direction}, then hit "
-                    f"something solid. {where}")
+            return (f"walked {walked} of {steps} tile(s) {direction}, then "
+                    f"{self._blockedBy(direction)}. {where}")
         return f"walked {walked} tile(s) {direction}. {where}"
+
+    def _blockedBy(self, direction: str) -> str:
+        """What a refused step ran into: an open text box, a person, or else a wall."""
+        if self.nav._boxUp():
+            return "stopped: " + npcs.BOX_STOP
+        ram = self.nav._ramPos()
+        fix = self.nav.locate()
+        if ram and fix and npcs.ahead(npcs.read(self.nav.client, ram), ram, direction):
+            return "stopped: " + npcs.standing(
+                self.nav._expectedTile(tuple(fix["tile"]), direction))
+        return "hit something solid"
 
     def _whereNow(self) -> str:
         fix = self.nav.locate()
@@ -1588,6 +1600,7 @@ class Observation:
     balls: int = 0                      # Poke Balls in the bag, all kinds
     learn: object = None                # move_learn.Pending, if a prompt is up
     learnBlock: str = ""                # the ranked advice for that prompt
+    people: str = ""                    # who stands near us on the overworld map
 
     # ---- rendering --------------------------------------------------------
 
@@ -1649,6 +1662,8 @@ class Observation:
             blocks.append(self._party())
             blocks.append(self._bag(cfg.bagLimit))
         else:
+            if self.people and not self._screenCovered():
+                blocks.append(self.people)
             blocks.append(self._party())
             # `heal` is a walking command, so it belongs with the places for
             # exactly the same reason: offering it while a box is up would
@@ -2684,6 +2699,9 @@ class PlayerAI:
                                         self._checkPendingForget(state),
                                         self._repeatAlert(),
                                         self._stuckNote) if n)
+        if not inBattle:
+            ram = self.nav._ramPos(state)
+            obs.people = npcs.report(npcs.read(self.nav.client, ram), ram) if ram else ""
         markOffMap(obs, state)  # pokeplay: title and intro are not the map (harness/offmap.py)
         self.actions.talk.update(obs)  # pokeplay: keep what the boxes said (harness/dialog.py)
         return obs
