@@ -117,8 +117,8 @@ from objectives import (  # noqa: E402
 from screen_state import measure as measureScreen, yesNoMenu  # noqa: E402
 from naming_screen import Keyboard, NamingError, currentName  # noqa: E402
 from naming_screen import isOpen as namingScreenOpen  # noqa: E402
-from offmap import markOffMap, namingBlock as offMapNamingBlock, pressEffect as offMapPressEffect  # pokeplay: harness/offmap.py
-from dialog import Conversation, READ_IT, lineCap, withBoxExample  # pokeplay: harness/dialog.py
+from offmap import IntroNames, markOffMap, namingBlock as offMapNamingBlock, pressEffect as offMapPressEffect  # pokeplay: harness/offmap.py
+from dialog import BOX_CAP, Conversation, READ_IT, lineCap, withBoxExample  # pokeplay: harness/dialog.py
 
 # Raw taps into a menu need a beat to land: the tap returns when its frames
 # elapse, but the menu redraws a few frames later, and a second tap fired into
@@ -535,6 +535,7 @@ class Actions:
         self.roster = roster        # matchup.Roster, for `check`
         self.data = data            # damage_calc.GameData, for `check`
         self.talk = Conversation()  # pokeplay: what boxes said (harness/dialog.py)
+        self.introNames = IntroNames()  # pokeplay: the rival gets its own name (harness/offmap.py)
         # Set by PlayerAI each turn so battle commands can name real moves.
         self.observation: "Observation | None" = None
         self.turn = 0               # for stamping notes
@@ -1059,6 +1060,8 @@ class Actions:
         wanted = " ".join(args).strip()
         if not wanted:
             raise ActionError("name needs the name to type, e.g. `name sprout`")
+        if clash := self.introNames.clash(obs.state, wanted):  # pokeplay
+            raise ActionError(clash)
         try:
             result = Keyboard(self.client).enter(wanted)
         except NamingError as exc:
@@ -1067,6 +1070,7 @@ class Actions:
         if not result["confirmed"]:
             return (f"typed {result['name']!r}{note}, but the keyboard is still "
                     f"open - check the screen and press A to accept it")
+        self.introNames.add(obs.state, result["name"])  # pokeplay
         return f"named it {result['name']!r}{note} and confirmed"
 
     # ---- learning a move --------------------------------------------------
@@ -1761,7 +1765,7 @@ class Observation:
         lines = ["A TEXT BOX IS OPEN ON SCREEN."]
         if self.dialogText:
             flat = " ".join(self.dialogText.split())
-            lines.append(f'  It says: "{flat[:400]}"')
+            lines.append(f'  It says: "{flat[:BOX_CAP]}"')  # pokeplay: was 400, cut long speeches
             # Only hedge when the text is actually hedgeable. gStringVar4 keeps
             # the last message long after its box has gone, so the caveat is
             # honest there - but a battle message is read live out of its own
