@@ -63,6 +63,7 @@ Usage:
 
 from __future__ import annotations
 
+import copy
 import difflib
 import json
 import re
@@ -523,7 +524,7 @@ class Memory:
 
     @classmethod
     def load(cls, path: Path = MEMORIES_FILE) -> "Memory":
-        data = dict(cls.DEFAULTS)
+        data = copy.deepcopy(cls.DEFAULTS)  # dict() would share the default lists
         if path.exists():
             try:
                 data.update(json.loads(path.read_text(encoding="utf-8")))
@@ -576,7 +577,7 @@ class Memory:
             if announce:
                 print(f"objectives: this is a different save (trainer id "
                       f"{trainerId}, remembered {known}) - resetting progress.")
-            self.data = dict(self.DEFAULTS)
+            self.data = copy.deepcopy(self.DEFAULTS)
             self.data["fresh"] = True
         self.data["trainer_id"] = trainerId
         self.data["player"] = player.get("name")
@@ -598,6 +599,16 @@ class Memory:
         self.data["starter"] = starter
         if announce:
             print(f"objectives: this save started with {starter.upper()}.")
+
+    PROGRESS = ("objective_index", "objective_id", "objective_title",
+                "objective_started_turn", "completed", "pursuit", "starter")
+
+    def rewind(self):
+        """Forget progress so the next sync rebuilds it from the game, as after
+        loading an earlier save. Who the player is, PP seen and notes stay."""
+        for key in self.PROGRESS:
+            self.data[key] = copy.deepcopy(self.DEFAULTS[key])
+        self.data["fresh"] = True
 
     def complete(self, objective: Objective, turn: int):
         self.data.setdefault("completed", []).append({
