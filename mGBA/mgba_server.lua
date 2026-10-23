@@ -139,6 +139,7 @@ GEN3_CHARS[0xB2] = "\""  GEN3_CHARS[0xB3] = "'"   GEN3_CHARS[0xB4] = "'"
 GEN3_CHARS[0xB5] = "M"   GEN3_CHARS[0xB6] = "F"   GEN3_CHARS[0xB8] = ","
 GEN3_CHARS[0xB9] = "x"   GEN3_CHARS[0xBA] = "/"
 GEN3_CHARS[0xB7] = "$"   GEN3_CHARS[0xF0] = ":"
+GEN3_CHARS[0x1B] = "é"   -- as in POKéMON; two bytes in UTF-8, so never an encode target
 
 -- Control codes, which only appear in dialog strings (never in names).
 -- Names terminate at 0xFF and contain nothing else; message text is full of
@@ -159,6 +160,11 @@ for code, ch in pairs(GEN3_CHARS) do
     if #ch == 1 and (GEN3_ENCODE[ch] == nil or code < GEN3_ENCODE[ch]) then
         GEN3_ENCODE[ch] = code
     end
+end
+-- M, F, x are also the lower codes of ♂, ♀, × (0xB5/0xB6/0xB9); letters win
+for i = 0, 25 do
+    GEN3_ENCODE[string.char(65 + i)] = 0xBB + i
+    GEN3_ENCODE[string.char(97 + i)] = 0xD5 + i
 end
 
 --- Encode an ASCII string to Gen 3 bytes. Returns (bytes, unmappedCount).
