@@ -35,8 +35,8 @@ import io
 import os
 import sys
 import time
+from collections.abc import Callable
 
-import npcs
 from locationTracker import LocationTracker
 from pathfinder import (BLOCKED, Pathfinder, RETURN_TARGET,
                         WALK_THROUGH_OBJECT_CATEGORIES)
@@ -66,6 +66,14 @@ BLOCKED_LIMIT = 4
 
 # Seconds to wait when people block the only way, before looking again.
 PEOPLE_WAIT = 2
+
+# What a walk says when people or a scripted stop end it.
+BOX_STOP = ("an event or a person stopped you and a text box is up: read it with A, "
+            "it may say what to do next")
+STANDING = ("someone is standing at {tile}: talk to them with A or go around "
+            "(they may move on)")
+CROWDED = ("people are in the way at {tiles}: wait for them to move, talk to them "
+           "with A, or go another way")
 
 # Presses allowed to talk a conversation out, and the pause between them. Mom
 # and the nurses run three or four pages around the healing animation, so a
@@ -147,6 +155,11 @@ OFFSET_ATTEMPT_LIMIT = 6
 
 
 class Navigator:
+    # Optional callable taking the RAM position (bank, number, x, y) and returning
+    # the set of (x, y) RAM tiles on that map where something stands right now
+    # (people, say). None means nothing moves, and walks plan on the map alone.
+    occupied: Callable[[tuple], set] | None = None
+
     def __init__(self, host='127.0.0.1', port=54321, connect=True,
                  pathfinder=None, tracker=None, screenshotPath=None,
                  client=None):
@@ -731,8 +744,8 @@ class Navigator:
         self.facing = None
         # Keep it: a refused step is a fact about the world that the grid can be
         # checked against, and _blockedStepEvidence does exactly that. Unless
-        # a person stands there: they say nothing about where the walls are.
-        if not npcs.ahead(npcs.read(self.client, before), before, direction):
+        # something stands there: it says nothing about where the walls are.
+        if not self._occupiedAhead(before, direction):
             self._lastBlocked = (before, direction)
         return 'blocked'
 
@@ -1095,7 +1108,7 @@ class Navigator:
     def _run(self, planFn, description, maxSteps, onArrive=None):
         """Walk the plan one verified step at a time, replanning after each.
 
-        People are routed round while the walk lasts; no survey sees them.
+        Tiles that ``occupied`` reports are routed round while the walk lasts.
 
         ``onArrive`` lets a goal keep working after it reaches its target -
         goCatch uses it to pace for an encounter. It is called with
@@ -1124,8 +1137,10 @@ class Navigator:
             curMap, curTile = fix['mapName'], tuple(fix['tile'])
 
             ram = self._ramPos(state)
-            people = npcs.read(self.client, ram)
-            crowd = npcs.blocked(people, npcs.delta(ram, curTile)) if people and ram else set()
+            crowd = set()
+            if self.occupied and ram:
+                shift = (curTile[0] - ram[2], curTile[1] - ram[3])
+                crowd = {(x + shift[0], y + shift[1]) for x, y in self.occupied(ram)}
             self.pf.avoid = {curMap: crowd}
             plan = planFn(curMap, curTile, caps)
             if not plan['found'] and crowd:
@@ -1137,7 +1152,8 @@ class Navigator:
                     if blocked >= BLOCKED_LIMIT:
                         return self._result(
                             "stuck", description, steps,
-                            npcs.stuckAt(self._peopleOnPath(bare, curMap, crowd)))
+                            CROWDED.format(tiles=", ".join(
+                                str(t) for t in sorted(self._peopleOnPath(bare, curMap, crowd)))))
                     time.sleep(PEOPLE_WAIT)
                     continue
             if not plan['found']:
@@ -1197,14 +1213,13 @@ class Navigator:
                 blocked += 1
                 if self._boxUp():
                     return self._result("interrupted", description, steps,
-                                        npcs.BOX_STOP)
-                there = npcs.ahead(npcs.read(self.client, ram), ram,
-                                   plan['directions'][0]) if ram else None
+                                        BOX_STOP)
+                there = ram and self._occupiedAhead(ram, plan['directions'][0])
                 if blocked >= BLOCKED_LIMIT:
                     if there:
                         return self._result(
                             "stuck", description, steps,
-                            npcs.standing(self._expectedTile(
+                            STANDING.format(tile=self._expectedTile(
                                 curTile, plan['directions'][0])))
                     return self._result(
                         "stuck", description, steps,
@@ -1220,6 +1235,13 @@ class Navigator:
         """The occupied tiles a plan walks through, or all of them if none."""
         hit = {(c, r) for m, c, r in plan.get('path') or [] if m == curMap and (c, r) in crowd}
         return hit or crowd
+
+    def _occupiedAhead(self, ram, direction):
+        """Does something stand on the RAM tile one step from ram toward direction?"""
+        if not self.occupied or not ram:
+            return False
+        dx, dy = STEP_DELTA[direction]
+        return (ram[2] + dx, ram[3] + dy) in self.occupied(ram)
 
     def _expectedTile(self, tile, move):
         dc, dr = STEP_DELTA[move]
