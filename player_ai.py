@@ -3371,7 +3371,12 @@ class PlayerAI:
     def _log(self, obs, report, reply, entry):
         if not self.cfg.logPath:
             return
-        record = {
+        record = self._record(obs, report, reply, entry)
+        with self.cfg.logPath.open("a", encoding="utf-8") as fh:
+            fh.write(json.dumps(record) + "\n")
+
+    def _record(self, obs, report, reply, entry) -> dict:
+        return {
             "time": datetime.now().isoformat(timespec="seconds"),
             "turn": entry["turn"], "in_battle": obs.inBattle,
             "map": obs.fix["mapName"] if obs.fix else None,
@@ -3379,8 +3384,6 @@ class PlayerAI:
             "report": report, "reply": reply,
             "action": entry["action"], "result": entry["result"],
         }
-        with self.cfg.logPath.open("a", encoding="utf-8") as fh:
-            fh.write(json.dumps(record) + "\n")
 
     # ---- run modes --------------------------------------------------------
 
