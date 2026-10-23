@@ -85,6 +85,8 @@ GEN3_ENCODE = {}
 for _code, _ch in sorted(GEN3_DECODE.items()):
     if len(_ch) == 1:
         GEN3_ENCODE.setdefault(_ch, _code)
+for _i in range(26):  # M, F, x are also the lower codes of ♂, ♀, ×; letters win
+    GEN3_ENCODE[chr(65 + _i)], GEN3_ENCODE[chr(97 + _i)] = 0xBB + _i, 0xD5 + _i
 
 
 def gen3_encode(text: str) -> bytes:
