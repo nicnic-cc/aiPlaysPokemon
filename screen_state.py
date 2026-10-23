@@ -180,8 +180,14 @@ MIN_CURSOR_PIXELS = 10
 # The two places FRLG draws the window, tried in this order. Overworld first
 # because it is the common one and because a battle frame cannot accidentally
 # satisfy it - the edge test wants the world showing past both borders.
+# A third place: a Pokemon Center nurse's "Would you like me to heal your
+# POKeMON back to perfect health?" draws a narrower menu further left. Measured
+# off a live LeafGreen v1.1 frame: interior x 158-193, y 70-105.
+NURSE_YESNO_LEFT, NURSE_YESNO_RIGHT = 158, 194
+
 YESNO_BOXES = (("overworld", YESNO_LEFT, YESNO_RIGHT),
-               ("battle", BATTLE_YESNO_LEFT, BATTLE_YESNO_RIGHT))
+               ("battle", BATTLE_YESNO_LEFT, BATTLE_YESNO_RIGHT),
+               ("nurse", NURSE_YESNO_LEFT, NURSE_YESNO_RIGHT))
 
 # Kept so `from screen_state import CURSOR_LEFT` still means something.
 CURSOR_LEFT = YESNO_LEFT + CURSOR_INSET
