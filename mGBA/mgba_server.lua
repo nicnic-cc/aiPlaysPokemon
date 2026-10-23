@@ -161,6 +161,11 @@ for code, ch in pairs(GEN3_CHARS) do
         GEN3_ENCODE[ch] = code
     end
 end
+-- pokeplay: M, F, x are also the lower codes of ♂, ♀, × (0xB5/0xB6/0xB9); letters win
+for i = 0, 25 do
+    GEN3_ENCODE[string.char(65 + i)] = 0xBB + i
+    GEN3_ENCODE[string.char(97 + i)] = 0xD5 + i
+end
 
 --- Encode an ASCII string to Gen 3 bytes. Returns (bytes, unmappedCount).
 --- Unmappable characters become 0x00 (space) so a search string stays the
