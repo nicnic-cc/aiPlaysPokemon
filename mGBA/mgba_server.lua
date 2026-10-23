@@ -139,6 +139,7 @@ GEN3_CHARS[0xB2] = "\""  GEN3_CHARS[0xB3] = "'"   GEN3_CHARS[0xB4] = "'"
 GEN3_CHARS[0xB5] = "M"   GEN3_CHARS[0xB6] = "F"   GEN3_CHARS[0xB8] = ","
 GEN3_CHARS[0xB9] = "x"   GEN3_CHARS[0xBA] = "/"
 GEN3_CHARS[0xB7] = "$"   GEN3_CHARS[0xF0] = ":"
+GEN3_CHARS[0x1B] = "é"   -- as in POKéMON; two bytes in UTF-8, so never an encode target
 
 -- Control codes, which only appear in dialog strings (never in names).
 -- Names terminate at 0xFF and contain nothing else; message text is full of
