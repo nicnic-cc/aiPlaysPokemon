@@ -708,9 +708,12 @@ class Actions:
 
         where = self._whereNow()
         if outcome == "blocked":
-            return (f"walked {walked} of {steps} tile(s) {direction}, then hit "
-                    f"something solid. {where}")
+            return (f"walked {walked} of {steps} tile(s) {direction}, then "
+                    f"{self._blockedText(direction)}. {where}")
         return f"walked {walked} tile(s) {direction}. {where}"
+
+    def _blockedText(self, direction: str) -> str:
+        return "hit something solid"
 
     def _whereNow(self) -> str:
         fix = self.nav.locate()
