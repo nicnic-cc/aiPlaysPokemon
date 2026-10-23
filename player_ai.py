@@ -1073,7 +1073,11 @@ class Actions:
         if not result["confirmed"]:
             return (f"typed {result['name']!r}{note}, but the keyboard is still "
                     f"open - check the screen and press A to accept it")
+        self._onNamed(obs.state, result)
         return f"named it {result['name']!r}{note} and confirmed"
+
+    def _onNamed(self, state: dict, result: dict) -> None:
+        pass
 
     # ---- learning a move --------------------------------------------------
 
