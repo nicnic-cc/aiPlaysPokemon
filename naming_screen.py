@@ -108,7 +108,7 @@ HOME = (0, 0)          # where the cursor sits when the screen opens
 # What a name may contain, after upper-casing. Anything else is dropped.
 TYPEABLE = set("".join(KEYBOARD)) - {" "} | {" "}
 
-TAP_FRAMES = 12
+TAP_FRAMES = 4         # well under TAP_DELAY: a same-key tap sent inside a hold is lost
 TAP_DELAY = 0.14       # a tap sent inside the last one's animation is dropped
 TYPE_RETRIES = 2       # per character, after re-anchoring on what did appear
 
