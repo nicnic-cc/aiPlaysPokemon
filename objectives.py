@@ -600,16 +600,6 @@ class Memory:
         if announce:
             print(f"objectives: this save started with {starter.upper()}.")
 
-    PROGRESS = ("objective_index", "objective_id", "objective_title",
-                "objective_started_turn", "completed", "pursuit", "starter")
-
-    def rewind(self):
-        """Forget progress so the next sync rebuilds it from the game, as after
-        loading an earlier save. Who the player is, PP seen and notes stay."""
-        for key in self.PROGRESS:
-            self.data[key] = copy.deepcopy(self.DEFAULTS[key])
-        self.data["fresh"] = True
-
     def complete(self, objective: Objective, turn: int):
         self.data.setdefault("completed", []).append({
             "id": objective.id, "title": objective.title, "turn": turn,
