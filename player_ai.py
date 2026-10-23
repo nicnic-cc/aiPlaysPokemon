@@ -616,6 +616,9 @@ class Actions:
                 times = max(1, min(MAX_PRESSES, int(match.group())))
 
         before = self._worldMark()
+        if (first := self._pressFirst(button, times, before)) is not None:
+            self.nav.facing = None
+            return first
         self._menuTap(button, times)
 
         # navigator caches which way we're facing to save a tap per step. A raw
@@ -625,6 +628,9 @@ class Actions:
         self.nav.facing = title if title in DIRECTIONS else None
         label = f"pressed {button}" + (f" x{times}" if times > 1 else "")
         return label + self._pressEffect(before)
+
+    def _pressFirst(self, button: str, times: int, before: dict | None) -> str | None:
+        return None
 
     def _worldMark(self) -> dict | None:
         """The two things a button press can change: where you are, and whether
