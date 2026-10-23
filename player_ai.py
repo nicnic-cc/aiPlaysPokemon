@@ -659,7 +659,7 @@ class Actions:
                 "ram": (player.get("map_bank"), player.get("map_number"),
                         player.get("x"), player.get("y"))}
 
-    def _pressEffect(self, before: dict | None) -> str:
+    def _pressEffect(self, before: dict | None, after: dict | None = None) -> str:
         """Say what the press actually did.
 
         Every other command here reports its outcome - `move` says where you
@@ -673,7 +673,8 @@ class Actions:
         convinced by its own record. So report the effect, and be blunt when
         there wasn't one.
         """
-        after = self._worldMark()
+        if after is None:
+            after = self._worldMark()
         if before is None or after is None:
             return ""
         if after["battle"] and not before["battle"]:
@@ -683,7 +684,7 @@ class Actions:
                 return f' - the battle moved on: "{after["text"]}"'
             return " - the battle is saying the same thing it was"
         if after["dialog"]:
-            return " - there is a text box on screen now; keep pressing A"
+            return self._boxEffect()
         if before["dialog"]:
             return " - the text box is gone; you can walk again"
         if after["ram"] != before["ram"]:
@@ -691,6 +692,9 @@ class Actions:
         return (" - nothing responded. There is no text box on screen and "
                 "nothing in front of you to talk to. Pressing A again will do "
                 "the same nothing; walk somewhere else instead")
+
+    def _boxEffect(self) -> str:
+        return " - there is a text box on screen now; keep pressing A"
 
     def move(self, args: list) -> str:
         self._requireNoDialog()
