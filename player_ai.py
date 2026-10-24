@@ -124,6 +124,8 @@ from naming_screen import isOpen as namingScreenOpen  # noqa: E402
 # against RAM), menus do.
 MENU_TAP_FRAMES = 12
 MENU_TAP_DELAY = 0.15
+BAG_FADE = 1.0  # the bag, and its party list after USE, fade in: a tap before that is dropped
+BAG_MENU_DELAY = 0.5  # USE / CANCEL opens after the item text redraws
 
 # How many characters of an open text box the report quotes.
 DIALOG_TEXT_CAP = 400
@@ -139,8 +141,8 @@ DIALOG_TEXT_CAP = 400
 #                 POKEMON 2 RUN 3                   slot2  slot3
 ACTION_FIGHT, ACTION_BAG, ACTION_POKEMON, ACTION_RUN = 0, 1, 2, 3
 
-# The bag is a row of pockets with the item list underneath, and it always opens
-# on the first pocket. RIGHT steps one pocket along the row, LEFT steps one back:
+# The bag is a row of pockets with the item list underneath, and it reopens on
+# the pocket it was left at. RIGHT steps one pocket along the row, LEFT steps one back:
 #
 #   ITEMS 0        KEY ITEMS 1        POKE BALLS 2
 #
@@ -939,9 +941,9 @@ class Actions:
         """Open the bag - and, given an item name, use that item in one go.
 
         The taps are counted from GAME_STATE rather than described to the model:
-        the bag opens on ITEMS every time, so the pocket is RIGHT x its index in
-        BAG_POCKETS, and the item is DOWN x its index in the pocket's list,
-        which is the same order the game draws it in. Nothing here is guessed.
+        the cursor is parked on the first line of ITEMS, then the pocket is
+        RIGHT x its index in BAG_POCKETS, and the item is DOWN x its index in
+        the pocket's list, the order the game draws it in. Nothing is guessed.
 
         It deliberately does not try to work out whether the bag is already
         open, because it cannot: no address the harness knows reports the bag,
@@ -953,8 +955,8 @@ class Actions:
         obs = self._requireBattle()
         if not args:
             self._chooseAction(ACTION_BAG)
-            return ("opened the bag, on the ITEMS pocket - it always opens "
-                    "there. The pockets are ITEMS -> KEY ITEMS -> POKE BALLS "
+            return ("opened the bag, on the pocket it was last left at. "
+                    "The pockets are ITEMS -> KEY ITEMS -> POKE BALLS "
                     "along the top: `press right` moves one pocket that way, "
                     "`press left` moves one back, `press down` moves down the "
                     "item list, `press a` uses what is highlighted and `press "
@@ -983,19 +985,31 @@ class Actions:
             raise ActionError(f"{name} is a key item - the game will not let you "
                               f"use one during a battle")
 
+        # The bag reopens on the pocket and line it was left at, and each pocket
+        # keeps its own line. Neither wraps, so surplus LEFT and UP taps park
+        # the cursor on the first line of ITEMS, then of the target pocket.
         self._chooseAction(ACTION_BAG)
+        time.sleep(BAG_FADE)
+        self._menuTap("LEFT", len(BAG_POCKETS) - 1)
         self._menuTap("RIGHT", entry["pocketIndex"])
+        lines = len((obs.state.get("bag") or {}).get(entry["pocket"]) or [])
+        self._menuTap("UP", lines)
         self._menuTap("DOWN", entry["itemIndex"])
-        self._menuTap("A")
+        self._menuTap("A")  # opens USE / CANCEL
+        time.sleep(BAG_MENU_DELAY)
+        self._menuTap("A")  # USE: a ball is thrown; a medicine asks for a Pokemon
+        if entry["pocket"] == "items":
+            time.sleep(BAG_FADE)
+            self._menuTap("A")  # the party list opens on the Pokemon in battle
         # Recorded for the next observation to check against, the same way `use`
         # is checked against the PP that actually moved.
         self.lastItem = {"name": name, "pocket": entry["pocket"],
                          "quantity": entry["quantity"]}
         return (f"took {name} out of the {entry['label']} pocket and used it "
                 f"(pocket {entry['pocketIndex'] + 1}, item "
-                f"{entry['itemIndex'] + 1} down the list). Check the next "
-                f"screenshot: a ball is thrown straight away, but a healing "
-                f"item asks which Pokemon first, and a text box may need A.")
+                f"{entry['itemIndex'] + 1} down the list). An item from the "
+                f"ITEMS pocket goes to the Pokemon in battle. Check the next "
+                f"screenshot: a text box may need A.")
 
     @staticmethod
     def _bagIndex(state: dict) -> list:
