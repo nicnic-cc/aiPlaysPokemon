@@ -792,6 +792,9 @@ local function readBagPocket(sb1, offset, numSlots, secKeyLow16)
                     name     = getItemName(itemId),
                     id       = itemId,
                     quantity = qty,
+                    -- item data byte 32: 0 not in battle, 1 on a Pokemon,
+                    -- 2 used directly (balls, Poke Doll)
+                    battle_usage = emu:read8(ROM_ITEM_DATA + itemId * 44 + 32),
                 }
             end
         end

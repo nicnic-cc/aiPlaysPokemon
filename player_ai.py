@@ -983,13 +983,16 @@ class Actions:
         if hit is None:
             # Key items are left out of the list for the same reason the report
             # does not name them: offering one is offering a dead end.
-            usable = [name for name, e in table if e["pocket"] != "key_items"]
+            usable = [name for name, e in table if self._usableInBattle(e)]
             raise ActionError(f"you have no {' '.join(args)!r}. What you can "
                               f"use in here: {', '.join(usable[:12]) or 'nothing'}")
         name, entry = hit
         if entry["pocket"] == "key_items":
             raise ActionError(f"{name} is a key item - the game will not let you "
                               f"use one during a battle")
+        if not self._usableInBattle(entry):
+            raise ActionError(f"the game will not let you use {name} in a "
+                              f"battle - it only works outside one")
 
         # The bag reopens on the pocket and line it was left at, and each pocket
         # keeps its own line. Neither wraps, so surplus LEFT and UP taps park
@@ -1004,7 +1007,7 @@ class Actions:
         self._menuTap("A")  # opens USE / CANCEL
         time.sleep(BAG_MENU_DELAY)
         self._menuTap("A")  # USE: a ball is thrown; a medicine asks for a Pokemon
-        if entry["pocket"] == "items":
+        if entry["onPokemon"]:
             time.sleep(BAG_FADE)
             self._menuTap("A")  # the party list opens on the Pokemon in battle
         # Recorded for the next observation to check against, the same way `use`
@@ -1018,6 +1021,10 @@ class Actions:
                 f"screenshot: a text box may need A.")
 
     @staticmethod
+    def _usableInBattle(entry: dict) -> bool:
+        return entry["pocket"] != "key_items" and entry["battleUsage"] != 0
+
+    @staticmethod
     def _bagIndex(state: dict) -> list:
         """[(item name, where it is)] over every pocket, in the game's order."""
         bag = state.get("bag") or {}
@@ -1028,7 +1035,13 @@ class Actions:
                               {"pocket": key, "label": label,
                                "pocketIndex": pocketIndex,
                                "itemIndex": itemIndex,
-                               "quantity": int(item.get("quantity") or 0)}))
+                               "quantity": int(item.get("quantity") or 0),
+                               # None from an older server: assume ITEMS go
+                               # on a Pokemon, as before battle_usage existed
+                               "battleUsage": item.get("battle_usage"),
+                               "onPokemon": (item.get("battle_usage") == 1
+                                             if item.get("battle_usage") is not None
+                                             else key == "items")}))
         return table
 
     def run(self, args: list) -> str:
@@ -1932,14 +1945,22 @@ class Observation:
                                  f"of them does anything in a battle. There is "
                                  f"no reason to open this pocket.")
                 continue
+            # Named items the game refuses in a battle get tried over and over
+            # (an Escape Rope against a trainer), so they are only counted.
+            unusable = sum(1 for e in entries if e.get("battle_usage") == 0)
+            entries = [e for e in entries if e.get("battle_usage") != 0]
             if not entries:
-                lines.append(f"  {label}: empty.")
+                lines.append(f"  {label}: " + (f"{unusable} item(s), none usable "
+                             f"in a battle." if unusable else "empty."))
                 continue
             usable += len(entries)
             names = ", ".join(f"{e.get('name')} x{e.get('quantity')}"
                               for e in entries[:limit])
             if len(entries) > limit:
                 names += f", and {len(entries) - limit} more"
+            if unusable:
+                names += (f" (and {unusable} that "
+                          f"{'does' if unusable == 1 else 'do'} nothing in a battle)")
             lines.append(f"  {label}: {names}")
         if not usable:
             return ("WHAT IS IN YOUR BAG\n  Nothing you could use in a battle. "
@@ -3144,6 +3165,12 @@ class PlayerAI:
                 obs.recommendation += (
                     f" {spent.move.name} would hit harder but is out of PP - a "
                     f"Pokemon Center refills it.")
+        elif rows and not any(r.is_usable for r in rows):
+            obs.recommendation = (
+                "CALCULATOR'S PICK: Struggle - every move is out of PP. `use` "
+                "with any move name picks FIGHT and the game struggles; it "
+                "hurts you by a quarter of the damage it does. Switch first "
+                "if another Pokemon still has PP.")
         elif spent is not None:
             obs.recommendation = (
                 f"CALCULATOR'S PICK: none - the only moves that damage this foe "
@@ -3164,12 +3191,6 @@ class PlayerAI:
         """
         if self.moveBook is None:
             return
-        elif rows and not any(r.is_usable for r in rows):
-            obs.recommendation = (
-                "CALCULATOR'S PICK: Struggle - every move is out of PP. `use` "
-                "with any move name picks FIGHT and the game struggles; it "
-                "hurts you by a quarter of the damage it does. Switch first "
-                "if another Pokemon still has PP.")
         try:
             pending = pendingLearn(self.moveBook, self.client, screen, state)
         except (MGBAError, ValueError, LearnError, KeyError):
