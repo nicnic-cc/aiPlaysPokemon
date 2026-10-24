@@ -86,6 +86,12 @@ CURSOR_ROWS = 5
 BATTLE_TEXT = 0x0202298C
 BATTLE_TEXT_LEN = 96
 
+# The battle text printer's next character, a pointer into BATTLE_TEXT: a long
+# message (a blackout) turns pages with its buffer unchanged, so only this says
+# which page is up. Measured on LeafGreen v1.1; it points elsewhere under a menu.
+TEXT_PRINTER_CHAR = 0x02020034
+PAGE_BREAK, TEXT_END = 0xFB, 0xFF
+
 # gMain.callback2 while the "which move should be forgotten?" list is up. Shared
 # with the ordinary party-menu summary screen, which is why it is never used
 # alone: the harness has no command that opens a summary, so in a battle it is
@@ -306,6 +312,22 @@ def battleText(client: MGBAClient) -> str:
     except (MGBAError, ValueError):
         return ""
     return " ".join(gen3_decode_text(raw).split())
+
+
+def battlePages(client: MGBAClient) -> tuple[list[str], int | None]:
+    """The battle message's pages, and which one is on screen (None while the printer is not on it)."""
+    try:
+        raw = client.peek(BATTLE_TEXT, BATTLE_TEXT_LEN)
+        at = int.from_bytes(client.peek(TEXT_PRINTER_CHAR, 4), "little") - BATTLE_TEXT
+    except (MGBAError, ValueError):
+        return [], None
+    end = raw.find(TEXT_END)
+    end = len(raw) if end < 0 else end
+    body = raw[:end].rstrip(bytes([PAGE_BREAK]))
+    pages = [" ".join(gen3_decode_text(p).split()) for p in body.split(bytes([PAGE_BREAK]))]
+    # a page waiting for A has the printer just past its break, so count the breaks before that
+    shown = min(raw[:at - 1].count(PAGE_BREAK), len(pages) - 1) if 0 < at <= end + 1 else None
+    return pages, shown
 
 
 def readCursor(client: MGBAClient) -> int:

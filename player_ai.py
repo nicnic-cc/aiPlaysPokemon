@@ -103,6 +103,7 @@ from move_learn import (  # noqa: E402
     SUMMARY_CALLBACK,
     LearnError,
     MoveBook,
+    battlePages,
     battleText,
     pendingLearn,
     rank as rankLearn,
@@ -578,9 +579,6 @@ class Actions:
         # action in the harness with no undo, so "it worked" is never asserted
         # on the strength of the taps alone.
         self.lastForget: dict | None = None
-        # The battle message an A last saw, and which of its pages is up: a
-        # long one (a blackout) turns pages while its buffer stays the same.
-        self.battleLine, self.battlePart = "", 1
 
     # ---- primitives -------------------------------------------------------
 
@@ -703,6 +701,7 @@ class Actions:
                 "menu": menu,
                 "cursor": cursor,
                 "text": battleText(self.client) if inBattle else "",
+                "pages": battlePages(self.client) if inBattle else ([], None),
                 "ram": (player.get("map_bank"), player.get("map_number"),
                         player.get("x"), player.get("y"))}
 
@@ -743,17 +742,15 @@ class Actions:
                 # not quoting the battle text: it is mid-redraw at this point
                 return f" - the {before['menu']} closed, back to the battle"
             if after["text"] and after["text"] != before["text"]:
-                self.battleLine, self.battlePart = after["text"], 1
-                return f' - the battle moved on: "{after["text"]}"'
+                pages, _ = battlePages(self.client)  # a new message opens on its first page
+                return f' - the battle moved on: "{pages[0] if pages else after["text"]}"'
             if before.get("pressed") == "A" and after["text"]:
-                # the same text after an A is a new page, or the fade out after the last one
+                # the same text after an A: a new page, the fade out after the last one, or a message moving on by itself
                 if self._battleEnded(BATTLE_FADE):
                     return " - the battle is over"
-                if after["text"] != self.battleLine:
-                    self.battleLine, self.battlePart = after["text"], 1
-                self.battlePart += 1
-                return (f" - the battle moved on to part {self.battlePart} of "
-                        f"the same long message; keep pressing A")
+                pages, shown = battlePages(self.client)
+                if shown is not None and (pages, shown) != before["pages"]:
+                    return f' - the battle moved on: "{pages[shown]}"'
             return " - the battle is saying the same thing it was"
         if before["battle"] and not after["battle"]:
             return " - the battle is over"
