@@ -669,7 +669,9 @@ class Actions:
         dialog = False
         if self.cfg.detectDialog and not state.get("in_battle"):
             try:
-                dialog = bool(measureScreen(self.client.screenshot())["open"])
+                # a yes/no menu is only drawn over a real box, even one measure takes for scenery
+                reading = measureScreen(self.client.screenshot())
+                dialog = bool(reading["open"] or reading.get("yesNo"))
             except (MGBAError, ValueError):
                 dialog = False
         # In a battle the dialog test above is skipped and the map never moves,
