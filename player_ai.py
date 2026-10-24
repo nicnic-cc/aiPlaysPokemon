@@ -124,6 +124,9 @@ from naming_screen import isOpen as namingScreenOpen  # noqa: E402
 # against RAM), menus do.
 MENU_TAP_FRAMES = 12
 MENU_TAP_DELAY = 0.15
+# A box can draw well after MENU_TAP_DELAY (a speech that closes and reopens,
+# a warp's first line); the longest prints in about this long at Fast text.
+BOX_WAIT = 1.4
 BAG_FADE = 1.0  # the bag, and its party list after USE, fade in: a tap before that is dropped
 BAG_MENU_DELAY = 0.5  # USE / CANCEL opens after the item text redraws
 STRUGGLE_TEXT = 1.0  # "<name> has no moves left!" prints before it takes A
@@ -720,6 +723,7 @@ class Actions:
             after = self._worldMark()
         if before is None or after is None:
             return ""
+        after = self._awaitBox(before, after)
         if after["battle"] and not before["battle"]:
             return " - a battle started"
         if after["battle"] and before["battle"]:
@@ -758,6 +762,22 @@ class Actions:
         return (" - nothing responded. There is no text box on screen and "
                 "nothing in front of you to talk to. Pressing A again will do "
                 "the same nothing; walk somewhere else instead")
+
+    def _awaitBox(self, before: dict, after: dict) -> dict:
+        """Where the press would read "nothing responded" or "the box is gone",
+        watch up to BOX_WAIT for a box, a battle or a step before saying so."""
+        if (after["battle"] or before["battle"] or after["dialog"]
+                or (not before["dialog"] and after["ram"] != before["ram"])):
+            return after
+        end = time.monotonic() + BOX_WAIT
+        while time.monotonic() < end:
+            time.sleep(MENU_TAP_DELAY)
+            mark = self._worldMark()
+            if mark is None:
+                return after
+            if mark["dialog"] or mark["battle"] or mark["ram"] != after["ram"]:
+                return mark
+        return after
 
     def _cursorMoved(self, before: dict, after: dict) -> str | None:
         """Where the action or move cursor landed, or that a direction had
