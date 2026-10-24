@@ -126,6 +126,7 @@ MENU_TAP_FRAMES = 12
 MENU_TAP_DELAY = 0.15
 BAG_FADE = 1.0  # the bag, and its party list after USE, fade in: a tap before that is dropped
 BAG_MENU_DELAY = 0.5  # USE / CANCEL opens after the item text redraws
+STRUGGLE_TEXT = 1.0  # "<name> has no moves left!" prints before it takes A
 
 # How many characters of an open text box the report quotes.
 DIALOG_TEXT_CAP = 400
@@ -858,6 +859,18 @@ class Actions:
         if not obs.moveSlots:
             raise ActionError("the battle hasn't loaded your moves yet - "
                               "`wait 1` and look again")
+        # With every move at zero PP the game skips the move list: FIGHT alone
+        # makes it Struggle. Refusing here left a lone Pokemon facing a trainer
+        # with nothing it could do at all.
+        pp = self._movePP(obs.state)
+        if pp and all(pp.get(m, 1) <= 0 for m, _i in obs.moveSlots):
+            self._chooseAction(ACTION_FIGHT)
+            time.sleep(STRUGGLE_TEXT)
+            self._menuTap("A")  # past "<name> has no moves left!"
+            return ("every move is out of PP, so this picked FIGHT and the game "
+                    "uses Struggle: it hits the foe and hurts you by a quarter "
+                    "of the damage it does. Heal at a Pokemon Center after "
+                    "the battle to refill the PP")
         names = ", ".join(m for m, _i in obs.moveSlots)
         if not args:
             raise ActionError(f"use needs a move: {names}")
@@ -878,15 +891,8 @@ class Actions:
         # off "There's no PP left for this move!", and the only thing anyone
         # would learn is what the PP column already said. Refusing by name says
         # it in one line and leaves the cursor where it was.
-        pp = self._movePP(obs.state)
         left = [m for m, _i in obs.moveSlots if pp.get(m, 1) > 0]
         if pp.get(name, 1) <= 0:
-            if not left:
-                raise ActionError(
-                    f"{name} is out of PP, and so is every other move - "
-                    f"attacking now only gets you Struggle, which damages you "
-                    f"too. Switch, use an item from the bag, or run, and heal "
-                    f"at a Pokemon Center")
             raise ActionError(f"{name} is out of PP - the game will not let you "
                               f"pick it. Still usable: {', '.join(left)}")
 
@@ -3158,6 +3164,12 @@ class PlayerAI:
         """
         if self.moveBook is None:
             return
+        elif rows and not any(r.is_usable for r in rows):
+            obs.recommendation = (
+                "CALCULATOR'S PICK: Struggle - every move is out of PP. `use` "
+                "with any move name picks FIGHT and the game struggles; it "
+                "hurts you by a quarter of the damage it does. Switch first "
+                "if another Pokemon still has PP.")
         try:
             pending = pendingLearn(self.moveBook, self.client, screen, state)
         except (MGBAError, ValueError, LearnError, KeyError):
