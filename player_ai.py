@@ -123,7 +123,7 @@ from naming_screen import isOpen as namingScreenOpen  # noqa: E402
 # elapse, but the menu redraws a few frames later, and a second tap fired into
 # that window is eaten. Walking doesn't need this (navigator verifies each step
 # against RAM), menus do.
-MENU_TAP_FRAMES = 12
+MENU_TAP_FRAMES = 4  # well under MENU_TAP_DELAY: a same-key tap sent inside a hold is lost
 MENU_TAP_DELAY = 0.15
 # A box can draw well after MENU_TAP_DELAY (a speech that closes and reopens,
 # a warp's first line); the longest prints in about this long at Fast text.
