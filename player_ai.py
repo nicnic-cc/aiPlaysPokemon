@@ -142,6 +142,7 @@ DIALOG_TEXT_CAP = 400
 #                 POKEMON 2 RUN 3                   slot2  slot3
 ACTION_FIGHT, ACTION_BAG, ACTION_POKEMON, ACTION_RUN = 0, 1, 2, 3
 ACTION_NAMES = ("FIGHT", "BAG", "POKEMON", "RUN")
+EDGE_WORDS = {"Up": "above", "Down": "below", "Left": "left of", "Right": "right of"}
 
 # gActionSelectionCursor and gMoveSelectionCursor, 4 bytes each, one per battler
 # (LeafGreen v1.1, measured live). Each keeps its slot while its menu is hidden,
@@ -636,6 +637,8 @@ class Actions:
                 times = max(1, min(MAX_PRESSES, int(match.group())))
 
         before = self._worldMark()
+        if before is not None:
+            before["pressed"] = button.title()  # _cursorMoved tells a direction at an edge
         if (first := self._pressFirst(button, times, before)) is not None:
             self.nav.facing = None
             return first
@@ -740,18 +743,28 @@ class Actions:
                 "the same nothing; walk somewhere else instead")
 
     def _cursorMoved(self, before: dict, after: dict) -> str | None:
-        """Where the action or move cursor landed, if the press moved it; a
-        cursor move opens nothing, so it needs no _menuSettled wait."""
+        """Where the action or move cursor landed, or that a direction had
+        nowhere to go; neither opens anything, so neither needs the _menuSettled wait."""
         if None in (before["cursor"], after["cursor"]) or after["menu"]:
             return None
         (action, move), (wasAction, wasMove) = after["cursor"], before["cursor"]
+        slots = dict((i, m) for m, i in (self.observation.moveSlots
+                                          if self.observation else []))
+        moveName = slots.get(move, f"move slot {move + 1}")
         if move != wasMove:
-            slots = dict((i, m) for m, i in (self.observation.moveSlots
-                                              if self.observation else []))
-            return (f" - the cursor is on {slots.get(move, f'move slot {move + 1}')}"
-                    " in the move menu; A uses it")
+            return f" - the cursor is on {moveName} in the move menu; A uses it"
         if action != wasAction and action < len(ACTION_NAMES):
             return f" - the cursor is on {ACTION_NAMES[action]}; A picks it"
+        side = EDGE_WORDS.get(before.get("pressed"))
+        if side is None or after["text"] != before["text"]:
+            return None
+        # the battle text is the witness for which menu is up: the action prompt, or the move menu's type pane
+        if after["text"].startswith("TYPE/"):
+            return (f" - there is nothing {side} {moveName}; the cursor is still "
+                    f"on {moveName} in the move menu; A uses it")
+        if after["text"].startswith("What will") and action < len(ACTION_NAMES):
+            name = ACTION_NAMES[action]
+            return f" - there is nothing {side} {name}; the cursor is still on {name}; A picks it"
         return None
 
     def _menuSettled(self, mark: dict) -> dict:
