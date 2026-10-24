@@ -142,6 +142,17 @@ DIALOG_TEXT_CAP = 400
 #                 POKEMON 2 RUN 3                   slot2  slot3
 ACTION_FIGHT, ACTION_BAG, ACTION_POKEMON, ACTION_RUN = 0, 1, 2, 3
 
+# Screens a battle opens over itself, by callback2 (LeafGreen v1.1). The battle
+# message buffer does not change under them, so only the screen id shows them.
+BATTLE_MENUS = {"08107F31": "bag", "0811EBF1": "party menu",
+                SUMMARY_CALLBACK: "summary screen"}
+BATTLE_MAIN = "08011115"
+
+
+def battleMenu(callback2: str | None) -> str | None:
+    """The menu open over the battle, "" for none, None between screens."""
+    return "" if callback2 == BATTLE_MAIN else BATTLE_MENUS.get(callback2)
+
 # The bag is a row of pockets with the item list underneath, and it reopens on
 # the pocket it was left at. RIGHT steps one pocket along the row, LEFT steps one back:
 #
@@ -656,8 +667,15 @@ class Actions:
         # it tells the model to stop doing the thing that was working. The
         # battle's own message buffer is the witness the other branches have.
         inBattle = bool(state.get("in_battle"))
+        menu = None
+        if inBattle:
+            try:
+                menu = battleMenu(self.client.screen().get("callback2"))
+            except (MGBAError, ValueError):
+                menu = None
         return {"battle": inBattle,
                 "dialog": dialog,
+                "menu": menu,
                 "text": battleText(self.client) if inBattle else "",
                 "ram": (player.get("map_bank"), player.get("map_number"),
                         player.get("x"), player.get("y"))}
@@ -683,6 +701,15 @@ class Actions:
         if after["battle"] and not before["battle"]:
             return " - a battle started"
         if after["battle"] and before["battle"]:
+            if ((after["menu"] is None and before["menu"]) or (after["menu"],
+                    after["text"]) == (before["menu"], before["text"])):
+                after = self._menuSettled(after)
+            if after["menu"]:
+                return (f" - the {after['menu']} is open over the battle; "
+                        "B backs out of it")
+            if before["menu"] and after["menu"] == "":
+                # not quoting the battle text: it is mid-redraw at this point
+                return f" - the {before['menu']} closed, back to the battle"
             if after["text"] and after["text"] != before["text"]:
                 return f' - the battle moved on: "{after["text"]}"'
             return " - the battle is saying the same thing it was"
@@ -695,6 +722,20 @@ class Actions:
         return (" - nothing responded. There is no text box on screen and "
                 "nothing in front of you to talk to. Pressing A again will do "
                 "the same nothing; walk somewhere else instead")
+
+    def _menuSettled(self, mark: dict) -> dict:
+        """A battle menu opens or closes only after a fade the tap does not wait
+        for, so give callback2 that long to change before calling it no change."""
+        end = time.monotonic() + BAG_FADE
+        while time.monotonic() < end:
+            time.sleep(MENU_TAP_DELAY)
+            try:
+                menu = battleMenu(self.client.screen().get("callback2"))
+            except (MGBAError, ValueError):
+                return mark
+            if menu is not None and menu != mark["menu"]:
+                return {**mark, "menu": menu}
+        return mark
 
     def _boxEffect(self) -> str:
         return " - there is a text box on screen now; keep pressing A"
@@ -1886,6 +1927,10 @@ class Observation:
         lines = ["WHERE YOU ARE"]
         if self.inBattle:
             lines.append("  You are in a BATTLE. The overworld map is not visible.")
+            menu = BATTLE_MENUS.get(self.screen.get("callback2"), "")
+            if menu and self.learn is None:
+                lines.append(f"  The {menu} is open over the battle. Press B "
+                             "to back out to the battle menu.")
         elif self.fix is not None:
             lines.append(f"  Map:   {self.fix['mapName']}  "
                          f"tile {tuple(self.fix['tile'])}")
