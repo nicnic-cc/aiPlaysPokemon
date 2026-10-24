@@ -11,7 +11,7 @@
 --   TAP|<button>|<frames> - Press button for N frames
 --   SCREENSHOT            - Returns PNG bytes: OK|<byte_length>\n<raw PNG bytes>
 --   GAME_STATE            - Returns full game state as JSON: OK|<json>\n
---   POSITION              - Returns just map/x/y/in_battle as JSON: OK|<json>\n
+--   POSITION              - Returns just map/x/y/facing/in_battle as JSON: OK|<json>\n
 --   SCREEN                - Returns UI/screen identity as JSON: OK|<json>\n
 --   PING                  - Returns OK\n (health check)
 --
@@ -699,6 +699,26 @@ local function isInBattle()
     return ((b >> GMAIN_IN_BATTLE_BIT) & 1) == 1
 end
 
+-- gObjectEvents (measured on LeafGreen v1.1): 16 slots of struct ObjectEvent.
+-- The player's slot is the active one with local id 255; the low nibble of
+-- byte 0x18 is facingDirection.
+local RAM_OBJECT_EVENTS  = 0x02036E38
+local OBJECT_EVENT_SIZE  = 0x24
+local OBJECT_EVENT_COUNT = 16
+local PLAYER_LOCAL_ID    = 255
+local FACING_NAMES = { [1] = "Down", [2] = "Up", [3] = "Left", [4] = "Right" }
+
+--- The way the player faces ("Up"/"Down"/"Left"/"Right"), or nil.
+local function playerFacing()
+    for i = 0, OBJECT_EVENT_COUNT - 1 do
+        local slot = RAM_OBJECT_EVENTS + i * OBJECT_EVENT_SIZE
+        if (emu:read8(slot) & 1) == 1 and emu:read8(slot + 8) == PLAYER_LOCAL_ID then
+            return FACING_NAMES[emu:read8(slot + 0x18) & 0xF]
+        end
+    end
+    return nil
+end
+
 --- Read one active battler from gBattleMons (unencrypted, in-battle only).
 --- Unlike the party structs, this reflects LIVE battle state: stat stages,
 --- stats already modified by nature, current types (e.g. Color Change),
@@ -1130,6 +1150,7 @@ local function handlePosition()
         map_number = emu:read8(sb1 + SB1_MAP_NUMBER),
         x          = emu:read16(sb1 + SB1_PLAYER_X),
         y          = emu:read16(sb1 + SB1_PLAYER_Y),
+        facing     = playerFacing(),
         in_battle  = isInBattle(),
     }
     return "OK|" .. toJSON(state) .. "\n"

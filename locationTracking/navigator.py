@@ -12,9 +12,10 @@ moved as expected, and replan on drift (NPC bumps, ledges, blocked tiles).
 Open-loop direction lists are too brittle for an agent, so nothing here trusts a
 precomputed path beyond the next step.
 
-Movement accounts for the turn-then-move quirk: a tap in a direction the player
-isn't already facing only rotates the avatar, and the move costs a second tap.
-See _step for how that's disambiguated from a genuinely blocked tile.
+Movement accounts for the turn-then-move quirk: a short tap in a direction the
+player isn't already facing only rotates the avatar. A full tap (16 frames)
+turns and walks; see _step for how a tap that went nowhere is told apart from a
+genuinely blocked tile, and _face for turning without walking.
 
 A battle / dialog (in_battle, or the screenshot stops matching any overworld
 map) is reported as an interruption rather than fought - the operator or a
@@ -117,6 +118,11 @@ STEP_SETTLE_POLLS = 24   # ~1.2s, enough for a door warp
 # Route 1, 36 steps per interval: at 0.20s a third of the steps were still
 # being dropped, at 0.25s and beyond none were. 0.30 keeps a margin.
 STEP_ANIMATION = 0.30
+
+# The longest hold that turns the player without walking. Measured on this ROM
+# from rest on open ground: 2-8 frames turn, 10 and up turn and walk, 1 does
+# nothing. Facing that way already, any hold walks.
+TURN_FRAMES = 4
 
 # A planned path crosses maps by listing a tile on one map followed by a tile on
 # the next, and _pathToDirections emits nothing for that pair - it assumes that
@@ -242,7 +248,7 @@ class Navigator:
         self.client.tap(button, frames)
 
     def _positionState(self):
-        """Cheap {map_bank, map_number, x, y, in_battle}, or None.
+        """Cheap {map_bank, map_number, x, y, facing, in_battle}, or None.
 
         Falls back to GAME_STATE against an mgba_server.lua predating POSITION,
         so an un-reloaded script still works - just slowly, since that reply
@@ -277,6 +283,13 @@ class Navigator:
         if p.get('x') is None or p.get('y') is None:
             return None
         return (p.get('map_bank'), p.get('map_number'), p['x'], p['y'])
+
+    def _facingNow(self, state=None):
+        """The way the player faces, from RAM; the guess in self.facing when the
+        server can't say (a script predating POSITION's facing, or GAME_STATE).
+        """
+        st = state if state is not None else self._positionState()
+        return (st or {}).get('facing') or self.facing
 
     # ── observation ───────────────────────────────────────────────────────
     def observe(self):
@@ -709,8 +722,9 @@ class Navigator:
 
         Returns 'moved', 'blocked', or 'unknown' (no position feed to verify).
         """
-        before = self._ramPos()
-        wasFacing = self.facing
+        state = self._positionState()
+        before = self._ramPos(state)
+        wasFacing = self._facingNow(state)
         self._tap(direction)
         self.facing = direction
 
@@ -863,30 +877,37 @@ class Navigator:
     def _face(self, direction):
         """Turn to face `direction` without leaving the current tile.
 
-        Needed before an interact press: if we already face that way the tap
-        would walk us off the approach tile instead of turning us, so this
-        verifies and walks back when that happens. Returns True when we end up
-        on the tile we started on, facing `direction`.
+        A TURN_FRAMES tap only turns when we face another way; facing it already,
+        any tap walks, so RAM decides whether to tap. True when we end where we
+        started, facing `direction`. With only the guess, a walk is undone.
         """
-        if self.facing == direction:
+        state = self._positionState()
+        if self._facingNow(state) == direction:
+            self.facing = direction
             return True
-        before = self._ramPos()
-        self._tap(direction)
+        before = self._ramPos(state)
+        self._tap(direction, TURN_FRAMES)
         self.facing = direction
-        # A turn is instant and a walk registers immediately, so one read tells
-        # us which happened - no waiting needed.
-        if before is None or self._ramPos() == before:
+        # A walk commits RAM to the next tile a few frames after the press, so
+        # read once the hold is long over. Reading straight after the tap saw
+        # the old tile and called a walk a turn.
+        time.sleep(STEP_ANIMATION)
+        if before is None:
             return True
+        ahead = self._ramPos()
+        if ahead == before:
+            return self._facingNow() == direction
 
-        # We were already facing that way and the tap walked us forward. Turn
-        # back (1 tap), step back (2nd tap), then turn to the target - that last
-        # tap can't move us because we're now facing the opposite way.
-        back = OPPOSITE[direction]
-        self._tap(back)
-        self._tap(back)
-        self._tap(direction)
-        self.facing = direction
-        return self._ramPos() == before
+        # The guess was wrong and the tap walked us forward. Let the step end
+        # (a tap inside it joins the walk), walk back with a full tap, which
+        # turns and walks, then turn to the target.
+        time.sleep(STEP_ANIMATION)
+        self._tap(OPPOSITE[direction])
+        self._awaitChange(ahead, STEP_SETTLE_POLLS)
+        time.sleep(STEP_ANIMATION)
+        self._tap(direction, TURN_FRAMES)
+        time.sleep(STEP_ANIMATION)
+        return self._ramPos() == before and self._facingNow() == direction
 
     # ── high-level goals ──────────────────────────────────────────────────
     def goTo(self, landmarkId, maxSteps=400):

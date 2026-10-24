@@ -274,7 +274,10 @@ class MGBAClient:
         return json.loads(parts[1])
 
     def position(self) -> dict:
-        """Return just {map_bank, map_number, x, y, in_battle}.
+        """Return just {map_bank, map_number, x, y, facing, in_battle}.
+
+        `facing` is "Up", "Down", "Left" or "Right", missing when the player
+        object is not loaded.
 
         Cheap enough to poll after every button press, unlike game_state(),
         which serializes the party, the whole bag and any live battle.
