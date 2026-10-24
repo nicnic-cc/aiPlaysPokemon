@@ -574,6 +574,9 @@ class Actions:
         # action in the harness with no undo, so "it worked" is never asserted
         # on the strength of the taps alone.
         self.lastForget: dict | None = None
+        # The battle message an A last saw, and which of its pages is up: a
+        # long one (a blackout) turns pages while its buffer stays the same.
+        self.battleLine, self.battlePart = "", 1
 
     # ---- primitives -------------------------------------------------------
 
@@ -720,9 +723,12 @@ class Actions:
         if after["battle"] and before["battle"]:
             if (moved := self._cursorMoved(before, after)) is not None:
                 return moved
-            if ((after["menu"] is None and before["menu"]) or (after["menu"],
-                    after["text"]) == (before["menu"], before["text"])):
+            # an empty buffer is the game between messages, not a change
+            if ((after["menu"] is None and before["menu"]) or not after["text"]
+                    or (after["menu"], after["text"]) == (before["menu"], before["text"])):
                 after = self._menuSettled(after)
+            if not after["battle"]:
+                return " - the battle is over"
             if after["menu"]:
                 return (f" - the {after['menu']} is open over the battle; "
                         "B backs out of it")
@@ -730,8 +736,17 @@ class Actions:
                 # not quoting the battle text: it is mid-redraw at this point
                 return f" - the {before['menu']} closed, back to the battle"
             if after["text"] and after["text"] != before["text"]:
+                self.battleLine, self.battlePart = after["text"], 1
                 return f' - the battle moved on: "{after["text"]}"'
+            if before.get("pressed") == "A" and after["text"]:
+                if after["text"] != self.battleLine:
+                    self.battleLine, self.battlePart = after["text"], 1
+                self.battlePart += 1
+                return (f" - the battle moved on to part {self.battlePart} of "
+                        f"the same long message; keep pressing A")
             return " - the battle is saying the same thing it was"
+        if before["battle"] and not after["battle"]:
+            return " - the battle is over"
         if after["dialog"]:
             return self._boxEffect()
         if before["dialog"]:
@@ -768,17 +783,22 @@ class Actions:
         return None
 
     def _menuSettled(self, mark: dict) -> dict:
-        """A battle menu opens or closes only after a fade the tap does not wait
-        for, so give callback2 that long to change before calling it no change."""
+        """A battle menu opens or closes, the next message prints, or the battle
+        ends only after a fade or a print the tap does not wait for, so give each
+        that long to change before calling it no change."""
         end = time.monotonic() + BAG_FADE
         while time.monotonic() < end:
             time.sleep(MENU_TAP_DELAY)
             try:
+                if not self.client.game_state().get("in_battle"):
+                    return {**mark, "battle": False}
                 menu = battleMenu(self.client.screen().get("callback2"))
             except (MGBAError, ValueError):
                 return mark
             if menu is not None and menu != mark["menu"]:
                 return {**mark, "menu": menu}
+            if (text := battleText(self.client)) and text != mark["text"]:
+                return {**mark, "text": text}
         return mark
 
     def _boxEffect(self) -> str:
