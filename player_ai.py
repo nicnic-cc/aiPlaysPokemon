@@ -141,6 +141,12 @@ DIALOG_TEXT_CAP = 400
 #   action menu:  FIGHT 0  BAG 1        move menu:  slot0  slot1
 #                 POKEMON 2 RUN 3                   slot2  slot3
 ACTION_FIGHT, ACTION_BAG, ACTION_POKEMON, ACTION_RUN = 0, 1, 2, 3
+ACTION_NAMES = ("FIGHT", "BAG", "POKEMON", "RUN")
+
+# gActionSelectionCursor and gMoveSelectionCursor, 4 bytes each, one per battler
+# (LeafGreen v1.1, measured live). Each keeps its slot while its menu is hidden,
+# so the one that changed on a tap is the menu on screen.
+BATTLE_CURSORS = 0x02023FF8
 
 # Screens a battle opens over itself, by callback2 (LeafGreen v1.1). The battle
 # message buffer does not change under them, so only the screen id shows them.
@@ -673,9 +679,17 @@ class Actions:
                 menu = battleMenu(self.client.screen().get("callback2"))
             except (MGBAError, ValueError):
                 menu = None
+        cursor = None
+        if inBattle:
+            try:
+                raw = self.client.peek(BATTLE_CURSORS, 8)
+                cursor = (raw[0], raw[4])
+            except (MGBAError, ValueError, IndexError):
+                cursor = None
         return {"battle": inBattle,
                 "dialog": dialog,
                 "menu": menu,
+                "cursor": cursor,
                 "text": battleText(self.client) if inBattle else "",
                 "ram": (player.get("map_bank"), player.get("map_number"),
                         player.get("x"), player.get("y"))}
@@ -701,6 +715,8 @@ class Actions:
         if after["battle"] and not before["battle"]:
             return " - a battle started"
         if after["battle"] and before["battle"]:
+            if (moved := self._cursorMoved(before, after)) is not None:
+                return moved
             if ((after["menu"] is None and before["menu"]) or (after["menu"],
                     after["text"]) == (before["menu"], before["text"])):
                 after = self._menuSettled(after)
@@ -722,6 +738,21 @@ class Actions:
         return (" - nothing responded. There is no text box on screen and "
                 "nothing in front of you to talk to. Pressing A again will do "
                 "the same nothing; walk somewhere else instead")
+
+    def _cursorMoved(self, before: dict, after: dict) -> str | None:
+        """Where the action or move cursor landed, if the press moved it; a
+        cursor move opens nothing, so it needs no _menuSettled wait."""
+        if None in (before["cursor"], after["cursor"]) or after["menu"]:
+            return None
+        (action, move), (wasAction, wasMove) = after["cursor"], before["cursor"]
+        if move != wasMove:
+            slots = dict((i, m) for m, i in (self.observation.moveSlots
+                                              if self.observation else []))
+            return (f" - the cursor is on {slots.get(move, f'move slot {move + 1}')}"
+                    " in the move menu; A uses it")
+        if action != wasAction and action < len(ACTION_NAMES):
+            return f" - the cursor is on {ACTION_NAMES[action]}; A picks it"
+        return None
 
     def _menuSettled(self, mark: dict) -> dict:
         """A battle menu opens or closes only after a fade the tap does not wait
