@@ -128,6 +128,7 @@ MENU_TAP_DELAY = 0.15
 # a warp's first line); the longest prints in about this long at Fast text.
 BOX_WAIT = 1.4
 BAG_FADE = 1.0  # the bag, and its party list after USE, fade in: a tap before that is dropped
+BATTLE_FADE = 1.5  # past BAG_FADE: the last page's A fades the battle out, in_battle set ~1.9 s more
 BAG_MENU_DELAY = 0.5  # USE / CANCEL opens after the item text redraws
 STRUGGLE_TEXT = 1.0  # "<name> has no moves left!" prints before it takes A
 
@@ -745,6 +746,9 @@ class Actions:
                 self.battleLine, self.battlePart = after["text"], 1
                 return f' - the battle moved on: "{after["text"]}"'
             if before.get("pressed") == "A" and after["text"]:
+                # the same text after an A is a new page, or the fade out after the last one
+                if self._battleEnded(BATTLE_FADE):
+                    return " - the battle is over"
                 if after["text"] != self.battleLine:
                     self.battleLine, self.battlePart = after["text"], 1
                 self.battlePart += 1
@@ -822,6 +826,18 @@ class Actions:
             if (text := battleText(self.client)) and text != mark["text"]:
                 return {**mark, "text": text}
         return mark
+
+    def _battleEnded(self, wait: float) -> bool:
+        """Whether the battle flag drops within wait seconds."""
+        end = time.monotonic() + wait
+        while time.monotonic() < end:
+            time.sleep(MENU_TAP_DELAY)
+            try:
+                if not self.client.game_state().get("in_battle"):
+                    return True
+            except (MGBAError, ValueError):
+                return False
+        return False
 
     def _boxEffect(self) -> str:
         return " - there is a text box on screen now; keep pressing A"
